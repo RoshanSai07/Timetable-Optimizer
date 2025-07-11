@@ -1,0 +1,462 @@
+/* Modern Green Color Scheme */
+:root {
+  --primary-green: #2e8b57; /* More vibrant green */
+  --light-green: #9ccc65;
+  --dark-green: #1b5e20;
+  --mint-green: #e8f5e9;
+  --teal: #00897b;
+  --light-teal: #b2dfdb;
+  --white: #ffffff;
+  --light-gray: #f5f7fa;
+  --medium-gray: #e0e0e0;
+  --dark-gray: #455a64;
+  --error-red: #e53935;
+  --warning-orange: #fb8c00;
+  --text-dark: #263238;
+  --text-light: #eceff1;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.16);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--light-gray);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout Structure */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Header Styles */
+.app-header {
+  background: linear-gradient(135deg, var(--primary-green), var(--teal));
+  color: var(--white);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.app-header h1 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 2.25rem;
+  letter-spacing: -0.5px;
+}
+
+.app-header p {
+  font-weight: 300;
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.app-header i {
+  margin-right: 10px;
+}
+
+/* Footer Styles */
+.app-footer {
+  background-color: var(--dark-green);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1.25rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* Card Components */
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1.75rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  color: var(--dark-green);
+  font-size: 0.95rem;
+}
+
+select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--medium-gray);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: var(--transition);
+  background-color: var(--white);
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23616161' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+}
+
+select:focus {
+  border-color: var(--light-green);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+}
+
+select[multiple] {
+  min-height: 150px;
+  background-image: none;
+  padding: 0.75rem;
+}
+
+select[multiple] option {
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.25rem;
+}
+
+select[multiple] option:hover {
+  background-color: var(--mint-green);
+}
+
+small {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--dark-gray);
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+small i {
+  margin-right: 5px;
+}
+
+/* Button Styles */
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+}
+
+button i {
+  margin-right: 8px;
+}
+
+.primary-btn {
+  background-color: var(--primary-green);
+  color: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.primary-btn:hover {
+  background-color: var(--dark-green);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.primary-btn:active {
+  transform: translateY(0);
+}
+
+.secondary-btn {
+  background-color: var(--white);
+  color: var(--primary-green);
+  border: 1px solid var(--medium-gray);
+}
+
+.secondary-btn:hover {
+  background-color: var(--light-gray);
+  border-color: var(--light-green);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  color: var(--primary-green);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Course Section */
+.course-section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+}
+
+.course-section h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-green);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+/* Teacher Cards Grid */
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.teacher-card {
+  position: relative;
+}
+
+.teacher-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.card-ui {
+  display: block;
+  background: var(--white);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  cursor: pointer;
+  border-left: 4px solid var(--light-teal);
+  height: 100%;
+}
+
+.card-ui:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-left-color: var(--teal);
+}
+
+.card-ui.selected {
+  background-color: var(--mint-green);
+  border-left-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.teacher-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.teacher-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+.rating {
+  font-weight: 500;
+  color: var(--warning-orange);
+}
+
+.slots {
+  font-style: italic;
+  color: var(--teal);
+  text-align: right;
+}
+
+#teacher-options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Timetable Styles */
+.timetable-container {
+  overflow-x: auto;
+  margin-top: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  background: var(--white);
+  padding: 1rem;
+}
+
+.timetable-grid {
+  display: grid;
+  grid-template-columns: 120px repeat(5, 1fr);
+  gap: 2px;
+  min-width: 800px;
+}
+
+.timetable-cell {
+  padding: 0.75rem;
+  min-height: 70px;
+  border: 1px solid var(--medium-gray);
+  position: relative;
+  background-color: var(--white);
+}
+
+.time-header {
+  font-weight: 500;
+  background-color: var(--light-teal);
+  text-align: right;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.day-header {
+  font-weight: 500;
+  background-color: var(--light-teal);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.course-slot {
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  word-break: break-word;
+  line-height: 1.3;
+}
+
+.theory-slot {
+  background-color: rgba(46, 125, 50, 0.08);
+  border-left: 3px solid var(--primary-green);
+}
+
+.lab-slot {
+  background-color: rgba(0, 137, 123, 0.08);
+  border-left: 3px solid var(--teal);
+}
+
+.conflict-slot {
+  background-color: rgba(229, 57, 53, 0.08);
+  border-left: 3px solid var(--error-red);
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  gap: 0.5rem;
+}
+
+.legend i {
+  font-size: 1rem;
+}
+
+.theory-legend {
+  color: var(--primary-green);
+}
+
+.lab-legend {
+  color: var(--teal);
+}
+
+.conflict-legend {
+  color: var(--error-red);
+}
+
+/* Utility Classes */
+.hidden {
+  display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .app-main {
+    padding: 1.5rem 1rem;
+  }
+
+  .teachers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 2rem 1rem;
+  }
+
+  .app-header h1 {
+    font-size: 1.75rem;
+  }
+
+  select[multiple] {
+    min-height: 120px;
+  }
+}
