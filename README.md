@@ -42,7 +42,7 @@ The main branch will remain clean or host the legacy version.
 5. Use the "Reset" button to start over.
 
 ## Notes
-
+-You can select one or more courses at a time, but your choices are locked until you hit the reset button.
 - Lab end times have been rounded to 50 minutes for easier logic.
 - Selections stay saved even when switching between courses.
 - All data is stored in the browser's memory—no backend used.
