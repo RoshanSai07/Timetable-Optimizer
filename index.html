@@ -13,6 +13,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   </head>
   <body>
     <div class="app-container">
@@ -29,24 +31,28 @@
           <div id="course-selection">
             <h2><i class="fas fa-book-open"></i> Select Courses</h2>
             <div class="form-group">
-              <select name="Courses" id="course-type" multiple>
+              <select name="Courses" id="course-type" multiple size="6">
                 <option value="CSE1022">
-                  CSE1022 - Introduction to Programming
+                  CSE1022 - Introduction to Programming (3 Credits)
                 </option>
                 <option value="CSE2001">
-                  CSE2001 - Data Structures and Algorithms
+                  CSE2001 - Data Structures and Algorithms (4 Credits)
+                </option>
+                <option value="CSE3002">
+                  CSE3002 - Artificial Intelligence (3 Credits)
                 </option>
                 <option value="MAT1003">
-                  MAT1003 - Discrete Mathematical Structures
+                  MAT1003 - Discrete Mathematical Structures (4 Credits)
                 </option>
                 <option value="MGT1001">
-                  MGT1001 - Ethics and Values - Lab Only
+                  MGT1001 - Ethics and Values - Lab Only (2 Credit)
                 </option>
                 <option value="MGT1040">
-                  MGT1040 - Entrepreneurship - Theory Only
+                  MGT1040 - Entrepreneurship - Theory Only (2 Credits)
                 </option>
                 <option value="STS2008">
-                  STS2008 - Numeric ability and Cognitive Intelligence
+                  STS2008 - Numeric ability and Cognitive Intelligence (3
+                  Credits)
                 </option>
               </select>
               <small
@@ -64,9 +70,17 @@
         <section id="teacher-selection" class="hidden">
           <div class="section-header">
             <h2><i class="fas fa-chalkboard-teacher"></i> Select Teachers</h2>
-            <button id="back-to-courses" class="secondary-btn">
-              <i class="fas fa-arrow-left"></i> Back to Courses
-            </button>
+            <div class="header-actions">
+              <button id="back-to-courses" class="secondary-btn">
+                <i class="fas fa-arrow-left"></i> Back to Courses
+              </button>
+              <button id="save-selection" class="secondary-btn">
+                <i class="fas fa-save"></i> Save Selection
+              </button>
+              <button id="load-selection" class="secondary-btn">
+                <i class="fas fa-folder-open"></i> Load Selection
+              </button>
+            </div>
           </div>
           <div id="teacher-options-container" class="teachers-grid"></div>
           <div class="action-buttons">
@@ -83,29 +97,41 @@
         <section id="timetable-display" class="hidden">
           <div class="section-header">
             <h2><i class="fas fa-table"></i> Your Timetable</h2>
-            <div class="legend">
-              <span class="theory-legend"
-                ><i class="fas fa-chalkboard"></i> Theory</span
-              >
-              <span class="lab-legend"><i class="fas fa-flask"></i> Lab</span>
-              <span class="conflict-legend"
-                ><i class="fas fa-exclamation-triangle"></i> Conflict</span
-              >
+            <div class="header-actions">
+              <div class="legend">
+                <span class="theory-legend"
+                  ><i class="fas fa-chalkboard"></i> Theory</span
+                >
+                <span class="lab-legend"><i class="fas fa-flask"></i> Lab</span>
+                <span class="conflict-legend"
+                  ><i class="fas fa-exclamation-triangle"></i> Conflict</span
+                >
+              </div>
+              <div class="export-buttons">
+                <button id="export-pdf" class="secondary-btn">
+                  <i class="fas fa-file-pdf"></i> Export PDF
+                </button>
+                <button id="export-image" class="secondary-btn">
+                  <i class="fas fa-image"></i> Export Image
+                </button>
+              </div>
             </div>
           </div>
           <div class="timetable-container">
             <div class="timetable-grid" id="timetable-grid"></div>
           </div>
+          <div id="conflict-warnings" class="conflict-warnings"></div>
           <small
-            ><i class="fas fa-info-circle"></i>For simplicity, lab sessions have
-            been assumed to end at 50 minutes instead of the standard +40 minute
-            duration.</small
+            ><i class="fas fa-info-circle"></i> For simplicity, lab sessions
+            have been assumed to end at 50 minutes instead of the standard +40
+            minute duration.</small
           >
         </section>
       </main>
 
       <footer class="app-footer">
         <p>Made with <i class="fas fa-heart"></i> for students</p>
+        <p class="version">Version 2.0.0</p>
       </footer>
     </div>
 
