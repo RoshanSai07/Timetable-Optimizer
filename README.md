@@ -1,16 +1,37 @@
 # Timetable-Optimizer
 
-A basic tool to help students select courses, compare available teachers, and generate a visual timetable without slot clashes.
+This branch contains Version 2.0 of the Course Selection & Timetable Assistant.
 
-## Features
+## Try It
+👉 [Live Demo](https://roshansai07.github.io/Timetable-Optimizer/)
 
-- Select one or multiple courses.
-- View available teachers along with their ratings and slot timings.
-- Choose a teacher for each course.
-- Visualize your weekly timetable.
-- Detect slot conflicts and highlight them.
-- Reset all selections with a single button.
-- Uses 24-hour time format for clarity.
+## What’s New in v2.0
+✅ Improved Slot Mapping Logic
+Smart alignment of theory and lab slots using unifiedTimes with accurate placement.
+
+🎯 Lab-only Time Handling
+Theory slots are now auto-skipped in lab-only periods, preserving logical slot allocation.
+
+📚 Dynamic Teacher Selection
+Auto-picks best-fit teachers if “No Preference” is selected, with visual selection UI.
+
+📤 Export Timetable
+Export as PDF or Image with a single click.
+
+🧠 Conflict Detection System
+Warns you of overlapping slots with exact time/day references.
+
+💾 Save & Load Selections
+Store your timetable preferences in the browser.
+
+## Tech Stack
+HTML, CSS (Custom UI)
+JavaScript (DOM-based rendering)
+html2canvas, jsPDF for export features
+
+## Branch Purpose
+This branch is deployed separately from main and serves as a stable release for Version 2.0.
+The main branch will remain clean or host the legacy version.
 
 ## How to Use
 
@@ -32,10 +53,7 @@ A basic tool to help students select courses, compare available teachers, and ge
 - `style.css` — Basic styles.
 - `script.js` — Logic for selection and timetable generation.
 - `data.js` — Contains course and slot data.
-- 
-## Try It
 
-👉 [Live Demo](https://your-demo-link.com)
 
 ## Clone It
 
