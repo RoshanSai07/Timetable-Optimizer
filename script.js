@@ -883,6 +883,181 @@ const courseData = {
       { name: "Gokulnath M", slots: ["L8", "L9"], rating: 2.68 },
     ],
   },
+  ECE2002: {
+    name: "Computer Architecture and Organization",
+    credits: 4,
+    theoryTeachers: [
+      { name: "Chillu Naresh", slots: ["A1", "TA1", "TAA1"], rating: "-" },
+      {
+        name: "G Bharath Reddy",
+        slots: ["A1", "TA1", "TAA1"],
+        rating: "5.02, 4.52, 4.02",
+      },
+      {
+        name: "Girish Kumar Mekala",
+        slots: ["A1", "TA1", "TAA1"],
+        rating: "-",
+      },
+      { name: "Moumita Saha", slots: ["A1", "TA1", "TAA1"], rating: "-" },
+      {
+        name: "Swati Shukla",
+        slots: ["A1", "TA1", "TAA1"],
+        rating: "3.16, 3.56, 3.67",
+      },
+      {
+        name: "Debanjali Sarkar",
+        slots: ["A1", "TA1", "TAA1"],
+        rating: "2.61, 2.35, 2.50",
+      },
+      {
+        name: "M. Krishnasamy",
+        slots: ["A1", "TA1", "TAA1"],
+        rating: "2.77, 3.00, 2.77",
+      },
+      {
+        name: "Rajeev Sharma",
+        slots: ["A1", "TA1", "TAA1"],
+        rating: "3.09, 3.22, 3.50",
+      },
+      {
+        name: "Sudha Ellison Mathe",
+        slots: ["A1", "TA1", "TAA1"],
+        rating: "3.74, 4.21, 4.68",
+      },
+      {
+        name: "Chandan Nayak",
+        slots: ["A1", "TA1", "TAA1"],
+        rating: "4.45, 4.38, 4.25",
+      },
+      {
+        name: "Anamika Lata",
+        slots: ["A1", "TA1", "TAA1"],
+        rating: "4.47, 4.43, 4.43",
+      },
+
+      { name: "Chillu Naresh", slots: ["A2", "TA2", "TAA2"], rating: "-" },
+      { name: "G Bharath Reddy", slots: ["A2", "TA2", "TAA2"], rating: "-" },
+      { name: "Vivek Upadhyaya", slots: ["A2", "TA2", "TAA2"], rating: "-" },
+      {
+        name: "Debanjali Sarkar",
+        slots: ["A2", "TA2", "TAA2"],
+        rating: "2.61, 2.35, 2.50",
+      },
+      {
+        name: "M. Krishnasamy",
+        slots: ["A2", "TA2", "TAA2"],
+        rating: "2.77, 3.00, 2.77",
+      },
+      {
+        name: "Rajeev Sharma",
+        slots: ["A2", "TA2", "TAA2"],
+        rating: "3.09, 3.22, 3.50",
+      },
+      {
+        name: "Pradosh Ranjan Sahoo",
+        slots: ["A2", "TA2", "TAA2"],
+        rating: "3.25, 2.16, 3.09",
+      },
+      {
+        name: "Agam Das Goswami",
+        slots: ["A2", "TA2", "TAA2"],
+        rating: "3.62, 3.74, 3.66",
+      },
+      {
+        name: "Mohit Kumar",
+        slots: ["A2", "TA2", "TAA2"],
+        rating: "3.88, 3.94, 3.88",
+      },
+      {
+        name: "Chandan Nayak",
+        slots: ["A2", "TA2", "TAA2"],
+        rating: "4.45, 4.38, 4.25",
+      },
+      {
+        name: "Anamika Lata",
+        slots: ["A2", "TA2", "TAA2"],
+        rating: "4.47, 4.43, 4.43",
+      },
+
+      { name: "Chillu Naresh", slots: ["B1", "TB1", "TBB1"], rating: "-" },
+      {
+        name: "Girish Kumar Mekala",
+        slots: ["B1", "TB1", "TBB1"],
+        rating: "-",
+      },
+      { name: "Moumita Saha", slots: ["B1", "TB1", "TBB1"], rating: "-" },
+      { name: "Swati Shukla", slots: ["B1", "TB1", "TBB1"], rating: "-" },
+      {
+        name: "Debanjali Sarkar",
+        slots: ["B1", "TB1", "TBB1"],
+        rating: "2.61, 2.35, 2.50",
+      },
+      {
+        name: "M. Krishnasamy",
+        slots: ["B1", "TB1", "TBB1"],
+        rating: "2.77, 3.00, 2.77",
+      },
+      {
+        name: "Pradosh Ranjan Sahoo",
+        slots: ["B1", "TB1", "TBB1"],
+        rating: "3.25, 2.16, 3.09",
+      },
+      {
+        name: "Agam Das Goswami",
+        slots: ["B1", "TB1", "TBB1"],
+        rating: "3.62, 3.74, 3.66",
+      },
+      {
+        name: "Mohit Kumar",
+        slots: ["B1", "TB1", "TBB1"],
+        rating: "3.88, 3.94, 3.88",
+      },
+      {
+        name: "Neeraj Kumar Misra",
+        slots: ["B1", "TB1", "TBB1"],
+        rating: "4.40, 4.45, 4.20",
+      },
+
+      { name: "G Bharath Reddy", slots: ["B2", "TB2", "TBB2"], rating: "-" },
+      {
+        name: "Girish Kumar Mekala",
+        slots: ["B2", "TB2", "TBB2"],
+        rating: "-",
+      },
+      { name: "Moumita Saha", slots: ["B2", "TB2", "TBB2"], rating: "-" },
+      { name: "Vivek Upadhyaya", slots: ["B2", "TB2", "TBB2"], rating: "-" },
+      {
+        name: "Rajeev Sharma",
+        slots: ["B2", "TB2", "TBB2"],
+        rating: "3.09, 3.22, 3.50",
+      },
+      {
+        name: "Agam Das Goswami",
+        slots: ["B2", "TB2", "TBB2"],
+        rating: "3.62, 3.74, 3.66",
+      },
+      {
+        name: "Sudha Ellison Mathe",
+        slots: ["B2", "TB2", "TBB2"],
+        rating: "3.74, 4.21, 4.68",
+      },
+      {
+        name: "Mohit Kumar",
+        slots: ["B2", "TB2", "TBB2"],
+        rating: "3.88, 3.94, 3.88",
+      },
+      {
+        name: "Neeraj Kumar Misra",
+        slots: ["B2", "TB2", "TBB2"],
+        rating: "4.40, 4.45, 4.20",
+      },
+      {
+        name: "Chandan Nayak",
+        slots: ["B2", "TB2", "TBB2"],
+        rating: "4.45, 4.38, 4.25",
+      },
+    ],
+  },
   MGT1040: {
     name: "Entrepreneurship - Theory Only",
     credits: 2,
