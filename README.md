@@ -5,7 +5,7 @@ This branch contains Version 2.0 of the Course Selection & Timetable Assistant.
 ## Try It
 👉 [Live Demo](https://roshansai07.github.io/Timetable-Optimizer/)
 
-## What’s New in v3.0
+## What’s New in v3.1
 
 ✅ Updated Course & Teacher Data
 Includes complete information for 4th Semester — all courses, teachers, and slot mappings are refreshed and verified.
@@ -50,7 +50,6 @@ Lab end times rounded to 50 minutes for logic consistency.
 index.html — Main page structure.
 style.css — UI and layout styling.
 script.js — Logic for selection, sharing table, and timetable generation.
-
 
 ## Clone It
 
