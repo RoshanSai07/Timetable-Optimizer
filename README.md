@@ -5,54 +5,51 @@ This branch contains Version 2.0 of the Course Selection & Timetable Assistant.
 ## Try It
 👉 [Live Demo](https://roshansai07.github.io/Timetable-Optimizer/)
 
-## What’s New in v2.0
-✅ Improved Slot Mapping Logic
-Smart alignment of theory and lab slots using unifiedTimes with accurate placement.
+## What’s New in v3.0
 
-🎯 Lab-only Time Handling
-Theory slots are now auto-skipped in lab-only periods, preserving logical slot allocation.
+✅ Updated Course & Teacher Data
+Includes complete information for 4th Semester — all courses, teachers, and slot mappings are refreshed and verified.
 
-📚 Dynamic Teacher Selection
-Auto-picks best-fit teachers if “No Preference” is selected, with visual selection UI.
+✅ Selected Teachers Table
+Automatically lists your chosen teachers in a neat, shareable format — perfect for sending your final selections to friends or teammates.
 
-📤 Export Timetable
-Export as PDF or Image with a single click.
 
-🧠 Conflict Detection System
-Warns you of overlapping slots with exact time/day references.
+## From v2.0 (Features You Still Have)
 
-💾 Save & Load Selections
-Store your timetable preferences in the browser.
+Smart Slot Mapping Logic — Unified alignment for theory + lab slots.
+Lab-only Time Handling — Auto-skips theory slots during lab hours.
+Dynamic Teacher Selection — Picks best-fit teachers when “No Preference” is selected.
+Export Timetable — One-click export to PDF or image.
+Conflict Detection System — Highlights overlapping slots with detailed info.
+Save & Load Selections — Your timetable preferences stay stored locally.
 
 ## Tech Stack
-HTML, CSS (Custom UI)
-JavaScript (DOM-based rendering)
-html2canvas, jsPDF for export features
+Frontend: HTML, CSS (Custom UI), JavaScript (DOM-based rendering)
+Libraries: html2canvas, jsPDF
 
 ## Branch Purpose
-This branch is deployed separately from main and serves as a stable release for Version 2.0.
-The main branch will remain clean or host the legacy version.
+This branch contains the stable v3.0 release, featuring 4th Semester data and the new Selected Teacher Table.
+The main branch remains clean or hosts the legacy build.
 
 ## How to Use
 
-1. Select a course from the dropdown.
-2. Click "Confirm" to see available teachers.
-3. Choose a teacher. Repeat for other courses.
-4. Click "Generate Timetable" to see your schedule.
-5. Use the "Reset" button to start over.
+Select a course from the dropdown.
+Click Confirm to view available teachers.
+Choose your preferred teacher(s).
+View your chosen teachers in the Selected Teachers Table.
+Click Generate Timetable to see your schedule.
+Use Reset to start again.
 
 ## Notes
--You can select one or more courses at a time, but your choices are locked until you hit the reset button.
-- Lab end times have been rounded to 50 minutes for easier logic.
-- Selections stay saved even when switching between courses.
-- All data is stored in the browser's memory—no backend used.
+Multiple courses can be selected before generating.
+Choices remain locked until you reset.
+All selections and data are stored locally in your browser — no backend.
+Lab end times rounded to 50 minutes for logic consistency.
 
 ## Files
-
-- `index.html` — Main page structure.
-- `style.css` — Basic styles.
-- `script.js` — Logic for selection and timetable generation.
-- `data.js` — Contains course and slot data.
+index.html — Main page structure.
+style.css — UI and layout styling.
+script.js — Logic for selection, sharing table, and timetable generation.
 
 
 ## Clone It
