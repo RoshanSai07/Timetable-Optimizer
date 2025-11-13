@@ -888,96 +888,40 @@ const courseData = {
     credits: 4,
     theoryTeachers: [
       { name: "Chillu Naresh", slots: ["A1", "TA1", "TAA1"], rating: "-" },
-      {
-        name: "G Bharath Reddy",
-        slots: ["A1", "TA1", "TAA1"],
-        rating: "5.02, 4.52, 4.02",
-      },
+      { name: "G Bharath Reddy", slots: ["A1", "TA1", "TAA1"], rating: 4.52 },
       {
         name: "Girish Kumar Mekala",
         slots: ["A1", "TA1", "TAA1"],
         rating: "-",
       },
       { name: "Moumita Saha", slots: ["A1", "TA1", "TAA1"], rating: "-" },
-      {
-        name: "Swati Shukla",
-        slots: ["A1", "TA1", "TAA1"],
-        rating: "3.16, 3.56, 3.67",
-      },
-      {
-        name: "Debanjali Sarkar",
-        slots: ["A1", "TA1", "TAA1"],
-        rating: "2.61, 2.35, 2.50",
-      },
-      {
-        name: "M. Krishnasamy",
-        slots: ["A1", "TA1", "TAA1"],
-        rating: "2.77, 3.00, 2.77",
-      },
-      {
-        name: "Rajeev Sharma",
-        slots: ["A1", "TA1", "TAA1"],
-        rating: "3.09, 3.22, 3.50",
-      },
+      { name: "Swati Shukla", slots: ["A1", "TA1", "TAA1"], rating: 3.46 },
+      { name: "Debanjali Sarkar", slots: ["A1", "TA1", "TAA1"], rating: 2.49 },
+      { name: "M. Krishnasamy", slots: ["A1", "TA1", "TAA1"], rating: 2.85 },
+      { name: "Rajeev Sharma", slots: ["A1", "TA1", "TAA1"], rating: 3.27 },
       {
         name: "Sudha Ellison Mathe",
         slots: ["A1", "TA1", "TAA1"],
-        rating: "3.74, 4.21, 4.68",
+        rating: 4.21,
       },
-      {
-        name: "Chandan Nayak",
-        slots: ["A1", "TA1", "TAA1"],
-        rating: "4.45, 4.38, 4.25",
-      },
-      {
-        name: "Anamika Lata",
-        slots: ["A1", "TA1", "TAA1"],
-        rating: "4.47, 4.43, 4.43",
-      },
+      { name: "Chandan Nayak", slots: ["A1", "TA1", "TAA1"], rating: 4.36 },
+      { name: "Anamika Lata", slots: ["A1", "TA1", "TAA1"], rating: 4.44 },
 
       { name: "Chillu Naresh", slots: ["A2", "TA2", "TAA2"], rating: "-" },
       { name: "G Bharath Reddy", slots: ["A2", "TA2", "TAA2"], rating: "-" },
       { name: "Vivek Upadhyaya", slots: ["A2", "TA2", "TAA2"], rating: "-" },
-      {
-        name: "Debanjali Sarkar",
-        slots: ["A2", "TA2", "TAA2"],
-        rating: "2.61, 2.35, 2.50",
-      },
-      {
-        name: "M. Krishnasamy",
-        slots: ["A2", "TA2", "TAA2"],
-        rating: "2.77, 3.00, 2.77",
-      },
-      {
-        name: "Rajeev Sharma",
-        slots: ["A2", "TA2", "TAA2"],
-        rating: "3.09, 3.22, 3.50",
-      },
+      { name: "Debanjali Sarkar", slots: ["A2", "TA2", "TAA2"], rating: 2.49 },
+      { name: "M. Krishnasamy", slots: ["A2", "TA2", "TAA2"], rating: 2.85 },
+      { name: "Rajeev Sharma", slots: ["A2", "TA2", "TAA2"], rating: 3.27 },
       {
         name: "Pradosh Ranjan Sahoo",
         slots: ["A2", "TA2", "TAA2"],
-        rating: "3.25, 2.16, 3.09",
+        rating: 2.83,
       },
-      {
-        name: "Agam Das Goswami",
-        slots: ["A2", "TA2", "TAA2"],
-        rating: "3.62, 3.74, 3.66",
-      },
-      {
-        name: "Mohit Kumar",
-        slots: ["A2", "TA2", "TAA2"],
-        rating: "3.88, 3.94, 3.88",
-      },
-      {
-        name: "Chandan Nayak",
-        slots: ["A2", "TA2", "TAA2"],
-        rating: "4.45, 4.38, 4.25",
-      },
-      {
-        name: "Anamika Lata",
-        slots: ["A2", "TA2", "TAA2"],
-        rating: "4.47, 4.43, 4.43",
-      },
+      { name: "Agam Das Goswami", slots: ["A2", "TA2", "TAA2"], rating: 3.67 },
+      { name: "Mohit Kumar", slots: ["A2", "TA2", "TAA2"], rating: 3.9 },
+      { name: "Chandan Nayak", slots: ["A2", "TA2", "TAA2"], rating: 4.36 },
+      { name: "Anamika Lata", slots: ["A2", "TA2", "TAA2"], rating: 4.44 },
 
       { name: "Chillu Naresh", slots: ["B1", "TB1", "TBB1"], rating: "-" },
       {
@@ -987,35 +931,19 @@ const courseData = {
       },
       { name: "Moumita Saha", slots: ["B1", "TB1", "TBB1"], rating: "-" },
       { name: "Swati Shukla", slots: ["B1", "TB1", "TBB1"], rating: "-" },
-      {
-        name: "Debanjali Sarkar",
-        slots: ["B1", "TB1", "TBB1"],
-        rating: "2.61, 2.35, 2.50",
-      },
-      {
-        name: "M. Krishnasamy",
-        slots: ["B1", "TB1", "TBB1"],
-        rating: "2.77, 3.00, 2.77",
-      },
+      { name: "Debanjali Sarkar", slots: ["B1", "TB1", "TBB1"], rating: 2.49 },
+      { name: "M. Krishnasamy", slots: ["B1", "TB1", "TBB1"], rating: 2.85 },
       {
         name: "Pradosh Ranjan Sahoo",
         slots: ["B1", "TB1", "TBB1"],
-        rating: "3.25, 2.16, 3.09",
+        rating: 2.83,
       },
-      {
-        name: "Agam Das Goswami",
-        slots: ["B1", "TB1", "TBB1"],
-        rating: "3.62, 3.74, 3.66",
-      },
-      {
-        name: "Mohit Kumar",
-        slots: ["B1", "TB1", "TBB1"],
-        rating: "3.88, 3.94, 3.88",
-      },
+      { name: "Agam Das Goswami", slots: ["B1", "TB1", "TBB1"], rating: 3.67 },
+      { name: "Mohit Kumar", slots: ["B1", "TB1", "TBB1"], rating: 3.9 },
       {
         name: "Neeraj Kumar Misra",
         slots: ["B1", "TB1", "TBB1"],
-        rating: "4.40, 4.45, 4.20",
+        rating: 4.35,
       },
 
       { name: "G Bharath Reddy", slots: ["B2", "TB2", "TBB2"], rating: "-" },
@@ -1026,36 +954,20 @@ const courseData = {
       },
       { name: "Moumita Saha", slots: ["B2", "TB2", "TBB2"], rating: "-" },
       { name: "Vivek Upadhyaya", slots: ["B2", "TB2", "TBB2"], rating: "-" },
-      {
-        name: "Rajeev Sharma",
-        slots: ["B2", "TB2", "TBB2"],
-        rating: "3.09, 3.22, 3.50",
-      },
-      {
-        name: "Agam Das Goswami",
-        slots: ["B2", "TB2", "TBB2"],
-        rating: "3.62, 3.74, 3.66",
-      },
+      { name: "Rajeev Sharma", slots: ["B2", "TB2", "TBB2"], rating: 3.27 },
+      { name: "Agam Das Goswami", slots: ["B2", "TB2", "TBB2"], rating: 3.67 },
       {
         name: "Sudha Ellison Mathe",
         slots: ["B2", "TB2", "TBB2"],
-        rating: "3.74, 4.21, 4.68",
+        rating: 4.21,
       },
-      {
-        name: "Mohit Kumar",
-        slots: ["B2", "TB2", "TBB2"],
-        rating: "3.88, 3.94, 3.88",
-      },
+      { name: "Mohit Kumar", slots: ["B2", "TB2", "TBB2"], rating: 3.9 },
       {
         name: "Neeraj Kumar Misra",
         slots: ["B2", "TB2", "TBB2"],
-        rating: "4.40, 4.45, 4.20",
+        rating: 4.35,
       },
-      {
-        name: "Chandan Nayak",
-        slots: ["B2", "TB2", "TBB2"],
-        rating: "4.45, 4.38, 4.25",
-      },
+      { name: "Chandan Nayak", slots: ["B2", "TB2", "TBB2"], rating: 4.36 },
     ],
   },
   MGT1040: {
@@ -1156,6 +1068,170 @@ const courseData = {
   },
 };
 
+// Sorting functionality
+let currentSort = {
+  course: null,
+  type: null,
+  criteria: "rating",
+  order: "desc",
+};
+
+// Add this function to create sorting controls
+function addSortingControls(courseCode, type, container) {
+  // Check if sorting controls already exist
+  if (
+    container.previousElementSibling &&
+    container.previousElementSibling.classList.contains("sorting-controls")
+  ) {
+    return;
+  }
+
+  const sortingControls = document.createElement("div");
+  sortingControls.className = "sorting-controls";
+  sortingControls.innerHTML = `
+    <div class="sort-options">
+      <span class="sort-label">Sort by:</span>
+      <select class="sort-criteria">
+        <option value="rating">Rating</option>
+        <option value="name">Name</option>
+        <option value="slots">Slots</option>
+      </select>
+      <select class="sort-order">
+        <option value="desc">High to Low</option>
+        <option value="asc">Low to High</option>
+      </select>
+      <button class="sort-apply-btn secondary-btn">
+        <i class="fas fa-sort"></i> Apply
+      </button>
+    </div>
+  `;
+
+  // Insert sorting controls before the teacher grid
+  container.parentNode.insertBefore(sortingControls, container);
+
+  const criteriaSelect = sortingControls.querySelector(".sort-criteria");
+  const orderSelect = sortingControls.querySelector(".sort-order");
+  const applyBtn = sortingControls.querySelector(".sort-apply-btn");
+
+  // Set current values if this course/type was previously sorted
+  if (currentSort.course === courseCode && currentSort.type === type) {
+    criteriaSelect.value = currentSort.criteria;
+    orderSelect.value = currentSort.order;
+  }
+
+  applyBtn.addEventListener("click", () => {
+    sortTeachers(courseCode, type, criteriaSelect.value, orderSelect.value);
+  });
+}
+
+// Add this function to sort teachers
+function sortTeachers(courseCode, type, criteria, order) {
+  currentSort = { course: courseCode, type, criteria, order };
+
+  const container = document.getElementById(`${type}-${courseCode}`);
+  if (!container) return;
+
+  const teacherCards = Array.from(container.querySelectorAll(".teacher-card"));
+  const noPreferenceCard = teacherCards.find((card) =>
+    card.querySelector('input[value=""]')
+  );
+  const otherCards = teacherCards.filter(
+    (card) => !card.querySelector('input[value=""]')
+  );
+
+  otherCards.sort((a, b) => {
+    const teacherA = getTeacherData(a, courseCode, type);
+    const teacherB = getTeacherData(b, courseCode, type);
+
+    let valueA, valueB;
+
+    switch (criteria) {
+      case "rating":
+        valueA = parseRating(teacherA.rating);
+        valueB = parseRating(teacherB.rating);
+        break;
+      case "name":
+        valueA = teacherA.name.toLowerCase();
+        valueB = teacherB.name.toLowerCase();
+        break;
+      case "slots":
+        // Sort by slot codes alphabetically
+        valueA = teacherA.slots.join(", ").toLowerCase();
+        valueB = teacherB.slots.join(", ").toLowerCase();
+        break;
+      default:
+        return 0;
+    }
+
+    if (order === "asc") {
+      return valueA < valueB ? -1 : valueA > valueB ? 1 : 0;
+    } else {
+      return valueA > valueB ? -1 : valueA < valueB ? 1 : 0;
+    }
+  });
+
+  // Clear container and re-add cards in sorted order
+  container.innerHTML = "";
+  if (noPreferenceCard) {
+    container.appendChild(noPreferenceCard);
+  }
+  otherCards.forEach((card) => container.appendChild(card));
+
+  // Update visual feedback
+  updateSortVisualFeedback(courseCode, type, criteria, order);
+}
+
+// Helper function to get teacher data from card
+function getTeacherData(card, courseCode, type) {
+  const input = card.querySelector("input");
+  const teacherName = input.value;
+  const slots = input.dataset.slots
+    ? input.dataset.slots.split(",").map((s) => s.trim())
+    : [];
+
+  const course = courseData[courseCode];
+  const teacherList =
+    type === "theory" ? course.theoryTeachers : course.labTeachers;
+  const teacher = teacherList.find((t) => t.name === teacherName);
+
+  return teacher || { name: teacherName, slots, rating: "-" };
+}
+
+// Helper function to parse rating
+function parseRating(rating) {
+  if (rating === "-" || rating === "" || rating === undefined) return -1;
+  const num = parseFloat(rating);
+  return isNaN(num) ? -1 : num;
+}
+
+// Update visual feedback for sorting
+function updateSortVisualFeedback(courseCode, type, criteria, order) {
+  const container = document.getElementById(`${type}-${courseCode}`);
+  if (!container) return;
+
+  // Remove existing indicators
+  const sortingControls = container.previousElementSibling;
+  if (
+    sortingControls &&
+    sortingControls.classList.contains("sorting-controls")
+  ) {
+    sortingControls
+      .querySelectorAll(".sort-indicator")
+      .forEach((ind) => ind.remove());
+
+    const indicator = document.createElement("span");
+    indicator.className = "sort-indicator";
+    indicator.innerHTML = `<i class="fas fa-sort-${
+      order === "asc" ? "up" : "down"
+    }"></i> ${criteria}`;
+    indicator.style.marginLeft = "10px";
+    indicator.style.fontSize = "0.8rem";
+    indicator.style.color = "var(--primary-green)";
+
+    sortingControls.querySelector(".sort-options").appendChild(indicator);
+  }
+}
+
 // DOM Elements
 const courseSelect = document.getElementById("course-type");
 const confirmBtn = document.getElementById("confirm-courses");
@@ -1251,7 +1327,7 @@ function sameSlots(a, b) {
   );
 }
 
-// ✅ Show teacher options for each course
+// ✅ Show teacher options for each course (UPDATED WITH SORTING)
 function showTeacherOptions() {
   const selectedOptions = Array.from(courseSelect.selectedOptions);
 
@@ -1284,10 +1360,12 @@ function showTeacherOptions() {
       <h3>${courseCode}: ${course.name} (${course.credits} Credits)</h3>
       <div class="teacher-section">
         <div class="teacher-type-label">Theory Teachers</div>
+        <!-- Sorting controls will be inserted here by JavaScript -->
         <div class="teachers-grid" id="theory-${courseCode}"></div>
       </div>
       <div class="teacher-section">
         <div class="teacher-type-label">Lab Teachers</div>
+        <!-- Sorting controls will be inserted here by JavaScript -->
         <div class="teachers-grid" id="lab-${courseCode}"></div>
       </div>
     `;
@@ -1295,6 +1373,14 @@ function showTeacherOptions() {
 
     const theoryContainer = document.getElementById(`theory-${courseCode}`);
     const labContainer = document.getElementById(`lab-${courseCode}`);
+
+    // Add sorting controls
+    if (course.theoryTeachers?.length) {
+      addSortingControls(courseCode, "theory", theoryContainer);
+    }
+    if (course.labTeachers?.length) {
+      addSortingControls(courseCode, "lab", labContainer);
+    }
 
     // Helper to render teachers for theory/lab
     function renderTeacherOptions(container, type, teacherList) {
@@ -1307,16 +1393,16 @@ function showTeacherOptions() {
       const noPrefDiv = document.createElement("div");
       noPrefDiv.className = "teacher-card";
       noPrefDiv.innerHTML = `
-        <input type="radio" name="${groupName}" id="${noPrefId}" value="" hidden ${
+    <input type="radio" name="${groupName}" id="${noPrefId}" value="" hidden ${
         noPrefSelected ? "checked" : ""
       }>
-        <label class="card-ui ${
-          noPrefSelected ? "selected" : ""
-        }" for="${noPrefId}">
-          <div class="teacher-name">No Preference</div>
-          <div class="teacher-meta"><span class="rating">System will choose</span><span class="slots">Any slot</span></div>
-        </label>
-      `;
+    <label class="card-ui ${
+      noPrefSelected ? "selected" : ""
+    }" for="${noPrefId}">
+      <div class="teacher-name">No Preference</div>
+      <div class="teacher-meta"><span class="rating">System will choose</span><span class="slots">Any slot</span></div>
+    </label>
+  `;
       container.appendChild(noPrefDiv);
 
       document.getElementById(noPrefId).addEventListener("change", () => {
@@ -1334,8 +1420,39 @@ function showTeacherOptions() {
           });
       });
 
-      // Real teachers
-      teacherList.forEach((teacher) => {
+      // Real teachers - apply initial sorting if exists
+      let teachersToRender = [...teacherList];
+      if (currentSort.course === courseCode && currentSort.type === type) {
+        teachersToRender.sort((a, b) => {
+          let valueA, valueB;
+
+          switch (currentSort.criteria) {
+            case "rating":
+              valueA = parseRating(a.rating);
+              valueB = parseRating(b.rating);
+              break;
+            case "name":
+              valueA = a.name.toLowerCase();
+              valueB = b.name.toLowerCase();
+              break;
+            case "slots":
+              // FIXED: Use the same logic as sortTeachers - sort by slot codes alphabetically
+              valueA = a.slots.join(", ").toLowerCase();
+              valueB = b.slots.join(", ").toLowerCase();
+              break;
+            default:
+              return 0;
+          }
+
+          if (currentSort.order === "asc") {
+            return valueA < valueB ? -1 : valueA > valueB ? 1 : 0;
+          } else {
+            return valueA > valueB ? -1 : valueA < valueB ? 1 : 0;
+          }
+        });
+      }
+
+      teachersToRender.forEach((teacher) => {
         const key = `${groupName}-${teacher.name.replace(
           /\s+/g,
           "-"
@@ -1347,21 +1464,21 @@ function showTeacherOptions() {
         const div = document.createElement("div");
         div.className = "teacher-card";
         div.innerHTML = `
-          <input type="radio" name="${groupName}" id="${key}" value="${
+      <input type="radio" name="${groupName}" id="${key}" value="${
           teacher.name
         }" data-slots="${teacher.slots.join(",")}" hidden ${
           isSelected ? "checked" : ""
         }>
-          <label class="card-ui ${isSelected ? "selected" : ""}" for="${key}">
-            <div class="teacher-name">${teacher.name}</div>
-            <div class="teacher-meta">
-              <span class="rating">${
-                teacher.rating ? "⭐ " + teacher.rating : "No rating"
-              }</span>
-              <span class="slots">${teacher.slots.join(", ")}</span>
-            </div>
-          </label>
-        `;
+      <label class="card-ui ${isSelected ? "selected" : ""}" for="${key}">
+        <div class="teacher-name">${teacher.name}</div>
+        <div class="teacher-meta">
+          <span class="rating">${
+            teacher.rating ? "⭐ " + teacher.rating : "No rating"
+          }</span>
+          <span class="slots">${teacher.slots.join(", ")}</span>
+        </div>
+      </label>
+    `;
         container.appendChild(div);
 
         document.getElementById(key).addEventListener("change", (e) => {
@@ -1396,11 +1513,65 @@ function showTeacherOptions() {
   teacherSection.classList.remove("hidden");
 }
 
+function populateSelectedTeachersTable() {
+  const tbody = document.getElementById("selected-teachers-tbody");
+  const totalCreditsDisplay = document.getElementById("total-credits-display");
+
+  tbody.innerHTML = "";
+
+  if (selections.courses.length === 0) {
+    const emptyRow = document.createElement("tr");
+    emptyRow.innerHTML = `
+      <td colspan="7" class="empty-selection">
+        <i class="fas fa-users"></i>
+        <div>No courses selected</div>
+      </td>
+    `;
+    tbody.appendChild(emptyRow);
+    totalCreditsDisplay.textContent = "0";
+    return;
+  }
+
+  let totalCredits = 0;
+
+  selections.courses.forEach((courseCode) => {
+    const course = courseData[courseCode];
+    const selected = selections.teachers[courseCode];
+
+    if (!course) return;
+
+    const row = document.createElement("tr");
+
+    const theoryTeacher = selected?.theory;
+    const labTeacher = selected?.lab;
+
+    row.innerHTML = `
+      <td>${courseCode}</td>
+      <td>${course.name}</td>
+      <td>${theoryTeacher ? theoryTeacher.name : "Not selected"}</td>
+      <td>${theoryTeacher ? theoryTeacher.slots.join(", ") : "-"}</td>
+      <td>${labTeacher ? labTeacher.name : "Not selected"}</td>
+      <td>${labTeacher ? labTeacher.slots.join(", ") : "-"}</td>
+      <td>${course.credits}</td>
+    `;
+
+    tbody.appendChild(row);
+    totalCredits += course.credits || 0;
+  });
+
+  totalCreditsDisplay.textContent = totalCredits.toString();
+}
+
 // ✅ Generate Timetable based on selected teachers and slots
 function generateTimetable() {
+  // First, populate the teachers table
+  populateSelectedTeachersTable();
+
+  // Then continue with the existing timetable generation logic
   document.querySelectorAll(".course-slot").forEach((el) => el.remove());
   conflictWarnings.innerHTML = "";
 
+  // ... rest of your existing generateTimetable function remains exactly the same ...
   const conflicts = new Set();
   const timeMap = {};
   const labOnlyTimes = unifiedTimes
@@ -1482,6 +1653,9 @@ function generateTimetable() {
       }
     });
   });
+
+  // Refresh the teachers table with auto-selected teachers
+  populateSelectedTeachersTable();
 
   // Place teacher slots into the timetable
   selections.courses.forEach((courseCode) => {
@@ -1569,28 +1743,6 @@ function generateTimetable() {
   }
 
   timetableDisplay.classList.remove("hidden");
-
-  // ✅ Display total credits
-  let totalCredits = 0;
-  const creditSet = new Set(); // avoid double-counting
-
-  selections.courses.forEach((code) => {
-    if (courseData[code] && !creditSet.has(code)) {
-      totalCredits += courseData[code].credits || 0;
-      creditSet.add(code);
-    }
-  });
-
-  const creditBar = document.getElementById("total-credits");
-  if (creditBar) {
-    creditBar.textContent = `Total Credits: ${totalCredits}`;
-  } else {
-    const div = document.createElement("div");
-    div.id = "total-credits";
-    div.className = "total-credits";
-    div.textContent = `Total Credits: ${totalCredits}`;
-    conflictWarnings.insertAdjacentElement("beforebegin", div);
-  }
 }
 
 // ✅ Save/load selection
@@ -1632,17 +1784,82 @@ async function exportAsPDF() {
   try {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF({ orientation: "landscape", unit: "mm" });
-    doc.setFontSize(20);
-    doc.text("Timetable", 105, 15, { align: "center" });
+
+    // Add teachers table first
+    doc.setFontSize(16);
+    doc.text("Selected Teachers", 20, 15);
+
+    // Get teachers table data
+    let teachersContent = [];
+    let totalCredits = 0;
+
+    selections.courses.forEach((courseCode) => {
+      const course = courseData[courseCode];
+      const selected = selections.teachers[courseCode];
+      if (!course) return;
+
+      const theoryTeacher = selected?.theory;
+      const labTeacher = selected?.lab;
+
+      teachersContent.push({
+        courseCode,
+        courseName: course.name,
+        theoryTeacher: theoryTeacher ? theoryTeacher.name : "Not selected",
+        theorySlots: theoryTeacher ? theoryTeacher.slots.join(", ") : "-",
+        labTeacher: labTeacher ? labTeacher.name : "Not selected",
+        labSlots: labTeacher ? labTeacher.slots.join(", ") : "-",
+        credits: course.credits,
+      });
+
+      totalCredits += course.credits || 0;
+    });
+
+    // Add teachers table content
+    let yPosition = 25;
+    doc.setFontSize(10);
+
+    teachersContent.forEach((item) => {
+      if (yPosition > 250) {
+        doc.addPage();
+        yPosition = 20;
+      }
+
+      doc.text(`${item.courseCode} - ${item.courseName}`, 20, yPosition);
+      yPosition += 5;
+      doc.text(
+        `Theory: ${item.theoryTeacher} (${item.theorySlots})`,
+        25,
+        yPosition
+      );
+      yPosition += 5;
+      doc.text(`Lab: ${item.labTeacher} (${item.labSlots})`, 25, yPosition);
+      yPosition += 5;
+      doc.text(`Credits: ${item.credits}`, 25, yPosition);
+      yPosition += 8;
+    });
+
+    // Add total credits
+    doc.text(`Total Credits: ${totalCredits}`, 20, yPosition);
+    yPosition += 15;
+
+    // Add timetable
+    if (yPosition > 180) {
+      doc.addPage();
+      yPosition = 20;
+    }
+
+    doc.setFontSize(16);
+    doc.text("Timetable", 20, yPosition);
+    yPosition += 10;
 
     const timetableElement = document.querySelector(".timetable-container");
-    const canvas = await html2canvas(timetableElement, { scale: 2 });
+    const canvas = await html2canvas(timetableElement, { scale: 1.5 });
     const imgData = canvas.toDataURL("image/png");
-    const imgWidth = 280;
+    const imgWidth = 270;
     const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-    doc.addImage(imgData, "PNG", 10, 20, imgWidth, imgHeight);
-    doc.save("timetable.pdf");
+    doc.addImage(imgData, "PNG", 10, yPosition, imgWidth, imgHeight);
+    doc.save("timetable-with-teachers.pdf");
   } catch (e) {
     alert("Export failed: " + e.message);
   }
@@ -1650,12 +1867,40 @@ async function exportAsPDF() {
 
 async function exportAsImage() {
   try {
-    const timetableElement = document.querySelector(".timetable-container");
-    const canvas = await html2canvas(timetableElement, { scale: 2 });
+    // Create a container to capture both teachers table and timetable
+    const exportContainer = document.createElement("div");
+    exportContainer.style.cssText = `
+      position: fixed;
+      left: -10000px;
+      top: -10000px;
+      width: 1200px;
+      background: white;
+      padding: 20px;
+      z-index: 10000;
+    `;
+
+    // Clone the teachers table
+    const teachersTable = document
+      .getElementById("selected-teachers-table")
+      .cloneNode(true);
+    teachersTable.style.marginBottom = "30px";
+    exportContainer.appendChild(teachersTable);
+
+    // Clone the timetable
+    const timetable = document
+      .querySelector(".timetable-container")
+      .cloneNode(true);
+    exportContainer.appendChild(timetable);
+
+    document.body.appendChild(exportContainer);
+
+    const canvas = await html2canvas(exportContainer, { scale: 2 });
     const link = document.createElement("a");
-    link.download = "timetable.png";
+    link.download = "timetable-with-teachers.png";
     link.href = canvas.toDataURL("image/png");
     link.click();
+
+    document.body.removeChild(exportContainer);
   } catch (e) {
     alert("Image export failed: " + e.message);
   }
@@ -1673,7 +1918,7 @@ function resetSelections() {
   conflictWarnings.innerHTML = "";
 }
 
-// ✅ Event listners
+// ✅ Event listeners
 document.addEventListener("DOMContentLoaded", () => {
   initializeTimetable();
 
@@ -1688,7 +1933,3 @@ document.addEventListener("DOMContentLoaded", () => {
   exportPdfBtn.addEventListener("click", exportAsPDF);
   exportImageBtn.addEventListener("click", exportAsImage);
 });
-
-console.log(generateBtn); // should not be null
-console.log(window.getComputedStyle(generateBtn).display);
-console.log("Children in timetableGrid:", timetableGrid.children.length);
