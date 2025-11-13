@@ -14,7 +14,7 @@ Includes complete information for 4th Semester — all courses, teachers, and sl
 Automatically lists your chosen teachers in a neat, shareable format — perfect for sending your final selections to friends or teammates.
 
 
-## From v2.0 (Features You Still Have)
+## From v2.0 
 
 Smart Slot Mapping Logic — Unified alignment for theory + lab slots.
 Lab-only Time Handling — Auto-skips theory slots during lab hours.
