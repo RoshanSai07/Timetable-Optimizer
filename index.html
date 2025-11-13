@@ -74,15 +74,20 @@
               <button id="back-to-courses" class="secondary-btn">
                 <i class="fas fa-arrow-left"></i> Back to Courses
               </button>
-              <button id="save-selection" class="secondary-btn">
-                <i class="fas fa-save"></i> Save Selection
-              </button>
-              <button id="load-selection" class="secondary-btn">
-                <i class="fas fa-folder-open"></i> Load Selection
-              </button>
+              <div>
+                <button id="save-selection" class="secondary-btn">
+                  <i class="fas fa-save"></i> Save Selection
+                </button>
+                <button id="load-selection" class="secondary-btn">
+                  <i class="fas fa-folder-open"></i> Load Selection
+                </button>
+              </div>
             </div>
           </div>
-          <div id="teacher-options-container" class="teachers-grid"></div>
+
+          <div id="teacher-options-container">
+            <!-- Course sections with sorting controls will be dynamically inserted here -->
+          </div>
           <div class="action-buttons">
             <button id="generate-timetable" class="primary-btn">
               <i class="fas fa-calendar-check"></i> Generate Timetable
@@ -93,7 +98,6 @@
           </div>
         </section>
 
-        <!-- Timetable Display Section -->
         <section id="timetable-display" class="hidden">
           <div class="section-header">
             <h2><i class="fas fa-table"></i> Your Timetable</h2>
@@ -117,6 +121,46 @@
               </div>
             </div>
           </div>
+
+          <!-- NEW: Selected Teachers Table -->
+          <div
+            id="selected-teachers-table"
+            class="selected-teachers-table card"
+          >
+            <h3><i class="fas fa-users"></i> Selected Teachers</h3>
+            <div class="table-container">
+              <table class="teachers-table">
+                <thead>
+                  <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Theory Teacher</th>
+                    <th>Theory Slots</th>
+                    <th>Lab Teacher</th>
+                    <th>Lab Slots</th>
+                    <th>Credits</th>
+                  </tr>
+                </thead>
+                <tbody id="selected-teachers-tbody">
+                  <!-- Will be populated by JavaScript -->
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td
+                      colspan="6"
+                      style="text-align: right; font-weight: bold"
+                    >
+                      Total Credits:
+                    </td>
+                    <td id="total-credits-display" style="font-weight: bold">
+                      0
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+
           <div class="timetable-container">
             <div class="timetable-grid" id="timetable-grid"></div>
           </div>
@@ -131,7 +175,7 @@
 
       <footer class="app-footer">
         <p>Made with <i class="fas fa-heart"></i> for students</p>
-        <p class="version">Version 3.0.1</p>
+        <p class="version">Version 3.1.0</p>
       </footer>
     </div>
 
