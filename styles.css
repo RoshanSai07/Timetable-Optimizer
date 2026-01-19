@@ -322,6 +322,7 @@ button:disabled {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0.5rem 0;
 }
 
