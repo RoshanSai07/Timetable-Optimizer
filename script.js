@@ -1,15 +1,69 @@
 const slotStructure = {
+  MON: {
+    theorySlots: [
+      ["-"],
+      ["TA1"],
+      ["TB1"],
+      ["E1"],
+      ["E1"],
+      ["TA2"],
+      ["TB2"],
+      ["E2"],
+      ["E2"],
+      ["-"],
+    ],
+    theoryTimes: [
+      "8.00 - 8.50",
+      "9.00 - 9.50",
+      "10.00 - 10.50",
+      "11.00 - 11.50",
+      "12.00 - 12.50",
+      "2.00 - 2.50",
+      "3.00 - 3.50",
+      "4.00 - 4.50",
+      "5.00 - 5.50",
+      "6.00 - 6.50",
+    ],
+    labSlots: [
+      ["L61"],
+      ["L62"],
+      ["L63"],
+      ["L64"],
+      ["L65"],
+      ["L66"],
+      ["L67"],
+      ["L68"],
+      ["L69"],
+      ["L70"],
+      ["L71"],
+      ["L72"],
+    ],
+    labTimes: [
+      "8.00 - 8.50",
+      "9.00 - 9.50",
+      "10.00 - 10.50",
+      "11.00 - 11.50",
+      "12.00 - 12.50",
+      "12.50 - 1.30",
+      "2.00 - 2.50",
+      "3.00 - 3.50",
+      "4.00 - 4.50",
+      "5.00 - 5.50",
+      "6.00 - 6.50",
+      "6.50 - 7.40",
+    ],
+  },
   TUE: {
     theorySlots: [
       ["TFF1"],
-      ["A1"],
-      ["B1"],
-      ["TC1", "G1"],
+      ["A1", "SE2"],
+      ["B1", "SD2"],
+      ["C1"],
       ["D1"],
       ["F2"],
-      ["A2"],
-      ["B2"],
-      ["TC2", "G2"],
+      ["A2", "SF1"],
+      ["B2", "SC1"],
+      ["C2"],
       ["TDD2"],
     ],
     theoryTimes: [
@@ -55,16 +109,16 @@ const slotStructure = {
   },
   WED: {
     theorySlots: [
-      ["TGG1"],
+      ["TG1"],
+      ["C1"],
       ["D1"],
+      ["A1", "SB1"],
       ["F1"],
-      ["E1", "SC2"],
-      ["B1"],
+      ["E2"],
+      ["C2"],
+      ["A2", "SB1"],
       ["D2"],
-      ["TF2", "G2"],
-      ["E2", "SC1"],
-      ["B2"],
-      ["TCC2"],
+      ["TFF2"],
     ],
     theoryTimes: [
       "8.00 - 8.50",
@@ -109,16 +163,16 @@ const slotStructure = {
   },
   THU: {
     theorySlots: [
-      ["TEE1"],
+      ["TG1"],
       ["C1"],
-      ["TD1", "TG1"],
-      ["TAA1", "ECS"],
-      ["TBB1", "CLUB"],
-      ["TE2", "SE1"],
+      ["D1"],
+      ["A1", "SB2"],
+      ["TF1"],
+      ["E2"],
       ["C2"],
-      ["A2"],
-      ["TD2", "TG2"],
-      ["TGG2"],
+      ["A2", "SB1"],
+      ["D2"],
+      ["TFF2"],
     ],
     theoryTimes: [
       "8.00 - 8.50",
@@ -163,15 +217,15 @@ const slotStructure = {
   },
   FRI: {
     theorySlots: [
-      ["TCC1"],
-      ["TB1"],
-      ["TA1"],
-      ["F1"],
-      ["TE1", "SD2"],
-      ["C2"],
-      ["TB2"],
-      ["TA2"],
-      ["F2"],
+      ["TDD1"],
+      ["B1", "SA2"],
+      ["A1", "SF2"],
+      ["G1", "TF1"],
+      ["E1"],
+      ["TC2"],
+      ["B2", "SA1"],
+      ["A2", "SE1"],
+      ["G2", "TF2"],
       ["TEE2"],
     ],
     theoryTimes: [
@@ -217,16 +271,16 @@ const slotStructure = {
   },
   SAT: {
     theorySlots: [
-      ["TDD1"],
-      ["E1", "SE2"],
+      ["-"],
+      ["TC1"],
       ["C1"],
-      ["TF1", "G1"],
-      ["A1"],
+      ["F1"],
+      ["G1", "TD1"],
+      ["G2", "TD2"],
       ["D2"],
-      ["E2", "SD1"],
-      ["TAA2", "ECS"],
-      ["TBB2", "CLUB"],
-      ["TFF2"],
+      ["F2"],
+      ["C2"],
+      ["-"],
     ],
     theoryTimes: [
       "8.00 - 8.50",
@@ -320,750 +374,498 @@ const unifiedTimes = [
 
 // Sample data with more realistic slots
 const courseData = {
-  CSE1005: {
-    name: "Software Engineering",
-    credits: 4,
-    theoryTeachers: [
-      { name: "Anurag De", slots: ["B1", "TB1"], rating: 2.96 },
-      { name: "Tauseef Khan", slots: ["B1", "TB1"], rating: 4.37 },
-      { name: "Naga Jagadesh Bommagani", slots: ["B1", "TB1"], rating: 4.62 },
-      { name: "Dasari Sandeep", slots: ["B1", "TB1"], rating: "-" },
-      { name: "JYOTHSNA.K", slots: ["B1", "TB1"], rating: "-" },
-      { name: "KARNA KRISHNAVENI", slots: ["B1", "TB1"], rating: "-" },
-      { name: "NAGAEESWARI BODAPATI", slots: ["B1", "TB1"], rating: "-" },
-      { name: "Pechetti Mounika", slots: ["B1", "TB1"], rating: "-" },
-      { name: "SAMBASIVA RAO GUMMA", slots: ["B1", "TB1"], rating: "-" },
-      { name: "Saroja Kumar Rout", slots: ["B1", "TB1"], rating: "-" },
-      { name: "SHARMILA SHAIK", slots: ["B1", "TB1"], rating: "-" },
-
-      { name: "M JAGADEESH", slots: ["B2", "TB2"], rating: 3.32 },
-      { name: "Nagendra Panini Challa", slots: ["B2", "TB2"], rating: 4.52 },
-      { name: "JYOTHSNA.K", slots: ["B2", "TB2"], rating: "-" },
-      { name: "MOHAMMAD SIRAJUDDIN", slots: ["B2", "TB2"], rating: "-" },
-      { name: "NAGAEESWARI BODAPATI", slots: ["B2", "TB2"], rating: "-" },
-      { name: "Pechetti Mounika", slots: ["B2", "TB2"], rating: "-" },
-      { name: "R PRASANNA KUMARI", slots: ["B2", "TB2"], rating: "-" },
-      { name: "SAMBASIVA RAO GUMMA", slots: ["B2", "TB2"], rating: "-" },
-      { name: "SHARMILA SHAIK", slots: ["B2", "TB2"], rating: "-" },
-      { name: "Varunkumar Anantharaman", slots: ["B2", "TB2"], rating: "-" },
-      { name: "Yelepi Usha Rani", slots: ["B2", "TB2"], rating: "-" },
-
-      { name: "Selva Kumar S", slots: ["C1", "TC1"], rating: 3.35 },
-      { name: "Bileesh P Babu", slots: ["C1", "TC1"], rating: "-" },
-      { name: "DHULIPALLA NAGAJYOTHI", slots: ["C1", "TC1"], rating: "-" },
-      { name: "Koduru Hajarathaiah", slots: ["C1", "TC1"], rating: "-" },
-      { name: "LAKSHMI PRASANNA MEDA", slots: ["C1", "TC1"], rating: "-" },
-      { name: "POTHINA POORNACHANDU", slots: ["C1", "TC1"], rating: "-" },
-      { name: "S V KISHORE BABU", slots: ["C1", "TC1"], rating: "-" },
-
-      { name: "Annapureddy V N Reddy", slots: ["C1", "TCC1"], rating: "-" },
-      {
-        name: "Battula Venkata Satish Babu",
-        slots: ["C1", "TCC1"],
-        rating: "-",
-      },
-      { name: "NADENLLA RAJAMOHANREDDY", slots: ["C1", "TCC1"], rating: "-" },
-
-      { name: "Selva Kumar S", slots: ["C2", "TC2"], rating: 3.35 },
-      { name: "Balusa Bhanu Chander", slots: ["C2", "TC2"], rating: "-" },
-      { name: "DHULIPALLA NAGAJYOTHI", slots: ["C2", "TC2"], rating: "-" },
-      { name: "G.Muneeswari", slots: ["C2", "TC2"], rating: "-" },
-      { name: "KARNA KRISHNAVENI", slots: ["C2", "TC2"], rating: "-" },
-      { name: "LAKSHMI PRASANNA MEDA", slots: ["C2", "TC2"], rating: "-" },
-      { name: "POTHINA POORNACHANDU", slots: ["C2", "TC2"], rating: "-" },
-
-      {
-        name: "Battula Venkata Satish Babu",
-        slots: ["C2", "TCC2"],
-        rating: "-",
-      },
-      {
-        name: "Prof.SCOPE Dig Crs Faculty-11",
-        slots: ["C2", "TCC2"],
-        rating: "-",
-      },
-      { name: "S V KISHORE BABU", slots: ["C2", "TCC2"], rating: "-" },
-    ],
-    labTeachers: [
-      {
-        name: "Soubhagya Sankar Barpanda",
-        slots: ["L10", "L11"],
-        rating: 3.13,
-      },
-      { name: "Gokul Yenduri", slots: ["L10", "L11"], rating: "-" },
-
-      { name: "Saroja Kumar Rout", slots: ["L14", "L15"], rating: "-" },
-      { name: "Allapati Rajya Lakshmi", slots: ["L14", "L15"], rating: "-" },
-
-      { name: "B.V.Gokulnath", slots: ["L2", "L3"], rating: "-" },
-      { name: "G.HARANADHA BABU", slots: ["L2", "L3"], rating: "-" },
-
-      { name: "LAKSHMI PRASANNA MEDA", slots: ["L20", "L21"], rating: "-" },
-      { name: "DHULIPALLA NAGAJYOTHI", slots: ["L20", "L21"], rating: "-" },
-
-      { name: "B.V.Gokulnath", slots: ["L22", "L23"], rating: "-" },
-      { name: "Pechetti Mounika", slots: ["L22", "L23"], rating: "-" },
-
-      { name: "Hussain Syed", slots: ["L26", "L27"], rating: "-" },
-      { name: "Arindam Dey", slots: ["L26", "L27"], rating: "-" },
-
-      { name: "JAINABBI BANDA", slots: ["L28", "L29"], rating: "-" },
-      { name: "SHAIK SHAHANAZ", slots: ["L28", "L29"], rating: "-" },
-
-      { name: "SHARMILA SHAIK", slots: ["L31", "L32"], rating: "-" },
-      { name: "S V KISHORE BABU", slots: ["L31", "L32"], rating: "-" },
-
-      { name: "Khasim Syed", slots: ["L33", "L34"], rating: 3.03 },
-      { name: "JAINABBI BANDA", slots: ["L33", "L34"], rating: "-" },
-
-      { name: "SAMBASIVA RAO GUMMA", slots: ["L35", "L36"], rating: "-" },
-      {
-        name: "MUNIPALLI UMA MAHESWARA RAO",
-        slots: ["L35", "L36"],
-        rating: "-",
-      },
-      { name: "M JAGADEESH", slots: ["L35", "L36"], rating: "-" },
-
-      { name: "Gokul Yenduri", slots: ["L37", "L38"], rating: "-" },
-      { name: "Allapati Rajya Lakshmi", slots: ["L37", "L38"], rating: "-" },
-
-      { name: "YAMINI KODALI", slots: ["L39", "L40"], rating: "-" },
-      { name: "Naga Jagadesh Bommagani", slots: ["L39", "L40"], rating: "-" },
-
-      { name: "Khasim Syed", slots: ["L4", "L5"], rating: "-" },
-      { name: "SHAIK SHAHANAZ", slots: ["L4", "L5"], rating: "-" },
-
-      { name: "BHABANI SANKAR SAMANTRAY", slots: ["L41", "L42"], rating: "-" },
-      { name: "G.HARANADHA BABU", slots: ["L41", "L42"], rating: "-" },
-
-      { name: "Pechetti Mounika", slots: ["L43", "L44"], rating: "-" },
-      { name: "ODNALA SRINIVAS", slots: ["L43", "L44"], rating: "-" },
-
-      { name: "Koduru Hajarathaiah", slots: ["L45", "L46"], rating: "-" },
-      { name: "Soubhagya Sankar Barpanda", slots: ["L45", "L46"], rating: "-" },
-
-      { name: "POTHINA POORNACHANDU", slots: ["L47", "L48"], rating: "-" },
-      { name: "BHABANI SANKAR SAMANTRAY", slots: ["L47", "L48"], rating: "-" },
-
-      { name: "Arindam Dey", slots: ["L49", "L50"], rating: "-" },
-      { name: "YAMINI KODALI", slots: ["L49", "L50"], rating: "-" },
-
-      { name: "Hussain Syed", slots: ["L51", "L52"], rating: "-" },
-      {
-        name: "MUNIPALLI UMA MAHESWARA RAO",
-        slots: ["L51", "L52"],
-        rating: "-",
-      },
-
-      { name: "M JAGADEESH", slots: ["L53", "L54"], rating: "-" },
-      {
-        name: "Prof.SCOPE Dig Crs Faculty-1",
-        slots: ["L53", "L54"],
-        rating: "-",
-      },
-      { name: "PREM SWARUP MALLIPUDI", slots: ["L53", "L54"], rating: "-" },
-
-      {
-        name: "Battula Venkata Satish Babu",
-        slots: ["L55", "L56"],
-        rating: "-",
-      },
-      { name: "ODNALA SRINIVAS", slots: ["L55", "L56"], rating: "-" },
-
-      { name: "PREM SWARUP MALLIPUDI", slots: ["L8", "L9"], rating: "-" },
-      { name: "ANANTHA HARITHA", slots: ["L8", "L9"], rating: "-" },
-    ],
-  },
-  CSE2007: {
-    name: "Database Management Systems",
-    credits: 4,
-    theoryTeachers: [
-      { name: "Beebi Naseeba", slots: ["C1", "TC1"], rating: 4.1 },
-      { name: "P. Kuppusamy", slots: ["C1", "TC1"], rating: 3.2 },
-      { name: "Paidipogu Sowjanya", slots: ["C1", "TC1"], rating: "-" },
-      { name: "PATAN MUSHIYA KATOON", slots: ["C1", "TC1"], rating: "-" },
-      { name: "RAJASEKAR RAMASAMY", slots: ["C1", "TC1"], rating: "-" },
-      { name: "Srinivasarao.Pokuri", slots: ["C1", "TC1"], rating: "-" },
-      { name: "Yallanti Sowjanya Kumari", slots: ["C1", "TC1"], rating: "-" },
-      { name: "Yarlagadda Siva Reshma", slots: ["C1", "TC1"], rating: "-" },
-
-      { name: "Burla Nagaraju", slots: ["C1", "TCC1"], rating: "-" },
-      { name: "Ravi Kumar Poluru", slots: ["C1", "TCC1"], rating: "-" },
-      { name: "Voddelli SriLakshmi", slots: ["C1", "TCC1"], rating: "-" },
-
-      { name: "Beebi Naseeba", slots: ["C2", "TC2"], rating: 4.1 },
-      { name: "BUDIDA SATISH KUMAR", slots: ["C2", "TC2"], rating: "-" },
-      { name: "P. Kuppusamy", slots: ["C2", "TC2"], rating: 3.2 },
-      { name: "Paidipogu Sowjanya", slots: ["C2", "TC2"], rating: "-" },
-      { name: "PATAN MUSHIYA KATOON", slots: ["C2", "TC2"], rating: "-" },
-      { name: "Rajasekhar Boddu", slots: ["C2", "TC2"], rating: "-" },
-      { name: "Yallanti Sowjanya Kumari", slots: ["C2", "TC2"], rating: "-" },
-      { name: "Yarlagadda Siva Reshma", slots: ["C2", "TC2"], rating: "-" },
-
-      { name: "Burla Nagaraju", slots: ["C2", "TCC2"], rating: "-" },
-      { name: "D. Paul Joseph", slots: ["C2", "TCC2"], rating: "-" },
-      { name: "Ravi Kumar Poluru", slots: ["C2", "TCC2"], rating: "-" },
-
-      { name: "Asish Kumar Dalai", slots: ["D1", "TD1"], rating: 3.5 },
-      { name: "Devulapalli Sudheer", slots: ["D1", "TD1"], rating: "-" },
-      { name: "G.Muneeswari", slots: ["D1", "TD1"], rating: 4.6 },
-      { name: "Monalisa Sahu", slots: ["D1", "TD1"], rating: "-" },
-      { name: "N Lakshmipathi Anantha", slots: ["D1", "TD1"], rating: "-" },
-      {
-        name: "Siddique Ibrahim Peer Mohamed",
-        slots: ["D1", "TD1"],
-        rating: 4.4,
-      },
-      { name: "Somya Ranjan Sahoo", slots: ["D1", "TD1"], rating: 3.4 },
-
-      { name: "Madugula Kiran Kumar", slots: ["D1", "TDD1"], rating: "-" },
-      { name: "SHAIK KHASIM BASHA", slots: ["D1", "TDD1"], rating: "-" },
-      {
-        name: "Siddique Ibrahim Peer Mohamed",
-        slots: ["D1", "TDD1"],
-        rating: 3.9,
-      },
-
-      { name: "Kailash Chandra Mishra", slots: ["D2", "TD2"], rating: "-" },
-      { name: "N Lakshmipathi Anantha", slots: ["D2", "TD2"], rating: "-" },
-      { name: "Nagaraju Devarakonda", slots: ["D2", "TD2"], rating: 4.0 },
-      { name: "Samuka Mohanty", slots: ["D2", "TD2"], rating: "-" },
-      {
-        name: "Siddique Ibrahim Peer Mohamed",
-        slots: ["D2", "TD2"],
-        rating: 4.4,
-      },
-      { name: "Somya Ranjan Sahoo", slots: ["D2", "TD2"], rating: 3.4 },
-      { name: "TANUKONDA PADMAJA", slots: ["D2", "TD2"], rating: "-" },
-
-      { name: "Madugula Kiran Kumar", slots: ["D2", "TDD2"], rating: "-" },
-      { name: "RAJASEKAR RAMASAMY", slots: ["D2", "TDD2"], rating: "-" },
-      { name: "SHAIK KHASIM BASHA", slots: ["D2", "TDD2"], rating: "-" },
-    ],
-    labTeachers: [
-      { name: "Rajesh Duvvuru", slots: ["L10", "L11"], rating: 4.32 },
-      { name: "PATAN MUSHIYA KATOON", slots: ["L10", "L11"], rating: "-" },
-
-      { name: "Lalitha Kumari P", slots: ["L14", "L15"], rating: 4.27 },
-      { name: "BUDIDA SATISH KUMAR", slots: ["L14", "L15"], rating: "-" },
-
-      { name: "Afzal Hussain Shahid", slots: ["L2", "L3"], rating: 3.29 },
-      { name: "Yarlagadda Siva Reshma", slots: ["L2", "L3"], rating: "-" },
-
-      { name: "Madugula Kiran Kumar", slots: ["L20", "L21"], rating: "-" },
-      { name: "RAJASEKAR RAMASAMY", slots: ["L20", "L21"], rating: "-" },
-
-      { name: "Manomita Chakraborty", slots: ["L22", "L23"], rating: 2.23 },
-      { name: "Sandipan Maiti", slots: ["L22", "L23"], rating: 3.42 },
-
-      { name: "SHAIK RESHMA", slots: ["L26", "L27"], rating: "-" },
-      { name: "SHAIK KHASIM BASHA", slots: ["L26", "L27"], rating: "-" },
-
-      { name: "Ravi Sankar Barpanda", slots: ["L28", "L29"], rating: 4.86 },
-      { name: "Deepasikha Mishra", slots: ["L28", "L29"], rating: 2.96 },
-
-      { name: "Yallanti Sowjanya Kumari", slots: ["L31", "L32"], rating: "-" },
-      {
-        name: "Mukkoti Maruthi Venkata Chalapathi",
-        slots: ["L31", "L32"],
-        rating: 4.11,
-      },
-
-      { name: "Burla Nagaraju", slots: ["L33", "L34"], rating: "-" },
-      { name: "S. Kalyani", slots: ["L33", "L34"], rating: "-" },
-
-      { name: "Hemant Kumar Reddy", slots: ["L35", "L36"], rating: 2.89 },
-      { name: "BUDIDA SATISH KUMAR", slots: ["L35", "L36"], rating: "-" },
-
-      { name: "Sandipan Maiti", slots: ["L37", "L38"], rating: 3.42 },
-      { name: "Ravi Sankar Barpanda", slots: ["L37", "L38"], rating: 4.86 },
-
-      { name: "Visalakshi Annepu", slots: ["L39", "L40"], rating: 3.74 },
-      { name: "Rajesh Duvvuru", slots: ["L39", "L40"], rating: 4.32 },
-      { name: "Yarlagadda Siva Reshma", slots: ["L39", "L40"], rating: "-" },
-
-      { name: "Burla Nagaraju", slots: ["L4", "L5"], rating: "-" },
-      { name: "SHAIK RESHMA", slots: ["L4", "L5"], rating: "-" },
-
-      { name: "Madugula Kiran Kumar", slots: ["L41", "L42"], rating: "-" },
-      { name: "Aravapalli Rama Satish", slots: ["L41", "L42"], rating: 2.31 },
-
-      { name: "Manomita Chakraborty", slots: ["L43", "L44"], rating: 2.23 },
-      { name: "Lalitha Kumari P", slots: ["L43", "L44"], rating: 4.27 },
-
-      { name: "Deepasikha Mishra", slots: ["L45", "L46"], rating: 2.96 },
-      { name: "JANGAM PAVANI PRAVALLIKA", slots: ["L45", "L46"], rating: "-" },
-
-      {
-        name: "Mukkoti Maruthi Venkata Chalapathi",
-        slots: ["L47", "L48"],
-        rating: 4.11,
-      },
-      {
-        name: "Prof.SCOPE Dig Crs Faculty-1",
-        slots: ["L47", "L48"],
-        rating: "-",
-      },
-
-      { name: "Aravapalli Rama Satish", slots: ["L49", "L50"], rating: 2.31 },
-      { name: "Hemant Kumar Reddy", slots: ["L49", "L50"], rating: 2.89 },
-
-      { name: "Srinivasarao.Pokuri", slots: ["L51", "L52"], rating: "-" },
-      { name: "Afzal Hussain Shahid", slots: ["L51", "L52"], rating: 3.29 },
-
-      { name: "MAHABOOBSUBHANI SHAIK CH", slots: ["L53", "L54"], rating: "-" },
-      {
-        name: "Prof.SCOPE Dig Crs Faculty-2",
-        slots: ["L53", "L54"],
-        rating: "-",
-      },
-
-      {
-        name: "Prof.SCOPE Dig Crs Faculty-2",
-        slots: ["L55", "L56"],
-        rating: "-",
-      },
-      { name: "Paidipogu Sowjanya", slots: ["L55", "L56"], rating: "-" },
-
-      { name: "Visalakshi Annepu", slots: ["L8", "L9"], rating: 3.74 },
-      { name: "S. Kalyani", slots: ["L8", "L9"], rating: "-" },
-    ],
-  },
-  CSE3008: {
-    name: "Introduction to Machine Learning",
-    credits: 4,
-    theoryTeachers: [
-      { name: "Renita R", slots: ["E1", "TE1"], rating: "-" },
-      { name: "Yallanti Sowjanya Kumari", slots: ["E1", "TE1"], rating: "-" },
-      { name: "Bileesh P Babu", slots: ["E1", "TE1"], rating: "-" },
-      { name: "T Rama Thulasi", slots: ["E1", "TE1"], rating: "-" },
-      { name: "NAGA MALLESWARARAO P", slots: ["E1", "TE1"], rating: "-" },
-      { name: "ANANTHA HARITHA", slots: ["E1", "TE1"], rating: "-" },
-      { name: "Pujari Jeevana Jyothi", slots: ["E1", "TE1"], rating: "-" },
-      { name: "P. Kuppusamy", slots: ["E1", "TEE1"], rating: "-" },
-
-      { name: "NAGA MALLESWARARAO P", slots: ["E2", "TE2"], rating: "-" },
-      { name: "Renita R", slots: ["E2", "TE2"], rating: "-" },
-      { name: "ANANTHA HARITHA", slots: ["E2", "TE2"], rating: "-" },
-      { name: "Pujari Jeevana Jyothi", slots: ["E2", "TE2"], rating: "-" },
-      { name: "Selva Kumar S", slots: ["E2", "TE2"], rating: "-" },
-      { name: "Gayathri Dhara", slots: ["E2", "TE2"], rating: "-" },
-      { name: "Bileesh P Babu", slots: ["E2", "TE2"], rating: "-" },
-      { name: "Karrothu Aravind", slots: ["E2", "TE2"], rating: "-" },
-
-      { name: "Srinivasa Reddy Konda", slots: ["F1", "TF1"], rating: "-" },
-      { name: "Prashanth Rajam", slots: ["F1", "TF1"], rating: "-" },
-      { name: "Saroja Kumar Rout", slots: ["F1", "TF1"], rating: "-" },
-      { name: "SHAIK SUFIA", slots: ["F1", "TF1"], rating: "-" },
-      { name: "Shalini Subramani", slots: ["F1", "TF1"], rating: "-" },
-      { name: "Jayanta Pratihar", slots: ["F1", "TFF1"], rating: "-" },
-      { name: "P.ADI LAKSHMI", slots: ["F1", "TFF1"], rating: "-" },
-      { name: "YOHOSHIVA BASARABOYINA", slots: ["F1", "TFF1"], rating: "-" },
-
-      { name: "GUNDIMEDA VENUGOPAL", slots: ["F2", "TF2"], rating: "-" },
-      { name: "Prashanth Rajam", slots: ["F2", "TF2"], rating: "-" },
-      { name: "SHAIK SUFIA", slots: ["F2", "TF2"], rating: "-" },
-      {
-        name: "Siddique Ibrahim Peer Mohamed",
-        slots: ["F2", "TF2"],
-        rating: "-",
-      },
-      { name: "Saroja Kumar Rout", slots: ["F2", "TFF2"], rating: "-" },
-      { name: "Karrothu Aravind", slots: ["F2", "TFF2"], rating: "-" },
-      { name: "YOHOSHIVA BASARABOYINA", slots: ["F2", "TFF2"], rating: "-" },
-    ],
-    labTeachers: [
-      { name: "Sanal Kumar T S", slots: ["L10", "L11"], rating: "-" },
-      { name: "Sanal Kumar T S", slots: ["L14", "L15"], rating: "-" },
-      { name: "Pujari Jeevana Jyothi", slots: ["L14", "L15"], rating: "-" },
-
-      { name: "Bileesh P Babu", slots: ["L2", "L3"], rating: "-" },
-      { name: "Suresh Dara", slots: ["L2", "L3"], rating: "-" },
-
-      { name: "Mohan Allam", slots: ["L20", "L21"], rating: "-" },
-      { name: "Selva Kumar S", slots: ["L20", "L21"], rating: "-" },
-
-      { name: "Monali Bordoloi", slots: ["L22", "L23"], rating: "-" },
-
-      {
-        name: "Siddique Ibrahim Peer Mohamed",
-        slots: ["L26", "L27"],
-        rating: "-",
-      },
-
-      { name: "P. Kuppusamy", slots: ["L28", "L29"], rating: "-" },
-
-      { name: "T Rama Thulasi", slots: ["L31", "L32"], rating: "-" },
-
-      { name: "Srinivasa Reddy Konda", slots: ["L33", "L34"], rating: "-" },
-      { name: "Suma Kamalesh Gandhimathi", slots: ["L33", "L34"], rating: "-" },
-
-      {
-        name: "Chintakindi Balaram Murthy",
-        slots: ["L35", "L36"],
-        rating: "-",
-      },
-      { name: "NAGA MALLESWARARAO P", slots: ["L35", "L36"], rating: "-" },
-
-      { name: "Yamarthi Narasimha Rao", slots: ["L37", "L38"], rating: "-" },
-
-      { name: "Monali Bordoloi", slots: ["L39", "L40"], rating: "-" },
-
-      { name: "Bommareddy Lokesh", slots: ["L4", "L5"], rating: "-" },
-      { name: "Shaik Subhani", slots: ["L4", "L5"], rating: "-" },
-
-      {
-        name: "Prof.SCOPE Dig Crs Faculty-2",
-        slots: ["L41", "L42"],
-        rating: "-",
-      },
-      { name: "Mohan Allam", slots: ["L41", "L42"], rating: "-" },
-
-      { name: "Prashanth Rajam", slots: ["L43", "L44"], rating: "-" },
-
-      { name: "Suresh Dara", slots: ["L45", "L46"], rating: "-" },
-      { name: "Radha Mohan Pattanayak", slots: ["L45", "L46"], rating: "-" },
-      { name: "Suma Kamalesh Gandhimathi", slots: ["L45", "L46"], rating: "-" },
-
-      {
-        name: "Prof.SCOPE Dig Crs Faculty-2",
-        slots: ["L47", "L48"],
-        rating: "-",
-      },
-
-      {
-        name: "Chintakindi Balaram Murthy",
-        slots: ["L49", "L50"],
-        rating: "-",
-      },
-      { name: "Yamarthi Narasimha Rao", slots: ["L49", "L50"], rating: "-" },
-
-      { name: "Bommareddy Lokesh", slots: ["L51", "L52"], rating: "-" },
-
-      {
-        name: "Prof.SCOPE Dig Crs Faculty-3",
-        slots: ["L53", "L54"],
-        rating: "-",
-      },
-
-      { name: "Radha Mohan Pattanayak", slots: ["L55", "L56"], rating: "-" },
-
-      { name: "Shaik Subhani", slots: ["L8", "L9"], rating: "-" },
-    ],
-  },
-  CSE2011: {
-    name: "Cyber Security and Digital Forensics",
-    credits: 4,
-    theoryTeachers: [
-      { name: "D. Santhadevi", slots: ["F1", "TF1"], rating: 0 },
-      { name: "Ramkumar D", slots: ["F1", "TF1"], rating: 3.49 },
-
-      { name: "D. Santhadevi", slots: ["F2", "TF2"], rating: 0 },
-      { name: "Anil Vithalrao Turukmane", slots: ["F2", "TF2"], rating: 3.55 },
-    ],
-    labTeachers: [
-      { name: "D. Santhadevi", slots: ["L14", "L15"], rating: 0 },
-      { name: "D. Santhadevi", slots: ["L33", "L34"], rating: 0 },
-      { name: "KILLI DURGA BHAVANI", slots: ["L4", "L5"], rating: 0 },
-      { name: "KILLI DURGA BHAVANI", slots: ["L43", "L44"], rating: 0 },
-      { name: "D. Santhadevi", slots: ["L47", "L48"], rating: 0 },
-    ],
-  },
-  MAT1011: {
-    name: "Applied Statistics",
-    credits: 4,
-    theoryTeachers: [
-      { name: "Komandla Mahipal Reddy", slots: ["D1", "TD1"], rating: 3.72 },
-      { name: "N Rajashekar", slots: ["D1", "TD1"], rating: "-" },
-      { name: "Chandan Kumar Thakur", slots: ["D1", "TD1"], rating: 2.36 },
-      { name: "Komandla Mahipal Reddy", slots: ["D1", "TD1"], rating: 3.72 },
-      { name: "Manisha Maity", slots: ["D1", "TD1"], rating: 3.86 },
-      { name: "Manisha Maity", slots: ["D1", "TD1"], rating: 3.86 },
-      { name: "Peeyush Singh", slots: ["D1", "TD1"], rating: 4.27 },
-      { name: "Prashanth Maroju", slots: ["D1", "TD1"], rating: 2.65 },
-      { name: "R Sinuvasan", slots: ["D1", "TD1"], rating: 4.55 },
-      { name: "Ramesh Prasad Panda", slots: ["D1", "TD1"], rating: 2.9 },
-      { name: "Santanu Mandal", slots: ["D1", "TD1"], rating: 4.09 },
-      { name: "Venkatrajam Marka", slots: ["D1", "TD1"], rating: 2.68 },
-      { name: "Pradip R. Patle", slots: ["D1", "TD1"], rating: 2.2 },
-
-      { name: "Perumandla Karunakar", slots: ["D1", "TDD1"], rating: "-" },
-      { name: "S V Gomathi", slots: ["D1", "TDD1"], rating: "-" },
-
-      { name: "Prashanth Maroju", slots: ["D2", "TD2"], rating: 2.64 },
-      { name: "Pratik Premadarshi Ray", slots: ["D2", "TD2"], rating: 3.38 },
-      { name: "Yada Nandukumar", slots: ["D2", "TD2"], rating: 4.27 },
-      { name: "RAMA KRISHNA RONGALI", slots: ["D2", "TD2"], rating: "-" },
-      { name: "S V Gomathi", slots: ["D2", "TD2"], rating: "-" },
-      { name: "V. Raja", slots: ["D2", "TD2"], rating: "-" },
-
-      { name: "ABHILASH CHAND", slots: ["D2", "TDD2"], rating: "-" },
-      { name: "Arun Kumar Yadav", slots: ["D2", "TDD2"], rating: 1.97 },
-      { name: "Gokulnath M", slots: ["D2", "TDD2"], rating: 2.68 },
-
-      { name: "N Rajashekar", slots: ["E1", "TE1"], rating: "-" },
-      { name: "Arun Kumar Yadav", slots: ["E1", "TE1"], rating: 1.97 },
-      { name: "Francis P", slots: ["E1", "TE1"], rating: 4.09 },
-      { name: "Nimai Sarkar", slots: ["E1", "TE1"], rating: 3.9 },
-      { name: "Pratik Premadarshi Ray", slots: ["E1", "TE1"], rating: 3.37 },
-      { name: "Santanu Nandi", slots: ["E1", "TE1"], rating: 2.0 },
-      { name: "Shobhit Kumar Srivastava", slots: ["E1", "TE1"], rating: 1.74 },
-      { name: "Soumen Kundu", slots: ["E1", "TE1"], rating: 4.86 },
-      { name: "Shalini", slots: ["E1", "TE1"], rating: "-" },
-      { name: "Sudhakar M", slots: ["E1", "TE1"], rating: "-" },
-      { name: "V. Raja", slots: ["E1", "TE1"], rating: "-" },
-
-      { name: "Ramesh Prasad Panda", slots: ["E1", "TEE1"], rating: 2.9 },
-
-      { name: "Perumandla Karunakar", slots: ["E2", "TE2"], rating: "-" },
-      { name: "Chandan Kumar Thakur", slots: ["E2", "TE2"], rating: 2.36 },
-      { name: "Francis P", slots: ["E2", "TE2"], rating: 4.09 },
-      { name: "Nimai Sarkar", slots: ["E2", "TE2"], rating: 3.9 },
-      { name: "Peeyush Singh", slots: ["E2", "TE2"], rating: 4.27 },
-      { name: "Piu Kundu", slots: ["E2", "TE2"], rating: 4.07 },
-      { name: "Pradip R. Patle", slots: ["E2", "TE2"], rating: 2.2 },
-      { name: "Santanu Mandal", slots: ["E2", "TE2"], rating: 4.09 },
-      { name: "Santanu Nandi", slots: ["E2", "TE2"], rating: 2.0 },
-      { name: "Sudhakar M", slots: ["E2", "TE2"], rating: "-" },
-      { name: "Shobhit Kumar Srivastava", slots: ["E2", "TE2"], rating: 1.74 },
-      { name: "Soumen Kundu", slots: ["E2", "TE2"], rating: 4.86 },
-    ],
-    labTeachers: [
-      { name: "ABHILASH CHAND", slots: ["L10", "L11"], rating: "-" },
-      { name: "Perumandla Karunakar", slots: ["L10", "L11"], rating: "-" },
-      { name: "S V Gomathi", slots: ["L14", "L15"], rating: "-" },
-      { name: "Sudhakar M", slots: ["L14", "L15"], rating: "-" },
-      { name: "Peeyush Singh", slots: ["L2", "L3"], rating: 4.27 },
-      { name: "Shobhit Kumar Srivastava", slots: ["L2", "L3"], rating: 1.74 },
-      { name: "Pratik Premadarshi Ray", slots: ["L2", "L3"], rating: 3.38 },
-      { name: "Komandla Mahipal Reddy", slots: ["L20", "L21"], rating: 3.72 },
-      { name: "RAMA KRISHNA RONGALI", slots: ["L20", "L21"], rating: "-" },
-      { name: "V. Pujitha", slots: ["L20", "L21"], rating: 3.49 },
-      { name: "Perumandla Karunakar", slots: ["L22", "L23"], rating: "-" },
-      { name: "ABHILASH CHAND", slots: ["L22", "L23"], rating: "-" },
-      { name: "Yada Nandukumar", slots: ["L26", "L27"], rating: 4.27 },
-      { name: "Santanu Mandal", slots: ["L26", "L27"], rating: 4.09 },
-      { name: "Prashanth Maroju", slots: ["L28", "L29"], rating: 2.64 },
-      { name: "Chandan Kumar Thakur", slots: ["L28", "L29"], rating: 2.36 },
-      { name: "Soumen Kundu", slots: ["L28", "L29"], rating: 4.86 },
-      { name: "Santanu Mandal", slots: ["L31", "L32"], rating: 4.09 },
-      { name: "N Rajashekar", slots: ["L31", "L32"], rating: "-" },
-      { name: "Nimai Sarkar", slots: ["L31", "L32"], rating: "-" },
-      { name: "Gokulnath M", slots: ["L33", "L34"], rating: 2.68 },
-      { name: "Pradip R. Patle", slots: ["L33", "L34"], rating: 2.2 },
-      { name: "Soumen Kundu", slots: ["L33", "L34"], rating: 4.86 },
-      { name: "Santanu Nandi", slots: ["L35", "L36"], rating: 2.0 },
-      { name: "Piu Kundu", slots: ["L35", "L36"], rating: "-" },
-      { name: "Ramesh Prasad Panda", slots: ["L37", "L38"], rating: 2.9 },
-      { name: "Nadiminti Nagamani", slots: ["L37", "L38"], rating: 3.39 },
-      { name: "Komandla Mahipal Reddy", slots: ["L39", "L40"], rating: 3.72 },
-      { name: "R Sinuvasan", slots: ["L39", "L40"], rating: "-" },
-      { name: "Santanu Nandi", slots: ["L4", "L5"], rating: 2.0 },
-      { name: "Piu Kundu", slots: ["L4", "L5"], rating: 4.07 },
-      { name: "Pratik Premadarshi Ray", slots: ["L41", "L42"], rating: 3.38 },
-      { name: "V. Pujitha", slots: ["L41", "L42"], rating: 3.49 },
-      { name: "RAMA KRISHNA RONGALI", slots: ["L41", "L42"], rating: "-" },
-      { name: "Arun Kumar Yadav", slots: ["L43", "L44"], rating: 1.97 },
-      { name: "Ramesh Prasad Panda", slots: ["L43", "L44"], rating: 2.9 },
-      { name: "Shobhit Kumar Srivastava", slots: ["L45", "L46"], rating: 1.74 },
-      { name: "ABHILASH CHAND", slots: ["L45", "L46"], rating: "-" },
-      { name: "Peeyush Singh", slots: ["L47", "L48"], rating: 4.27 },
-      { name: "Nimai Sarkar", slots: ["L47", "L48"], rating: "-" },
-      { name: "Soumen Kundu", slots: ["L47", "L48"], rating: 4.86 },
-      { name: "S V Gomathi", slots: ["L49", "L50"], rating: "-" },
-      { name: "Pradip R. Patle", slots: ["L49", "L50"], rating: 2.2 },
-      { name: "Manisha Maity", slots: ["L49", "L50"], rating: 3.86 },
-      { name: "Arun Kumar Yadav", slots: ["L51", "L52"], rating: 1.97 },
-      { name: "Sudhakar M", slots: ["L51", "L52"], rating: "-" },
-      { name: "Prashanth Maroju", slots: ["L53", "L54"], rating: 2.64 },
-      { name: "Manisha Maity", slots: ["L53", "L54"], rating: 3.86 },
-      { name: "Shalini", slots: ["L55", "L56"], rating: "-" },
-      { name: "Davala Ravi Kumar", slots: ["L55", "L56"], rating: 3.52 },
-      { name: "Chandan Kumar Thakur", slots: ["L8", "L9"], rating: 2.36 },
-      { name: "Gokulnath M", slots: ["L8", "L9"], rating: 2.68 },
-    ],
-  },
-  ECE2002: {
-    name: "Computer Architecture and Organization",
-    credits: 4,
-    theoryTeachers: [
-      { name: "Chillu Naresh", slots: ["A1", "TA1", "TAA1"], rating: "-" },
-      { name: "G Bharath Reddy", slots: ["A1", "TA1", "TAA1"], rating: 4.52 },
-      {
-        name: "Girish Kumar Mekala",
-        slots: ["A1", "TA1", "TAA1"],
-        rating: "-",
-      },
-      { name: "Moumita Saha", slots: ["A1", "TA1", "TAA1"], rating: "-" },
-      { name: "Swati Shukla", slots: ["A1", "TA1", "TAA1"], rating: 3.46 },
-      { name: "Debanjali Sarkar", slots: ["A1", "TA1", "TAA1"], rating: 2.49 },
-      { name: "M. Krishnasamy", slots: ["A1", "TA1", "TAA1"], rating: 2.85 },
-      { name: "Rajeev Sharma", slots: ["A1", "TA1", "TAA1"], rating: 3.27 },
-      {
-        name: "Sudha Ellison Mathe",
-        slots: ["A1", "TA1", "TAA1"],
-        rating: 4.21,
-      },
-      { name: "Chandan Nayak", slots: ["A1", "TA1", "TAA1"], rating: 4.36 },
-      { name: "Anamika Lata", slots: ["A1", "TA1", "TAA1"], rating: 4.44 },
-
-      { name: "Chillu Naresh", slots: ["A2", "TA2", "TAA2"], rating: "-" },
-      { name: "G Bharath Reddy", slots: ["A2", "TA2", "TAA2"], rating: "-" },
-      { name: "Vivek Upadhyaya", slots: ["A2", "TA2", "TAA2"], rating: "-" },
-      { name: "Debanjali Sarkar", slots: ["A2", "TA2", "TAA2"], rating: 2.49 },
-      { name: "M. Krishnasamy", slots: ["A2", "TA2", "TAA2"], rating: 2.85 },
-      { name: "Rajeev Sharma", slots: ["A2", "TA2", "TAA2"], rating: 3.27 },
-      {
-        name: "Pradosh Ranjan Sahoo",
-        slots: ["A2", "TA2", "TAA2"],
-        rating: 2.83,
-      },
-      { name: "Agam Das Goswami", slots: ["A2", "TA2", "TAA2"], rating: 3.67 },
-      { name: "Mohit Kumar", slots: ["A2", "TA2", "TAA2"], rating: 3.9 },
-      { name: "Chandan Nayak", slots: ["A2", "TA2", "TAA2"], rating: 4.36 },
-      { name: "Anamika Lata", slots: ["A2", "TA2", "TAA2"], rating: 4.44 },
-
-      { name: "Chillu Naresh", slots: ["B1", "TB1", "TBB1"], rating: "-" },
-      {
-        name: "Girish Kumar Mekala",
-        slots: ["B1", "TB1", "TBB1"],
-        rating: "-",
-      },
-      { name: "Moumita Saha", slots: ["B1", "TB1", "TBB1"], rating: "-" },
-      { name: "Swati Shukla", slots: ["B1", "TB1", "TBB1"], rating: "-" },
-      { name: "Debanjali Sarkar", slots: ["B1", "TB1", "TBB1"], rating: 2.49 },
-      { name: "M. Krishnasamy", slots: ["B1", "TB1", "TBB1"], rating: 2.85 },
-      {
-        name: "Pradosh Ranjan Sahoo",
-        slots: ["B1", "TB1", "TBB1"],
-        rating: 2.83,
-      },
-      { name: "Agam Das Goswami", slots: ["B1", "TB1", "TBB1"], rating: 3.67 },
-      { name: "Mohit Kumar", slots: ["B1", "TB1", "TBB1"], rating: 3.9 },
-      {
-        name: "Neeraj Kumar Misra",
-        slots: ["B1", "TB1", "TBB1"],
-        rating: 4.35,
-      },
-
-      { name: "G Bharath Reddy", slots: ["B2", "TB2", "TBB2"], rating: "-" },
-      {
-        name: "Girish Kumar Mekala",
-        slots: ["B2", "TB2", "TBB2"],
-        rating: "-",
-      },
-      { name: "Moumita Saha", slots: ["B2", "TB2", "TBB2"], rating: "-" },
-      { name: "Vivek Upadhyaya", slots: ["B2", "TB2", "TBB2"], rating: "-" },
-      { name: "Rajeev Sharma", slots: ["B2", "TB2", "TBB2"], rating: 3.27 },
-      { name: "Agam Das Goswami", slots: ["B2", "TB2", "TBB2"], rating: 3.67 },
-      {
-        name: "Sudha Ellison Mathe",
-        slots: ["B2", "TB2", "TBB2"],
-        rating: 4.21,
-      },
-      { name: "Mohit Kumar", slots: ["B2", "TB2", "TBB2"], rating: 3.9 },
-      {
-        name: "Neeraj Kumar Misra",
-        slots: ["B2", "TB2", "TBB2"],
-        rating: 4.35,
-      },
-      { name: "Chandan Nayak", slots: ["B2", "TB2", "TBB2"], rating: 4.36 },
-    ],
-  },
-  MGT1040: {
-    name: "Entrepreneurship - Theory Only",
+  LIB1023: {
+    name: "Indian Studies",
     credits: 2,
-    theoryTeachers: [
-      { name: "Dripta De Joarder", slots: ["A1"], rating: 2.44 },
-      { name: "Karishma Bisht", slots: ["A1"], rating: 3.99 },
-      { name: "Kashif Beg", slots: ["A1"], rating: 2.45 },
-      { name: "Umer Mushtaq lone", slots: ["A1"], rating: 0 },
-      { name: "Deepjoy Katuwal", slots: ["A2"], rating: 4.82 },
-      { name: "Ishfaq Ahmad Thaku", slots: ["A2"], rating: "-" },
-      { name: "Rajashree Naik", slots: ["A2"], rating: "-" },
-      { name: "Shaiku Shahida Saheb", slots: ["A2"], rating: 4.29 },
-      { name: "Aby Abraham", slots: ["C1"], rating: 3.95 },
-      { name: "Kashif Beg", slots: ["C1"], rating: 2.45 },
-      { name: "N.Prabhakar", slots: ["C1"], rating: "-" },
-      { name: "Vadithe Rakesh Naik", slots: ["C1"], rating: "-" },
-      { name: "Ameet Chavan", slots: ["C2"], rating: 4.67 },
-      { name: "G.Soma Sekhar", slots: ["C2"], rating: 0 },
-      { name: "Karishma Bisht", slots: ["C2"], rating: 3.99 },
-      { name: "Senthamizhselvi.A", slots: ["C2"], rating: 4.46 },
-      { name: "Deepjoy Katuwal", slots: ["G1"], rating: 4.82 },
-      { name: "Dripta De Joarder", slots: ["G1"], rating: 2.44 },
-      { name: "G.Soma Sekhar", slots: ["G1"], rating: 0 },
-      { name: "N.Prabhakar", slots: ["G1"], rating: "-" },
-      { name: "Aby Abraham", slots: ["G2"], rating: 3.95 },
-      { name: "Rajashree Naik", slots: ["G2"], rating: "-" },
-      { name: "Umer Mushtaq lone", slots: ["G2"], rating: 0 },
-      { name: "Vadithe Rakesh Naik", slots: ["G2"], rating: "-" },
+    theoryTeachers: [],
+    labTeachers: [
+      { name: "Kanaka Himabindu Pottumuthu", slots: ["L63", "L64"] },
+      { name: "Ganesh Moolinti", slots: ["L17", "L18"] },
+      { name: "Naveen Kumar Ranjan", slots: ["L13", "L14"] },
+      { name: "Chandan Vishwas", slots: ["L25", "L26"] },
+      { name: "K. Deepanjan", slots: ["L29", "L30"] },
+      { name: "V Balasingh", slots: ["L5", "L6"] },
+      { name: "Naveen Kumar Cherupelly", slots: ["L25", "L26"] },
+      { name: "Prof.VISH Dig Crs Faculty-1", slots: ["L47", "L48"] },
+      { name: "Sudesh Manger", slots: ["L67", "L68"] },
+      { name: "Kanaka Himabindu Pottumuthu", slots: ["L67", "L68"] },
+      { name: "SREENISH S", slots: ["L3", "L4"] },
+      { name: "Sudesh Manger", slots: ["L65", "L66"] },
+      { name: "Suresh Garimella", slots: ["L19", "L20"] },
+      { name: "Deepjoy Katuwal", slots: ["L23", "L24"] },
+      { name: "Srabani Chakraborty", slots: ["L35", "L36"] },
+      { name: "Satri Veera Kesalu", slots: ["L53", "L54"] },
+      { name: "Naveen Kumar Cherupelly", slots: ["L35", "L36"] },
+      { name: "Debosmita Biswas", slots: ["L63", "L64"] },
+      { name: "Rakhi N K", slots: ["L9", "L10"] },
+      { name: "Arpana Venu", slots: ["L11", "L12"] },
+      { name: "Joseph Alugula", slots: ["L7", "L8"] },
+      { name: "Sanziou Boro", slots: ["L31", "L32"] },
+      { name: "Anupama A.P", slots: ["L33", "L34"] },
+      { name: "Pragnya Parimita Chayani", slots: ["L43", "L44"] },
+      { name: "Anindita Shome", slots: ["L37", "L38"] },
+      { name: "Amar Wayal", slots: ["L39", "L40"] },
+      { name: "Ankita Swetaparna", slots: ["L51", "L52"] },
+      { name: "Rini Singh", slots: ["L53", "L54"] },
+      { name: "Rakhi N K", slots: ["L15", "L16"] },
+      { name: "Anjitha Gopi", slots: ["L45", "L46"] },
+      { name: "Aby Abraham", slots: ["L5", "L6"] },
+      { name: "Ann Mary George", slots: ["L49", "L50"] },
+      { name: "Suresh Jagannadham", slots: ["L41", "L42"] },
+      { name: "Farooq Ahmad Mir", slots: ["L55", "L56"] },
     ],
   },
-  STS2009: {
-    name: "Arithmetic Problem Solving Skills",
+
+  ENG1002: {
+    name: "English for Effective Communication",
     credits: 3,
     theoryTeachers: [
-      { name: "KALYANI M", slots: ["A1", "TA1"], rating: "-" },
-      { name: "MANIKANTA K", slots: ["A1", "TA1"], rating: "-" },
-      { name: "SUPRIYA C", slots: ["A1", "TA1"], rating: "-" },
-      { name: "Prof.Vijay", slots: ["A1", "TA1"], rating: "-" },
-      { name: "Prof Musthaq", slots: ["A2", "TA2"], rating: "-" },
-      { name: "Prof. Jesmitha", slots: ["A2", "TA2"], rating: "-" },
-      { name: "SUJITHA", slots: ["A2", "TA2"], rating: "-" },
-      { name: "Prof.Six Phrase Faculty-6", slots: ["A2", "TA2"], rating: "-" },
-      { name: "Mamatha", slots: ["A2", "TA2"], rating: "-" },
+      { name: "Rasheda Parveen", slots: ["C1"] },
+      { name: "Arpana Venu", slots: ["C1"] },
+      { name: "Rini Singh", slots: ["C1"] },
+      { name: "Shubhra Ghoshal", slots: ["C1"] },
+      { name: "P ARUL NEHRU", slots: ["C1"] },
+      { name: "Farooq Ahmad Mir", slots: ["C2"] },
+      { name: "Anindita Shome", slots: ["C2"] },
+      { name: "Neethu P Antony", slots: ["C2"] },
+      { name: "MANISHA BHADRAN", slots: ["C2"] },
+      { name: "Ann Mary George", slots: ["C2"] },
+      { name: "Vishnu V", slots: ["C2"] },
+      { name: "Debosmita Biswas", slots: ["D1"] },
+      { name: "Srirupa Poddar", slots: ["D1"] },
+      { name: "Pragnya Parimita Chayani", slots: ["D2"] },
+      { name: "Prof.VISH Dig Crs Faculty-1", slots: ["D2"] },
+      { name: "Pragnya Parimita Chayani", slots: ["F1"] },
+      { name: "Ritu Varghese", slots: ["F1"] },
+      { name: "Prof.VISH Dig Crs Faculty-1", slots: ["F2"] },
+      { name: "P ARUL NEHRU", slots: ["F2"] },
+      { name: "MANISHA BHADRAN", slots: ["G1"] },
+      { name: "Shubhra Ghoshal", slots: ["G1"] },
+      { name: "P ARUL NEHRU", slots: ["G1"] },
+      { name: "Jabeen Yasmeen", slots: ["G1"] },
+      { name: "Prof.VISH Dig Crs Faculty-1", slots: ["G1"] },
+      { name: "Neethu P Antony", slots: ["G1"] },
+      { name: "Rini Singh", slots: ["G2"] },
+      { name: "Ritu Varghese", slots: ["G2"] },
+      { name: "Chandini Stephens", slots: ["G2"] },
+      { name: "Arpana Venu", slots: ["G2"] },
+      { name: "Vishnu V", slots: ["G2"] },
+      { name: "Anindita Shome", slots: ["G2"] },
+      { name: "Neethu P Antony", slots: ["C1"] },
+    ],
+    labTeachers: [
+      { name: "Sanziou Boro", slots: ["L11", "L12"] },
+      { name: "UDITA BANERJEE", slots: ["L13", "L14"] },
+      { name: "Ann Mary George", slots: ["L15", "L16"] },
+      { name: "Chandini Stephens", slots: ["L19", "L20"] },
+      { name: "Shubhra Ghoshal", slots: ["L1", "L2"] },
+      { name: "Neelima Adapa", slots: ["L23", "L24"] },
+      { name: "V Balasingh", slots: ["L25", "L26"] },
+      { name: "Chandini Stephens", slots: ["L25", "L26"] },
+      { name: "Neelima Adapa", slots: ["L27", "L28"] },
+      { name: "Rasheda Parveen", slots: ["L29", "L30"] },
+      { name: "MANISHA BHADRAN", slots: ["L31", "L32"] },
+      { name: "Pragnya Parimita Chayani", slots: ["L33", "L34"] },
+      { name: "Ritu Varghese", slots: ["L35", "L36"] },
+      { name: "Neethu P Antony", slots: ["L37", "L38"] },
+      { name: "Pragnya Parimita Chayani", slots: ["L3", "L4"] },
+      { name: "Sanziou Boro", slots: ["L3", "L4"] },
+      { name: "Chandini Stephens", slots: ["L41", "L42"] },
+      { name: "Ankita Swetaparna", slots: ["L45", "L46"] },
+      { name: "Tannistha Dasgupta", slots: ["L47", "L48"] },
+      { name: "Jabeen Yasmeen", slots: ["L49", "L50"] },
+      { name: "P ARUL NEHRU", slots: ["L51", "L52"] },
+      { name: "Vishnu V", slots: ["L53", "L54"] },
+      { name: "Shubhra Ghoshal", slots: ["L55", "L56"] },
+      { name: "Prof.VISH Dig Crs Faculty-1", slots: ["L5", "L6"] },
+      { name: "Debosmita Biswas", slots: ["L65", "L66"] },
+      { name: "Anjitha Gopi", slots: ["L65", "L66"] },
+      { name: "Sanziou Boro", slots: ["L67", "L68"] },
+      { name: "Rakhi N K", slots: ["L69", "L70"] },
+      { name: "Debosmita Biswas", slots: ["L69", "L70"] },
+      { name: "Raghavi R K", slots: ["L69", "L70"] },
+      { name: "Srirupa Poddar", slots: ["L71", "L72"] },
+      { name: "Shubhra Ghoshal", slots: ["L7", "L8"] },
+      { name: "Neelima Adapa", slots: ["L9", "L10"] },
+      { name: "Rakhi N K", slots: ["L67", "L68"] },
+    ],
+  },
+  ENG2001: {
+    name: "English for Professional Communication",
+    credits: 3,
+    theoryTeachers: [
+      { name: "Chandini Stephens", slots: ["D2"] },
+      { name: "Srirupa Poddar", slots: ["A2"] },
+      { name: "Amar Wayal", slots: ["F2"] },
+      { name: "Tannistha Dasgupta", slots: ["A2"] },
+      { name: "MANISHA BHADRAN", slots: ["D1"] },
+      { name: "UDITA BANERJEE", slots: ["A1"] },
+      { name: "Tannistha Dasgupta", slots: ["B2"] },
+      { name: "Rasheda Parveen", slots: ["A2"] },
+      { name: "UDITA BANERJEE", slots: ["D2"] },
+      { name: "Jabeen Yasmeen", slots: ["F1"] },
+      { name: "V Balasingh", slots: ["B1"] },
+      { name: "Rakhi N K", slots: ["B2"] },
+      { name: "UDITA BANERJEE", slots: ["F2"] },
+      { name: "Deepjoy Katuwal", slots: ["D1"] },
+      { name: "Anjitha Gopi", slots: ["A1"] },
+      { name: "Ann Mary George", slots: ["B1"] },
+      { name: "Anupama A.P", slots: ["F1"] },
+      { name: "Ankita Swetaparna", slots: ["A1"] },
+      { name: "Arpana Venu", slots: ["D1"] },
+    ],
+    labTeachers: [
+      { name: "UDITA BANERJEE", slots: ["L7", "L8"] },
+      { name: "Amar Wayal", slots: ["L35", "L36"] },
+      { name: "Tannistha Dasgupta", slots: ["L29", "L30"] },
+      { name: "Rasheda Parveen", slots: ["L33", "L34"] },
+      { name: "Jabeen Yasmeen", slots: ["L15", "L16"] },
+      { name: "Raghavi R K", slots: ["L5", "L6"] },
+      { name: "V Balasingh", slots: ["L39", "L40"] },
+      { name: "MANISHA BHADRAN", slots: ["L51", "L52"] },
+      { name: "Anupama A.P", slots: ["L49", "L50"] },
+      { name: "Raghavi R K", slots: ["L9", "L10"] },
+      { name: "Anjitha Gopi", slots: ["L63", "L64"] },
+      { name: "Amar Wayal", slots: ["L43", "L44"] },
+      { name: "Ankita Swetaparna", slots: ["L27", "L28"] },
+      { name: "Srirupa Poddar", slots: ["L67", "L68"] },
+      { name: "Anupama A.P", slots: ["L45", "L46"] },
+      { name: "Tannistha Dasgupta", slots: ["L55", "L56"] },
+      { name: "Anjitha Gopi", slots: ["L41", "L42"] },
+      { name: "Neethu P Antony", slots: ["L23", "L24"] },
+      { name: "Farooq Ahmad Mir", slots: ["L13", "L14"] },
+      { name: "Arpana Venu", slots: ["L21", "L22"] },
+    ],
+  },
 
-      { name: "Prof.Six Phrase Faculty-6", slots: ["B1", "TB1"], rating: "-" },
-      { name: "Prof Musthaq", slots: ["B1", "TB1"], rating: "-" },
-      { name: "K MANI", slots: ["B1", "TB1"], rating: "-" },
-      { name: "KALYANI M", slots: ["B1", "TB1"], rating: "-" },
-      { name: "Prof.Six Phrase Faculty-6", slots: ["B2", "TB2"], rating: "-" },
-      { name: "SUJITHA", slots: ["B2", "TB2"], rating: "-" },
-      { name: "Prof Musthaq", slots: ["B2", "TB2"], rating: "-" },
-      { name: "Prof Poojitha L", slots: ["B2", "TB2"], rating: "-" },
-      { name: "MANIKANTA K", slots: ["B2", "TB2"], rating: "-" },
+  MAT1002: {
+    name: "Applications of Differential and Difference Equations",
+    credits: 4,
+    theoryTeachers: [
+      { name: "Ramasamy Kavikumar", slots: ["F2", "TF2", "TFF2"] },
+      { name: "Raja Solanki", slots: ["B2", "SB2", "TB2"] },
+      { name: "Sk Ashadul Rahaman", slots: ["D1", "SD1", "TD1"] },
+      { name: "Parul Saini", slots: ["D2", "SD2", "TD2"] },
+      { name: "SOWNDARRAJAN P T", slots: ["E1", "SE1", "TE1"] },
+      { name: "Santi Ranjan Das", slots: ["E1", "SE1", "TE1"] },
+      { name: "Santi Ranjan Das", slots: ["E2", "TE2", "TEE2"] },
+      { name: "Subhasis Panda", slots: ["A2", "SA2", "TA2"] },
+      { name: "Jyotsna Sharma", slots: ["D2", "TD2", "TDD2"] },
+      { name: "Abhik Digar", slots: ["D2", "TD2", "TDD2"] },
+      { name: "Varunkumar Merugu", slots: ["E2", "SE2", "TE2"] },
+      { name: "Satyanarayana Badeti", slots: ["F2", "SF2", "TF2"] },
+      { name: "Sonali Kaushik", slots: ["A2", "SA2", "TA2"] },
+      { name: "Ravi Kumar Bandaru", slots: ["A2", "SA2", "TA2"] },
+      { name: "Saikat Roy", slots: ["B1", "SB1", "TB1"] },
+      { name: "Reddimalla Naresh", slots: ["B1", "SB1", "TB1"] },
+      { name: "Chiranjeev Kumar Shahu", slots: ["B2", "SB2", "TB2"] },
+      { name: "Saikat Roy", slots: ["B2", "SB2", "TB2"] },
+      { name: "Sk Ashadul Rahaman", slots: ["D2", "SD2", "TD2"] },
+      { name: "Himanshu Verma", slots: ["D2", "TD2", "TDD2"] },
+      { name: "Jyotirmoy Roy", slots: ["E1", "SE1", "TE1"] },
+      { name: "Ramasamy Kavikumar", slots: ["F1", "TF1", "TFF1"] },
+      { name: "Parul Saini", slots: ["F1", "TF1", "TFF1"] },
+      { name: "Satyendra Singh Chauhan", slots: ["F2", "TF2", "TFF2"] },
+      { name: "Sonali Kaushik", slots: ["A1", "SA1", "TA1"] },
+      { name: "Jyotsna Sharma", slots: ["D1", "TD1", "TDD1"] },
+      { name: "Sukanta Nayak", slots: ["E2", "SE2", "TE2"] },
+      { name: "Jyotirmoy Roy", slots: ["E2", "TE2", "TEE2"] },
+      { name: "Himanshu Verma", slots: ["D1", "SD1", "TD1"] },
+      { name: "Manoj Kumar Mishra", slots: ["E1", "SE1", "TE1"] },
+      { name: "Subhasis Panda", slots: ["A1", "SA1", "TA1"] },
+      { name: "Sukanta Nayak", slots: ["B1", "SB1", "TB1"] },
+      { name: "Raja Solanki", slots: ["B1", "SB1", "TB1"] },
+      { name: "Vemula Ramakrishna Reddy", slots: ["F2", "SF2", "TF2"] },
+      { name: "Debgopal Sahoo", slots: ["E2", "TE2", "TEE2"] },
+      { name: "Ravi Kumar Bandaru", slots: ["A1", "SA1", "TA1"] },
+      { name: "Kottu Durga Prasad", slots: ["D2", "SD2", "TD2"] },
+      { name: "Abhik Digar", slots: ["D1", "SD1", "TD1"] },
+      { name: "Lisna PC", slots: ["F2", "TF2", "TFF2"] },
+      { name: "Varunkumar Merugu", slots: ["A2", "SA2", "TA2"] },
+      { name: "Reddimalla Naresh", slots: ["B2", "SB2", "TB2"] },
+      { name: "A. Ramesh", slots: ["E2", "SE2", "TE2"] },
+      { name: "Srinivas S", slots: ["F1", "SF1", "TF1"] },
+      { name: "Lisna PC", slots: ["F1", "SF1", "TF1"] },
+      { name: "Prakash S", slots: ["D1", "TD1", "TDD1"] },
+      { name: "Akshay Kumar", slots: ["A2", "SA2", "TA2"] },
+      { name: "Debgopal Sahoo", slots: ["E1", "SE1", "TE1"] },
+      { name: "Akshay Kumar", slots: ["A1", "SA1", "TA1"] },
+      { name: "K. Panduranga", slots: ["A2", "SA2", "TA2"] },
+      { name: "K. Panduranga", slots: ["A1", "SA1", "TA1"] },
+      { name: "Kottu Durga Prasad", slots: ["D1", "SD1", "TD1"] },
+    ],
+    labTeachers: [],
+  },
 
-      { name: "Prof.Six Phrase Faculty-6", slots: ["C1", "TC1"], rating: "-" },
-      { name: "Prof.Vijay", slots: ["C1", "TC1"], rating: "-" },
-      { name: "Prof. Jesmitha", slots: ["C1", "TCC1"], rating: "-" },
-      { name: "Mamatha", slots: ["C1", "TCC1"], rating: "-" },
-      { name: "K MANI", slots: ["C2", "TC2"], rating: "-" },
-      { name: "SUPRIYA C", slots: ["C2", "TC2"], rating: "-" },
-      { name: "Prof Poojitha L", slots: ["C2", "TCC2"], rating: "-" },
-      { name: "Prof.Yamini Durga", slots: ["C2", "TCC2"], rating: "-" },
+  CHY1009: {
+    name: "Chemistry and Environmental Studies",
+    credits: 4,
+    theoryTeachers: [
+      { name: "V V Sreenivasu M", slots: ["E2", "TE2"] },
+      { name: "Chalasani Rajesh", slots: ["C2", "TC2"] },
+      { name: "Manas Ranjan Dash", slots: ["E2", "TE2"] },
+      { name: "SANGEETA ADHIKARI", slots: ["E1", "TE1"] },
+      { name: "Ritambhara Sharma", slots: ["C2", "TC2"] },
+      { name: "Manas Ranjan Dash", slots: ["B1", "TB1"] },
+      { name: "Sachil Sharma", slots: ["B2", "TB2"] },
+      { name: "Tufan Ghosh", slots: ["B2", "TB2"] },
+      { name: "Naga Prasad Puvvada", slots: ["B2", "TB2"] },
+      { name: "Moru Satyanarayana", slots: ["C1", "TC1"] },
+      { name: "Sachil Sharma", slots: ["E1", "TE1"] },
+      { name: "Soumyakanta Prusty", slots: ["E2", "TE2"] },
+      { name: "DASARI BOSU BABU", slots: ["B1", "TB1"] },
+      { name: "Chalasani Rajesh", slots: ["C1", "TC1"] },
+      { name: "Illa Ramakanth", slots: ["C1", "TC1"] },
+      { name: "Rajarshi Sarkar", slots: ["C2", "TC2"] },
+      { name: "Debakanta Tripathy", slots: ["B2", "TB2"] },
+      { name: "Koteswararao Gorantla", slots: ["B2", "TB2"] },
+      { name: "Triveni Rajashekhar Mandlimath", slots: ["B1", "TB1"] },
+      { name: "Sandhya Sadanandan", slots: ["B2", "TB2"] },
+      { name: "Pratheep Kumar", slots: ["B1", "TB1"] },
+      { name: "Tufan Ghosh", slots: ["E1", "TE1"] },
+      { name: "Illa Ramakanth", slots: ["C2", "TC2"] },
+      { name: "Sandhya Sadanandan", slots: ["B1", "TB1"] },
+      { name: "Rajarshi Sarkar", slots: ["C1", "TC1"] },
+      { name: "Naga Prasad Puvvada", slots: ["B1", "TB1"] },
+    ],
+    labTeachers: [
+      { name: "A V NARENDRA KUMAR", slots: ["L19", "L20"] },
+      { name: "Triveni Rajashekhar Mandlimath", slots: ["L21", "L22"] },
+      { name: "Prof.SAS Dig Crs Faculty-6", slots: ["L29", "L30"] },
+      { name: "TURBASU SENGUPTA", slots: ["L47", "L48"] },
+      { name: "V V Sreenivasu M", slots: ["L45", "L46"] },
+      { name: "V V Sreenivasu M", slots: ["L9", "L10"] },
+      { name: "T Ramana", slots: ["L29", "L30"] },
+      { name: "GANGADHAR PAMARTHI", slots: ["L35", "L36"] },
+      { name: "Soumyakanta Prusty", slots: ["L5", "L6"] },
+      { name: "T Ramana", slots: ["L1", "L2"] },
+      { name: "Muthu Prabhu Subbaiah", slots: ["L25", "L26"] },
+      { name: "Prof.SAS Dig Crs Faculty-6", slots: ["L33", "L34"] },
+      { name: "A V NARENDRA KUMAR", slots: ["L39", "L40"] },
+      { name: "Bibhab Bandhu Majumdar", slots: ["L27", "L28"] },
+      { name: "Pratheep Kumar", slots: ["L49", "L50"] },
+      { name: "Dripta De Joarder", slots: ["L55", "L56"] },
+      { name: "Koteswararao Gorantla", slots: ["L51", "L52"] },
+      { name: "Dripta De Joarder", slots: ["L15", "L16"] },
+      { name: "Triveni Rajashekhar Mandlimath", slots: ["L67", "L68"] },
+      { name: "Ritambhara Sharma", slots: ["L9", "L10"] },
+      { name: "Debakanta Tripathy", slots: ["L23", "L24"] },
+      { name: "Pratheep Kumar", slots: ["L65", "L66"] },
+      { name: "Debakanta Tripathy", slots: ["L37", "L38"] },
+      { name: "Soumyakanta Prusty", slots: ["L3", "L4"] },
+      { name: "Koteswararao Gorantla", slots: ["L43", "L44"] },
+      { name: "Pratheep Kumar", slots: ["L69", "L70"] },
+      { name: "V V Sreenivasu M", slots: ["L31", "L32"] },
+      { name: "Sabeel M Basheer", slots: ["L51", "L52"] },
+    ],
+  },
 
-      { name: "K MANI", slots: ["D1", "TD1"], rating: "-" },
-      { name: "SUJITHA", slots: ["D1", "TD1"], rating: "-" },
-      { name: "Mamatha", slots: ["D1", "TDD1"], rating: "-" },
-      { name: "Prof.Six Phrase Faculty-6", slots: ["D1", "TDD1"], rating: "-" },
-      { name: "Prof. Jesmitha", slots: ["D2", "TD2"], rating: "-" },
-      { name: "SUPRIYA C", slots: ["D2", "TD2"], rating: "-" },
-      { name: "KALYANI M", slots: ["D2", "TDD2"], rating: "-" },
-      { name: "Prof.Vijay", slots: ["D2", "TDD2"], rating: "-" },
+  CSE2005: {
+    name: "Object Oriented Programming using JAVA",
+    credits: 4,
+    theoryTeachers: [
+      { name: "Prof.SCOPE Dig Crs Faculty-9", slots: ["A2", "TA2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-14", slots: ["A2", "TA2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-21", slots: ["D1", "TD1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-7", slots: ["D2", "TDD2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-20", slots: ["D2", "TDD2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-13", slots: ["D2", "TDD2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-4", slots: ["E2", "TEE2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-5", slots: ["E2", "TEE2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-6", slots: ["E2", "TEE2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-13", slots: ["F1", "TF1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-24", slots: ["F1", "TFF1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-7", slots: ["F2", "TF2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-23", slots: ["F2", "TF2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-25", slots: ["F2", "TFF2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-18", slots: ["F2", "TFF2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-6", slots: ["A1", "TA1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-11", slots: ["A2", "TA2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-12", slots: ["A2", "TA2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-6", slots: ["A2", "TA2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-13", slots: ["D1", "TD1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-5", slots: ["E1", "TEE1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-2", slots: ["E2", "TE2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-3", slots: ["E2", "TE2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-25", slots: ["F1", "TF1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-26", slots: ["F1", "TFF1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-22", slots: ["F2", "TF2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-24", slots: ["F2", "TFF2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-5", slots: ["A1", "TA1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-22", slots: ["D2", "TD2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-1", slots: ["E1", "TE1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-3", slots: ["E1", "TE1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-8", slots: ["E1", "TEE1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-1", slots: ["E2", "TE2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-23", slots: ["F1", "TFF1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-17", slots: ["F2", "TFF2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-8", slots: ["A1", "TA1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-10", slots: ["A2", "TA2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-21", slots: ["D2", "TD2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-4", slots: ["E1", "TEE1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-7", slots: ["D1", "TD1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-1", slots: ["A1", "TA1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-8", slots: ["A2", "TA2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-2", slots: ["E1", "TE1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-2", slots: ["A1", "TA1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-3", slots: ["A1", "TA1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-20", slots: ["D1", "TD1"] },
+      { name: "DHANIKONDA RATNA BHAVANI", slots: ["D1", "TDD1"] },
+      { name: "R PRASANNA KUMARI", slots: ["D1", "TDD1"] },
+      { name: "PUTTA DURGA", slots: ["C2", "TC2"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-20", slots: ["F1", "TF1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-21", slots: ["F1", "TFF1"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-4", slots: ["A1", "TA1"] },
+    ],
+    labTeachers: [
+      { name: "Prof.SCOPE Dig Crs Faculty-25", slots: ["L19", "L20"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-16", slots: ["L21", "L22"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-15", slots: ["L23", "L24"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-23", slots: ["L25", "L26"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-25", slots: ["L25", "L26"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-18", slots: ["L27", "L28"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-15", slots: ["L27", "L28"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-16", slots: ["L33", "L34"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-24", slots: ["L39", "L40"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-24", slots: ["L41", "L42"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-10", slots: ["L65", "L66"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-5", slots: ["L9", "L10"] },
+      { name: "PUTTA DURGA", slots: ["L15", "L16"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-6", slots: ["L23", "L24"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-22", slots: ["L29", "L30"] },
+      { name: "CHATTU KANNAIAH", slots: ["L29", "L30"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-20", slots: ["L31", "L32"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-17", slots: ["L35", "L36"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-26", slots: ["L37", "L38"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-24", slots: ["L49", "L50"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-24", slots: ["L51", "L52"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-23", slots: ["L55", "L56"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-8", slots: ["L69", "L70"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-11", slots: ["L69", "L70"] },
+      { name: "BEESETTI VANITHA", slots: ["L11", "L12"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-16", slots: ["L13", "L14"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-19", slots: ["L49", "L50"] },
+      { name: "TATA GAYATHRI", slots: ["L5", "L6"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-9", slots: ["L63", "L64"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-25", slots: ["L11", "L12"] },
+      { name: "PUTTA DURGA", slots: ["L11", "L12"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-14", slots: ["L13", "L14"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-4", slots: ["L19", "L20"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-21", slots: ["L33", "L34"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-15", slots: ["L37", "L38"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-23", slots: ["L39", "L40"] },
+      { name: "Debasis Dwibedy", slots: ["L45", "L46"] },
+      { name: "TATA GAYATHRI", slots: ["L51", "L52"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-19", slots: ["L65", "L66"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-3", slots: ["L71", "L72"] },
+      { name: "PUTTA DURGA", slots: ["L31", "L32"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-12", slots: ["L63", "L64"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-25", slots: ["L15", "L16"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-13", slots: ["L23", "L24"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-19", slots: ["L27", "L28"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-19", slots: ["L47", "L48"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-7", slots: ["L53", "L54"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-14", slots: ["L63", "L64"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-15", slots: ["L67", "L68"] },
+      { name: "TATA GAYATHRI", slots: ["L37", "L38"] },
+      { name: "Srikanth Busa", slots: ["L43", "L44"] },
+      { name: "PUTTA DURGA", slots: ["L55", "L56"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-2", slots: ["L71", "L72"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-16", slots: ["L67", "L68"] },
+      { name: "Prof.SCOPE Dig Crs Faculty-23", slots: ["L43", "L44"] },
+    ],
+  },
 
-      { name: "MANIKANTA K", slots: ["E1", "TE1"], rating: "-" },
-      { name: "Prof Poojitha L", slots: ["E1", "TE1"], rating: "-" },
-      { name: "Mamatha", slots: ["E1", "TE1"], rating: "-" },
-      { name: "Prof. Jesmitha", slots: ["E1", "TE1"], rating: "-" },
-      { name: "MANIKANTA K", slots: ["E2", "TE2"], rating: "-" },
-      { name: "Prof Poojitha L", slots: ["E2", "TE2"], rating: "-" },
-
-      { name: "Prof.Vijay", slots: ["F1", "TF1"], rating: "-" },
-      { name: "SUPRIYA C", slots: ["F1", "TF1"], rating: "-" },
-      { name: "K MANI", slots: ["F1", "TFF1"], rating: "-" },
-      { name: "SUJITHA", slots: ["F1", "TFF1"], rating: "-" },
-      { name: "Prof Musthaq", slots: ["F2", "TF2"], rating: "-" },
-      { name: "SUPRIYA C", slots: ["F2", "TF2"], rating: "-" },
-      { name: "SUJITHA", slots: ["F2", "TF2"], rating: "-" },
-      { name: "Prof.Six Phrase Faculty-6", slots: ["F2", "TF2"], rating: "-" },
-      { name: "Prof. Jesmitha", slots: ["F2", "TFF2"], rating: "-" },
-      { name: "Prof.Vijay", slots: ["F2", "TFF2"], rating: "-" },
-
-      { name: "Prof Musthaq", slots: ["G1", "TG1"], rating: "-" },
-      { name: "MANIKANTA K", slots: ["G1", "TG1"], rating: "-" },
-      { name: "MANIKANTA K", slots: ["G2", "TG2"], rating: "-" },
-      { name: "KALYANI M", slots: ["G2", "TG2"], rating: "-" },
+  ECE1002: {
+    name: "Fundamentals of Electrical and Electronics Engineering",
+    credits: 4,
+    theoryTeachers: [
+      { name: "Jayashree Pradhan", slots: ["C2", "TC2"] },
+      { name: "MS.G.P.S. PRASHANTHI", slots: ["D2", "TDD2"] },
+      { name: "Suseela Vappangi", slots: ["E2", "TE2"] },
+      { name: "DAYANAND KALAPALA", slots: ["E2", "TEE2"] },
+      { name: "Jayashree Pradhan", slots: ["F1", "TF1"] },
+      { name: "Anoop Kumar Mishra", slots: ["F1", "TFF1"] },
+      { name: "Anoop Kumar Mishra", slots: ["F2", "TF2"] },
+      { name: "SANDEEP SARJERAO GODHADE", slots: ["F2", "TF2"] },
+      { name: "Anil Kumar Nayak", slots: ["F2", "TFF2"] },
+      { name: "Anil Kumar Nayak", slots: ["C1", "TC1"] },
+      { name: "GALAM RAVI KUMAR", slots: ["D1", "TD1"] },
+      { name: "Jayashree Pradhan", slots: ["D1", "TDD1"] },
+      { name: "Neha Gupta", slots: ["D2", "TD2"] },
+      { name: "Neha Gupta", slots: ["C2", "TC2"] },
+      { name: "Sudha Ellison Mathe", slots: ["E1", "TE1"] },
+      { name: "Suseela Vappangi", slots: ["E1", "TEE1"] },
+      { name: "Neha Gupta", slots: ["F1", "TF1"] },
+      { name: "Anoop Kumar Mishra", slots: ["C1", "TC1"] },
+    ],
+    labTeachers: [
+      { name: "DARAM SRIKANTH", slots: ["L15", "L16"] },
+      { name: "Jayashree Pradhan", slots: ["L39", "L40"] },
+      { name: "Khairnar Vikas Vishnu", slots: ["L41", "L42"] },
+      { name: "KESANAPALLI AKSA RANI", slots: ["L45", "L46"] },
+      { name: "Anil Kumar Nayak", slots: ["L11", "L12"] },
+      { name: "DARAM SRIKANTH", slots: ["L31", "L32"] },
+      { name: "Sudha Ellison Mathe", slots: ["L67", "L68"] },
+      { name: "Suseela Vappangi", slots: ["L33", "L34"] },
+      { name: "GALAM RAVI KUMAR", slots: ["L21", "L22"] },
+      { name: "MS.G.P.S. PRASHANTHI", slots: ["L23", "L24"] },
+      { name: "SHAIK LAL JOHN BASHA", slots: ["L25", "L26"] },
+      { name: "GALAM RAVI KUMAR", slots: ["L27", "L28"] },
+      { name: "MS.G.P.S. PRASHANTHI", slots: ["L29", "L30"] },
+      { name: "KESANAPALLI AKSA RANI", slots: ["L3", "L4"] },
+      { name: "Anoop Kumar Mishra", slots: ["L49", "L50"] },
+      { name: "SHAIK LAL JOHN BASHA", slots: ["L55", "L56"] },
+      { name: "GALAM RAVI KUMAR", slots: ["L51", "L52"] },
+      { name: "POTHURAJU SURESH", slots: ["L19", "L20"] },
+      { name: "Suseela Vappangi", slots: ["L3", "L4"] },
+      { name: "Neha Gupta", slots: ["L47", "L48"] },
+    ],
+  },
+  PHY1008: {
+    name: "Modern Physics - Embedded Theory and Lab",
+    credits: 4,
+    theoryTeachers: [
+      { name: "Khadheer Pasha Sk", slots: ["C2", "TC2"] },
+      { name: "MANAS RANJAN PANDA", slots: ["B2", "TB2"] },
+      { name: "Vivek Shukla", slots: ["E2", "TE2"] },
+      { name: "SHUBHADEEP PAL", slots: ["B2", "TB2"] },
+      { name: "Prachi Jain", slots: ["C2", "TC2"] },
+      { name: "Vivek Shukla", slots: ["B1", "TB1"] },
+      { name: "Dwarasala Adilakshmi", slots: ["B2", "TB2"] },
+      { name: "Sudharshan Vadnala", slots: ["B2", "TB2"] },
+      { name: "Debajit Goswami", slots: ["C1", "TC1"] },
+      { name: "Lakshmi Sowjanya Pali", slots: ["C1", "TC1"] },
+      { name: "SARONATH HALDER", slots: ["E2", "TE2"] },
+      { name: "Muniyandi Muneeswaran", slots: ["B1", "TB1"] },
+      { name: "Nagarjuna Neella", slots: ["C2", "TC2"] },
+      { name: "SARONATH HALDER", slots: ["E1", "TE1"] },
+      { name: "Virendra Kumar Verma", slots: ["E1", "TE1"] },
+      { name: "S Dasaradha Ramarao", slots: ["B1", "TB1"] },
+      { name: "SHUBHADEEP PAL", slots: ["B1", "TB1"] },
+      { name: "Nandam Ashok", slots: ["C1", "TC1"] },
+    ],
+    labTeachers: [
+      { name: "Prabhakaran Thandapani", slots: ["L49", "L50"] },
+      { name: "Narendra Nath Dutta", slots: ["L11", "L12"] },
+      { name: "Prabhakaran Thandapani", slots: ["L11", "L12"] },
+      { name: "Ganesh Kotagiri", slots: ["L27", "L28"] },
+      { name: "Prabhakaran Thandapani", slots: ["L29", "L30"] },
+      { name: "Prabhakaran Thandapani", slots: ["L45", "L46"] },
+      { name: "Muniyandi Muneeswaran", slots: ["L71", "L72"] },
+      { name: "Virendra Kumar Verma", slots: ["L5", "L6"] },
+      { name: "Muniyandi Muneeswaran", slots: ["L67", "L68"] },
+      { name: "K Senthil", slots: ["L15", "L16"] },
+      { name: "Muniyandi Muneeswaran", slots: ["L9", "L10"] },
+      { name: "Prachi Jain", slots: ["L7", "L8"] },
+      { name: "Sudagar J", slots: ["L41", "L42"] },
+      { name: "Dwarasala Adilakshmi", slots: ["L1", "L2"] },
+      { name: "Narendra Nath Dutta", slots: ["L51", "L52"] },
+      { name: "K Senthil", slots: ["L5", "L6"] },
+      { name: "Prachi Jain", slots: ["L55", "L56"] },
+      { name: "Sudharshan Vadnala", slots: ["L69", "L70"] },
+      { name: "Sudharshan Vadnala", slots: ["L37", "L38"] },
+      { name: "Nallamuthu S", slots: ["L31", "L32"] },
     ],
   },
 };
@@ -1072,8 +874,8 @@ const courseData = {
 let currentSort = {
   course: null,
   type: null,
-  criteria: "rating",
-  order: "desc",
+  criteria: "name", // default
+  order: "asc",
 };
 
 // Add this function to create sorting controls
@@ -1089,22 +891,40 @@ function addSortingControls(courseCode, type, container) {
   const sortingControls = document.createElement("div");
   sortingControls.className = "sorting-controls";
   sortingControls.innerHTML = `
-    <div class="sort-options">
-      <span class="sort-label">Sort by:</span>
+  <div class="sort-options">
+
+  <div class="search-bar">
+    <span class="sort-label">Filter:</span>
+    <input
+      type="text"
+      class="teacher-search"
+      placeholder="Search teacher..."
+    />
+  </div>
+
+  <div class="sorting">
+    <span class="sort-label">Sort by:</span>
+
+    <div class="sorting-form">
       <select class="sort-criteria">
-        <option value="rating">Rating</option>
         <option value="name">Name</option>
         <option value="slots">Slots</option>
       </select>
+
       <select class="sort-order">
         <option value="desc">High to Low</option>
         <option value="asc">Low to High</option>
       </select>
-      <button class="sort-apply-btn secondary-btn">
-        <i class="fas fa-sort"></i> Apply
-      </button>
     </div>
-  `;
+
+    <button class="sort-apply-btn secondary-btn">
+      <i class="fas fa-sort"></i> Apply
+    </button>
+  </div>
+
+</div>
+
+`;
 
   // Insert sorting controls before the teacher grid
   container.parentNode.insertBefore(sortingControls, container);
@@ -1112,6 +932,13 @@ function addSortingControls(courseCode, type, container) {
   const criteriaSelect = sortingControls.querySelector(".sort-criteria");
   const orderSelect = sortingControls.querySelector(".sort-order");
   const applyBtn = sortingControls.querySelector(".sort-apply-btn");
+
+  // Search
+  const searchInput = sortingControls.querySelector(".teacher-search");
+
+  searchInput.addEventListener("input", () => {
+    filterTeachers(courseCode, type, searchInput.value);
+  });
 
   // Set current values if this course/type was previously sorted
   if (currentSort.course === courseCode && currentSort.type === type) {
@@ -1124,6 +951,34 @@ function addSortingControls(courseCode, type, container) {
   });
 }
 
+function filterTeachers(courseCode, type, query) {
+  const container = document.getElementById(`${type}-${courseCode}`);
+  if (!container) return;
+
+  const teacherCards = Array.from(container.querySelectorAll(".teacher-card"));
+
+  const lowerQuery = query.toLowerCase();
+
+  teacherCards.forEach((card) => {
+    const nameEl = card.querySelector(".teacher-name");
+    const slotsEl = card.querySelector(".slots");
+
+    const nameText = nameEl ? nameEl.textContent.toLowerCase() : "";
+    const slotsText = slotsEl ? slotsEl.textContent.toLowerCase() : "";
+
+    // Always show "No Preference"
+    if (card.querySelector('input[value=""]')) {
+      card.style.display = "";
+      return;
+    }
+
+    const match =
+      nameText.includes(lowerQuery) || slotsText.includes(lowerQuery);
+
+    card.style.display = match ? "" : "none";
+  });
+}
+
 // Add this function to sort teachers
 function sortTeachers(courseCode, type, criteria, order) {
   currentSort = { course: courseCode, type, criteria, order };
@@ -1133,32 +988,29 @@ function sortTeachers(courseCode, type, criteria, order) {
 
   const teacherCards = Array.from(container.querySelectorAll(".teacher-card"));
   const noPreferenceCard = teacherCards.find((card) =>
-    card.querySelector('input[value=""]')
+    card.querySelector('input[value=""]'),
   );
   const otherCards = teacherCards.filter(
-    (card) => !card.querySelector('input[value=""]')
+    (card) => !card.querySelector('input[value=""]'),
   );
 
   otherCards.sort((a, b) => {
-    const teacherA = getTeacherData(a, courseCode, type);
-    const teacherB = getTeacherData(b, courseCode, type);
+    const teacherA = getTeacherData(a);
+    const teacherB = getTeacherData(b);
 
     let valueA, valueB;
 
     switch (criteria) {
-      case "rating":
-        valueA = parseRating(teacherA.rating);
-        valueB = parseRating(teacherB.rating);
-        break;
       case "name":
         valueA = teacherA.name.toLowerCase();
         valueB = teacherB.name.toLowerCase();
         break;
+
       case "slots":
-        // Sort by slot codes alphabetically
-        valueA = teacherA.slots.join(", ").toLowerCase();
-        valueB = teacherB.slots.join(", ").toLowerCase();
+        valueA = normalizeSlotsForSort(teacherA.slots);
+        valueB = normalizeSlotsForSort(teacherB.slots);
         break;
+
       default:
         return 0;
     }
@@ -1170,31 +1022,36 @@ function sortTeachers(courseCode, type, criteria, order) {
     }
   });
 
-  // Clear container and re-add cards in sorted order
   container.innerHTML = "";
-  if (noPreferenceCard) {
-    container.appendChild(noPreferenceCard);
-  }
+  if (noPreferenceCard) container.appendChild(noPreferenceCard);
   otherCards.forEach((card) => container.appendChild(card));
 
-  // Update visual feedback
   updateSortVisualFeedback(courseCode, type, criteria, order);
 }
 
+function normalizeSlotsForSort(slots) {
+  return slots
+    .map((s) => {
+      const match = s.match(/^([A-Z]+)(\d+)$/i);
+      if (!match) return s;
+
+      const [, prefix, num] = match;
+      return `${prefix}${num.padStart(3, "0")}`;
+    })
+    .sort()
+    .join("|")
+    .toLowerCase();
+}
+
 // Helper function to get teacher data from card
-function getTeacherData(card, courseCode, type) {
+function getTeacherData(card) {
   const input = card.querySelector("input");
   const teacherName = input.value;
   const slots = input.dataset.slots
     ? input.dataset.slots.split(",").map((s) => s.trim())
     : [];
 
-  const course = courseData[courseCode];
-  const teacherList =
-    type === "theory" ? course.theoryTeachers : course.labTeachers;
-  const teacher = teacherList.find((t) => t.name === teacherName);
-
-  return teacher || { name: teacherName, slots, rating: "-" };
+  return { name: teacherName, slots };
 }
 
 // Helper function to parse rating
@@ -1228,12 +1085,208 @@ function updateSortVisualFeedback(courseCode, type, criteria, order) {
     indicator.style.fontSize = "0.8rem";
     indicator.style.color = "var(--primary-green)";
 
-    sortingControls.querySelector(".sort-options").appendChild(indicator);
+    sortingControls.querySelector(".sorting").appendChild(indicator);
   }
 }
 
+const unifiedToTheoryIndex = {};
+let theoryRow = 0;
+unifiedTimes.forEach((u, i) => {
+  if (!u.labOnly) unifiedToTheoryIndex[i] = theoryRow++;
+});
+
+function getSlotsAt(day, unifiedIndex) {
+  const time = unifiedTimes[unifiedIndex].time;
+
+  // THEORY (index-based is fine)
+  const theoryIndex = unifiedToTheoryIndex[unifiedIndex];
+  const theory =
+    theoryIndex !== undefined
+      ? slotStructure[day]?.theorySlots?.[theoryIndex] || []
+      : [];
+
+  // LAB (time-based)
+  const labTimes = slotStructure[day]?.labTimes || [];
+  const labSlots = slotStructure[day]?.labSlots || [];
+
+  const lab = labTimes.map((t, i) => (t === time ? labSlots[i] : [])).flat();
+
+  return [...theory, ...lab].flatMap((s) => s.split(",").map((x) => x.trim()));
+}
+
+function autoSelectTeacher(courseCode, type, timeMap) {
+  const course = courseData[courseCode];
+
+  // 🛑 Course not found or no data
+  if (!course) return null;
+
+  const teachers =
+    (type === "theory" ? course.theoryTeachers : course.labTeachers) || [];
+
+  if (!Array.isArray(teachers) || teachers.length === 0) return null;
+
+  const validTeachers = [];
+
+  for (const teacher of teachers) {
+    let conflictCount = 0;
+    let invalid = false;
+
+    for (const slotCode of teacher.slots) {
+      for (const day of DAYS) {
+        for (let i = 0; i < unifiedTimes.length; i++) {
+          const slots = getSlotsAt(day, i);
+          if (!slots.includes(slotCode)) continue;
+
+          // ❌ Theory in lab-only time = invalid
+          if (type === "theory" && unifiedTimes[i].labOnly) {
+            invalid = true;
+            break;
+          }
+
+          const key = `${day}|${i}`;
+
+          // ⚠ Conflict
+          if (timeMap[key]) {
+            conflictCount++;
+          }
+        }
+        if (invalid) break;
+      }
+      if (invalid) break;
+    }
+
+    if (invalid) continue;
+
+    validTeachers.push({ teacher, conflictCount });
+  }
+
+  // 1️⃣ Prefer zero-conflict teachers
+  const zeroConflict = validTeachers.filter((t) => t.conflictCount === 0);
+  if (zeroConflict.length) {
+    // 🎲 RANDOM pick among valid zero-conflict teachers
+    const pick = zeroConflict[Math.floor(Math.random() * zeroConflict.length)];
+    return pick.teacher;
+  }
+
+  // 2️⃣ Otherwise minimal conflicts (random among best)
+  const minConflicts = Math.min(...validTeachers.map((t) => t.conflictCount));
+
+  const best = validTeachers.filter((t) => t.conflictCount === minConflicts);
+
+  const pick = best[Math.floor(Math.random() * best.length)];
+  return pick.teacher;
+}
+
+function removeCourseFromTimetable(courseCode) {
+  // Remove timetable slots for this course
+  document.querySelectorAll(".course-slot").forEach((el) => {
+    const codeEl = el.querySelector(".course-code");
+    if (codeEl && codeEl.textContent === courseCode) {
+      el.remove();
+    }
+  });
+
+  // Remove conflict warnings related to this course
+  Array.from(conflictWarnings.children).forEach((warning) => {
+    if (warning.textContent.includes(courseCode)) {
+      warning.remove();
+    }
+  });
+
+  // If no courses left → fully reset timetable view
+  if (selections.courses.length === 0) {
+    timetableDisplay.classList.add("hidden");
+    conflictWarnings.innerHTML = "";
+    document.querySelectorAll(".course-slot").forEach((el) => el.remove());
+    return;
+  }
+
+  // Otherwise, regenerate timetable to normalize conflicts
+  if (!timetableDisplay.classList.contains("hidden")) {
+    generateTimetable();
+  }
+}
+
+function addCourse() {
+  const checkedBoxes = document.querySelectorAll(
+    "#course-dropdown input[type='checkbox']:checked",
+  );
+
+  const selectedCodes = Array.from(checkedBoxes).map((cb) => cb.value);
+
+  if (selectedCodes.length === 0) return;
+
+  // Update selected courses
+  selections.courses = selectedCodes;
+
+  // Lock dropdown selections
+  checkedBoxes.forEach((input) => {
+    input.checked = true;
+    input.disabled = true;
+    input.closest("label")?.classList.add("selected-course");
+  });
+
+  // Remove orphaned teacher selections
+  Object.keys(selections.teachers).forEach((code) => {
+    if (!selectedCodes.includes(code)) {
+      delete selections.teachers[code];
+    }
+  });
+
+  renderCourseTabs();
+  updateCourseDropdownLabel();
+  menu.classList.add("hidden");
+
+  // ❌ DO NOT open teacher section here
+  // ❌ DO NOT jump to tabs here
+}
+
+function renderCourseTabs() {
+  selectedCoursesTabs.innerHTML = "";
+
+  selections.courses.forEach((code) => {
+    const tab = document.createElement("div");
+    tab.className = "course-tab";
+    tab.textContent = code;
+
+    const remove = document.createElement("span");
+    remove.innerHTML = "&times;";
+    remove.onclick = () => {
+      // Remove course from state
+      selections.courses = selections.courses.filter((c) => c !== code);
+      delete selections.teachers[code];
+
+      // Remove it from timetable + conflicts
+      removeCourseFromTimetable(code);
+
+      // Sync UI
+      uncheckCourseInDropdown(code);
+      renderCourseTabs();
+      updateCourseDropdownLabel();
+
+      // Hide teacher section if no courses remain
+      if (selections.courses.length === 0) {
+        teacherSection.classList.add("hidden");
+        teacherTabs.innerHTML = "";
+        teacherTabContent.innerHTML = "";
+      } else if (!teacherSection.classList.contains("hidden")) {
+        renderTeacherTabs();
+      }
+    };
+
+    tab.appendChild(remove);
+    selectedCoursesTabs.appendChild(tab);
+  });
+}
+
 // DOM Elements
-const courseSelect = document.getElementById("course-type");
+const courseDropdown = document.getElementById("course-dropdown");
+const addCourseBtn = document.getElementById("add-course");
+const selectedCoursesTabs = document.getElementById("selected-courses-tabs");
+
+const teacherTabs = document.getElementById("teacher-tabs");
+const teacherTabContent = document.getElementById("teacher-tab-content");
+
 const confirmBtn = document.getElementById("confirm-courses");
 const backBtn = document.getElementById("back-to-courses");
 const saveBtn = document.getElementById("save-selection");
@@ -1248,6 +1301,8 @@ const exportPdfBtn = document.getElementById("export-pdf");
 const exportImageBtn = document.getElementById("export-image");
 const conflictWarnings = document.getElementById("conflict-warnings");
 
+const DAYS = ["MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
 const selections = {
   courses: [],
   teachers: {},
@@ -1258,60 +1313,36 @@ const selections = {
 function initializeTimetable() {
   timetableGrid.innerHTML = "";
 
-  const days = ["TUE", "WED", "THU", "FRI", "SAT"];
+  // Top-left empty cell
+  const empty = document.createElement("div");
+  empty.className = "timetable-cell day-header";
+  timetableGrid.appendChild(empty);
 
-  // First row: Header
-  const timeHeader = document.createElement("div");
-  timeHeader.className = "timetable-cell day-header";
-  timeHeader.textContent = "Time";
-  timetableGrid.appendChild(timeHeader);
-
-  days.forEach((day) => {
-    const dayHeader = document.createElement("div");
-    dayHeader.className = "timetable-cell day-header";
-    dayHeader.textContent = day;
-    timetableGrid.appendChild(dayHeader);
+  // Time headers (top)
+  unifiedTimes.forEach((t) => {
+    const timeHeader = document.createElement("div");
+    timeHeader.className = "timetable-cell time-header";
+    timeHeader.textContent = t.time;
+    if (t.labOnly) timeHeader.classList.add("lab-only-time");
+    timetableGrid.appendChild(timeHeader);
   });
 
-  // Time rows
-  // Track separate index for theory slot rows
-  const theoryIndices = {
-    TUE: 0,
-    WED: 0,
-    THU: 0,
-    FRI: 0,
-    SAT: 0,
-  };
+  // Day rows
+  DAYS.forEach((day) => {
+    const dayCell = document.createElement("div");
+    dayCell.className = "timetable-cell day-header";
+    dayCell.textContent = day;
+    timetableGrid.appendChild(dayCell);
 
-  unifiedTimes.forEach((timeObj, timeIndex) => {
-    // Time column
-    const timeCell = document.createElement("div");
-    timeCell.className = "timetable-cell time-header";
-    timeCell.textContent = timeObj.time;
-    if (timeObj.labOnly) timeCell.classList.add("lab-only-time");
-    timetableGrid.appendChild(timeCell);
-
-    // For each day
-    days.forEach((day) => {
+    unifiedTimes.forEach((_, timeIndex) => {
       const cell = document.createElement("div");
       cell.className = "timetable-cell";
 
-      let theorySlots = [];
-      if (!timeObj.labOnly) {
-        // Only use theory slot if it's a theory-compatible time
-        theorySlots =
-          slotStructure[day]?.theorySlots?.[theoryIndices[day]] || [];
-        theoryIndices[day]++; // only increment if we actually used it
-      }
-
-      const labSlots = slotStructure[day]?.labSlots?.[timeIndex] || [];
-
-      const allSlots = [...theorySlots, ...labSlots].flat();
-
-      if (allSlots.length > 0) {
+      const slots = getSlotsAt(day, timeIndex);
+      if (slots.length > 0) {
         const label = document.createElement("div");
         label.className = "slot-code-label";
-        label.textContent = allSlots.join(" / ");
+        label.textContent = slots.join(" / ");
         cell.appendChild(label);
       }
 
@@ -1328,74 +1359,79 @@ function sameSlots(a, b) {
 }
 
 // ✅ Show teacher options for each course (UPDATED WITH SORTING)
-function showTeacherOptions() {
-  const selectedOptions = Array.from(courseSelect.selectedOptions);
+// function showTeacherOptions() {
+//   const selectedOptions = Array.from(courseSelect.selectedOptions);
 
-  // Preserve old selections and just add new ones
-  selectedOptions.forEach((opt) => {
-    const courseCode = opt.value.split(" - ")[0];
-    if (!selections.courses.includes(courseCode)) {
-      selections.courses.push(courseCode);
-    }
-  });
+//   // Preserve old selections and just add new ones
+//   selectedOptions.forEach((opt) => {
+//     const courseCode = opt.value.split(" - ")[0];
+//     if (!selections.courses.includes(courseCode)) {
+//       selections.courses.push(courseCode);
+//     }
+//   });
 
-  if (selections.courses.length === 0) {
-    alert("Please select at least one course.");
-    return;
-  }
+//   if (selections.courses.length === 0) {
+//     alert("Please select at least one course.");
+//     return;
+//   }
 
-  teacherContainer.innerHTML = "";
+//   teacherContainer.innerHTML = "";
 
-  const currentSelection = selectedOptions.map(
-    (opt) => opt.value.split(" - ")[0]
-  );
+//   const currentSelection = selectedOptions.map(
+//     (opt) => opt.value.split(" - ")[0],
+//   );
 
-  currentSelection.forEach((courseCode) => {
-    const course = courseData[courseCode];
-    if (!course) return;
+//   currentSelection.forEach((courseCode) => {
+//     const course = courseData[courseCode];
+//     if (!course) return;
 
-    const courseDiv = document.createElement("div");
-    courseDiv.className = "course-section card";
-    courseDiv.innerHTML = `
-      <h3>${courseCode}: ${course.name} (${course.credits} Credits)</h3>
-      <div class="teacher-section">
-        <div class="teacher-type-label">Theory Teachers</div>
-        <!-- Sorting controls will be inserted here by JavaScript -->
-        <div class="teachers-grid" id="theory-${courseCode}"></div>
-      </div>
-      <div class="teacher-section">
-        <div class="teacher-type-label">Lab Teachers</div>
-        <!-- Sorting controls will be inserted here by JavaScript -->
-        <div class="teachers-grid" id="lab-${courseCode}"></div>
-      </div>
-    `;
-    teacherContainer.appendChild(courseDiv);
+//     const courseDiv = document.createElement("div");
+//     courseDiv.className = "course-section card";
+//     courseDiv.innerHTML = `
+//       <h3>${courseCode}: ${course.name} (${course.credits} Credits)</h3>
+//       <div class="teacher-section">
+//         <div class="teacher-type-label">Theory Teachers</div>
+//         <!-- Sorting controls will be inserted here by JavaScript -->
+//         <div class="teachers-grid" id="theory-${courseCode}"></div>
+//       </div>
+//       <div class="teacher-section">
+//         <div class="teacher-type-label">Lab Teachers</div>
+//         <!-- Sorting controls will be inserted here by JavaScript -->
+//         <div class="teachers-grid" id="lab-${courseCode}"></div>
+//       </div>
+//     `;
+//     teacherContainer.appendChild(courseDiv);
 
-    const theoryContainer = document.getElementById(`theory-${courseCode}`);
-    const labContainer = document.getElementById(`lab-${courseCode}`);
+//     const theoryContainer = document.getElementById(`theory-${courseCode}`);
+//     const labContainer = document.getElementById(`lab-${courseCode}`);
 
-    // Add sorting controls
-    if (course.theoryTeachers?.length) {
-      addSortingControls(courseCode, "theory", theoryContainer);
-    }
-    if (course.labTeachers?.length) {
-      addSortingControls(courseCode, "lab", labContainer);
-    }
+//     // Add sorting controls
+//     if (course.theoryTeachers?.length) {
+//       addSortingControls(courseCode, "theory", theoryContainer);
+//     }
+//     if (course.labTeachers?.length) {
+//       addSortingControls(courseCode, "lab", labContainer);
+//     }
 
-    // Helper to render teachers for theory/lab
-    function renderTeacherOptions(container, type, teacherList) {
-      const groupName = `${courseCode}-${type}`;
-      const selected = selections.teachers[courseCode]?.[type];
+//     // Helper to render teachers for theory/lab
+//   }
 
-      // No Preference option
-      const noPrefId = `${groupName}-no-preference`;
-      const noPrefSelected = !selected;
-      const noPrefDiv = document.createElement("div");
-      noPrefDiv.className = "teacher-card";
-      noPrefDiv.innerHTML = `
+//   teacherSection.classList.remove("hidden");
+// }
+
+function renderTeacherOptions(courseCode, container, type, teacherList) {
+  const groupName = `radio-${courseCode}-${type}`;
+  const selected = selections.teachers[courseCode]?.[type];
+
+  // No Preference option
+  const noPrefId = `${groupName}-no-preference`;
+  const noPrefSelected = !selected;
+  const noPrefDiv = document.createElement("div");
+  noPrefDiv.className = "teacher-card";
+  noPrefDiv.innerHTML = `
     <input type="radio" name="${groupName}" id="${noPrefId}" value="" hidden ${
-        noPrefSelected ? "checked" : ""
-      }>
+      noPrefSelected ? "checked" : ""
+    }>
     <label class="card-ui ${
       noPrefSelected ? "selected" : ""
     }" for="${noPrefId}">
@@ -1403,72 +1439,63 @@ function showTeacherOptions() {
       <div class="teacher-meta"><span class="rating">System will choose</span><span class="slots">Any slot</span></div>
     </label>
   `;
-      container.appendChild(noPrefDiv);
+  container.appendChild(noPrefDiv);
 
-      document.getElementById(noPrefId).addEventListener("change", () => {
-        if (!selections.teachers[courseCode])
-          selections.teachers[courseCode] = {};
-        delete selections.teachers[courseCode][type];
+  document.getElementById(noPrefId).addEventListener("change", () => {
+    if (!selections.teachers[courseCode]) selections.teachers[courseCode] = {};
+    delete selections.teachers[courseCode][type];
 
-        document
-          .querySelectorAll(`input[name="${groupName}"]`)
-          .forEach((input) => {
-            input.nextElementSibling.classList.toggle(
-              "selected",
-              input.checked
-            );
-          });
-      });
+    document.querySelectorAll(`input[name="${groupName}"]`).forEach((input) => {
+      input.nextElementSibling.classList.toggle("selected", input.checked);
+    });
+  });
 
-      // Real teachers - apply initial sorting if exists
-      let teachersToRender = [...teacherList];
-      if (currentSort.course === courseCode && currentSort.type === type) {
-        teachersToRender.sort((a, b) => {
-          let valueA, valueB;
+  // Real teachers - apply initial sorting if exists
+  let teachersToRender = [...teacherList];
+  if (currentSort.course === courseCode && currentSort.type === type) {
+    teachersToRender.sort((a, b) => {
+      let valueA, valueB;
 
-          switch (currentSort.criteria) {
-            case "rating":
-              valueA = parseRating(a.rating);
-              valueB = parseRating(b.rating);
-              break;
-            case "name":
-              valueA = a.name.toLowerCase();
-              valueB = b.name.toLowerCase();
-              break;
-            case "slots":
-              // FIXED: Use the same logic as sortTeachers - sort by slot codes alphabetically
-              valueA = a.slots.join(", ").toLowerCase();
-              valueB = b.slots.join(", ").toLowerCase();
-              break;
-            default:
-              return 0;
-          }
+      switch (currentSort.criteria) {
+        case "name":
+          valueA = a.name.toLowerCase();
+          valueB = b.name.toLowerCase();
+          break;
 
-          if (currentSort.order === "asc") {
-            return valueA < valueB ? -1 : valueA > valueB ? 1 : 0;
-          } else {
-            return valueA > valueB ? -1 : valueA < valueB ? 1 : 0;
-          }
-        });
+        case "slots":
+          valueA = normalizeSlotsForSort(a.slots);
+          valueB = normalizeSlotsForSort(b.slots);
+          break;
+
+        default:
+          return 0;
       }
 
-      teachersToRender.forEach((teacher) => {
-        const key = `${groupName}-${teacher.name.replace(
-          /\s+/g,
-          "-"
-        )}-${Math.random().toString(36).substr(2, 4)}`;
-        const isSelected =
-          selected?.name === teacher.name &&
-          sameSlots(selected?.slots, teacher.slots);
+      if (currentSort.order === "asc") {
+        return valueA < valueB ? -1 : valueA > valueB ? 1 : 0;
+      } else {
+        return valueA > valueB ? -1 : valueA < valueB ? 1 : 0;
+      }
+    });
+  }
 
-        const div = document.createElement("div");
-        div.className = "teacher-card";
-        div.innerHTML = `
+  teachersToRender.forEach((teacher) => {
+    const key = `${groupName}-${teacher.name.replace(
+      /\s+/g,
+      "-",
+    )}-${Math.random().toString(36).substr(2, 4)}`;
+    const isSelected =
+      selected?.name === teacher.name &&
+      sameSlots(selected?.slots, teacher.slots);
+
+    const div = document.createElement("div");
+    div.className = "teacher-card";
+    div.innerHTML = `
       <input type="radio" name="${groupName}" id="${key}" value="${
-          teacher.name
-        }" data-slots="${teacher.slots.join(",")}" hidden ${
-          isSelected ? "checked" : ""
-        }>
+        teacher.name
+      }" data-slots="${teacher.slots.join(",")}" hidden ${
+        isSelected ? "checked" : ""
+      }>
       <label class="card-ui ${isSelected ? "selected" : ""}" for="${key}">
         <div class="teacher-name">${teacher.name}</div>
         <div class="teacher-meta">
@@ -1479,38 +1506,141 @@ function showTeacherOptions() {
         </div>
       </label>
     `;
-        container.appendChild(div);
+    container.appendChild(div);
 
-        document.getElementById(key).addEventListener("change", (e) => {
-          if (!selections.teachers[courseCode])
-            selections.teachers[courseCode] = {};
-          selections.teachers[courseCode][type] = {
-            name: e.target.value,
-            slots: e.target.dataset.slots.split(",").map((s) => s.trim()),
-          };
+    document.getElementById(key).addEventListener("change", (e) => {
+      if (!selections.teachers[courseCode])
+        selections.teachers[courseCode] = {};
+      selections.teachers[courseCode][type] = {
+        name: e.target.value,
+        slots: e.target.dataset.slots.split(",").map((s) => s.trim()),
+      };
 
-          document
-            .querySelectorAll(`input[name="${groupName}"]`)
-            .forEach((input) => {
-              input.nextElementSibling.classList.toggle(
-                "selected",
-                input.checked
-              );
-            });
+      document
+        .querySelectorAll(`input[name="${groupName}"]`)
+        .forEach((input) => {
+          input.nextElementSibling.classList.toggle("selected", input.checked);
         });
-      });
-    }
-
-    // Render both theory and lab teacher lists
-    if (course.theoryTeachers?.length) {
-      renderTeacherOptions(theoryContainer, "theory", course.theoryTeachers);
-    }
-    if (course.labTeachers?.length) {
-      renderTeacherOptions(labContainer, "lab", course.labTeachers);
-    }
+    });
   });
+}
+
+function openTeacherSelection() {
+  if (selections.courses.length === 0) {
+    alert("Please add at least one course.");
+    return;
+  }
 
   teacherSection.classList.remove("hidden");
+  renderTeacherTabs();
+
+  // 🚀 Jump to last added course tab
+  const lastCourse = selections.courses[selections.courses.length - 1];
+
+  const btn = Array.from(teacherTabs.children).find(
+    (b) => b.textContent === lastCourse,
+  );
+
+  if (btn) btn.click();
+}
+
+function renderTeacherTabs() {
+  teacherTabs.innerHTML = "";
+  teacherTabContent.innerHTML = "";
+
+  selections.courses.forEach((courseCode, index) => {
+    const btn = document.createElement("button");
+    btn.textContent = courseCode;
+    btn.className = index === 0 ? "active" : "";
+
+    btn.onclick = () => {
+      document
+        .querySelectorAll("#teacher-tabs button")
+        .forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      btn.scrollIntoView({ behavior: "smooth", inline: "center" });
+      renderTeacherTab(courseCode);
+    };
+
+    teacherTabs.appendChild(btn);
+  });
+
+  renderTeacherTab(selections.courses[0]);
+}
+
+function renderTeacherTab(courseCode) {
+  teacherTabContent.innerHTML = "";
+
+  const course = courseData[courseCode];
+  if (!course) return;
+
+  const hasTheory =
+    Array.isArray(course.theoryTeachers) && course.theoryTeachers.length > 0;
+
+  const hasLab =
+    Array.isArray(course.labTeachers) && course.labTeachers.length > 0;
+
+  const courseDiv = document.createElement("div");
+  courseDiv.className = "course-section card";
+  courseDiv.innerHTML = `
+    <h3>${courseCode}: ${course.name} (${course.credits} Credits)</h3>
+
+    <div class="teacher-section">
+      <div class="teacher-type-label">Theory Teachers</div>
+      <div class="teachers-grid" id="theory-${courseCode}"></div>
+      <div class="no-teacher-msg hidden" id="no-theory-${courseCode}">
+        No theory classes for this course.
+      </div>
+    </div>
+
+    <div class="teacher-section">
+      <div class="teacher-type-label">Lab Teachers</div>
+      <div class="teachers-grid" id="lab-${courseCode}"></div>
+      <div class="no-teacher-msg hidden" id="no-lab-${courseCode}">
+        No lab classes for this course.
+      </div>
+    </div>
+  `;
+
+  teacherTabContent.appendChild(courseDiv);
+
+  const theoryContainer = document.getElementById(`theory-${courseCode}`);
+  const labContainer = document.getElementById(`lab-${courseCode}`);
+  const noTheoryMsg = document.getElementById(`no-theory-${courseCode}`);
+  const noLabMsg = document.getElementById(`no-lab-${courseCode}`);
+
+  // THEORY
+  if (hasTheory) {
+    addSortingControls(courseCode, "theory", theoryContainer);
+    renderTeacherOptions(
+      courseCode,
+      theoryContainer,
+      "theory",
+      course.theoryTeachers,
+    );
+    noTheoryMsg.classList.add("hidden");
+  } else {
+    theoryContainer.classList.add("hidden");
+    noTheoryMsg.classList.remove("hidden");
+  }
+
+  // LAB
+  if (hasLab) {
+    addSortingControls(courseCode, "lab", labContainer);
+    renderTeacherOptions(courseCode, labContainer, "lab", course.labTeachers);
+    noLabMsg.classList.add("hidden");
+  } else {
+    labContainer.classList.add("hidden");
+    noLabMsg.classList.remove("hidden");
+  }
+
+  // Neither theory nor lab
+  if (!hasTheory && !hasLab) {
+    const warning = document.createElement("div");
+    warning.className = "no-teacher-msg";
+    warning.textContent = "No teaching data available for this course.";
+    courseDiv.appendChild(warning);
+  }
 }
 
 function populateSelectedTeachersTable() {
@@ -1540,18 +1670,40 @@ function populateSelectedTeachersTable() {
 
     if (!course) return;
 
-    const row = document.createElement("tr");
+    const hasTheory =
+      Array.isArray(course.theoryTeachers) && course.theoryTeachers.length > 0;
+
+    const hasLab =
+      Array.isArray(course.labTeachers) && course.labTeachers.length > 0;
 
     const theoryTeacher = selected?.theory;
     const labTeacher = selected?.lab;
 
+    // Display logic
+    let theoryTeacherText = "N/A";
+    let theorySlotsText = "N/A";
+    let labTeacherText = "N/A";
+    let labSlotsText = "N/A";
+
+    if (hasTheory) {
+      theoryTeacherText = theoryTeacher ? theoryTeacher.name : "Not selected";
+      theorySlotsText = theoryTeacher ? theoryTeacher.slots.join(", ") : "-";
+    }
+
+    if (hasLab) {
+      labTeacherText = labTeacher ? labTeacher.name : "Not selected";
+      labSlotsText = labTeacher ? labTeacher.slots.join(", ") : "-";
+    }
+
+    const row = document.createElement("tr");
+
     row.innerHTML = `
       <td>${courseCode}</td>
       <td>${course.name}</td>
-      <td>${theoryTeacher ? theoryTeacher.name : "Not selected"}</td>
-      <td>${theoryTeacher ? theoryTeacher.slots.join(", ") : "-"}</td>
-      <td>${labTeacher ? labTeacher.name : "Not selected"}</td>
-      <td>${labTeacher ? labTeacher.slots.join(", ") : "-"}</td>
+      <td>${theoryTeacherText}</td>
+      <td>${theorySlotsText}</td>
+      <td>${labTeacherText}</td>
+      <td>${labSlotsText}</td>
       <td>${course.credits}</td>
     `;
 
@@ -1590,67 +1742,49 @@ function generateTimetable() {
     }
   });
 
-  // Auto-select teachers if not chosen
+  // Auto-select teachers if not chosen (SMART, GLOBAL, NON-CLASHING)
   selections.courses.forEach((courseCode) => {
-    const selected = selections.teachers[courseCode] || {};
-    const course = courseData[courseCode];
+    selections.teachers[courseCode] ??= {};
+  });
 
-    ["theory", "lab"].forEach((type) => {
-      if (selected[type]) return;
+  ["theory", "lab"].forEach((type) => {
+    selections.courses.forEach((courseCode) => {
+      const course = courseData[courseCode];
+      if (!course) return;
 
-      const candidates =
-        (type === "theory" ? course.theoryTeachers : course.labTeachers) || [];
-      let bestChoice = null;
+      const teacherList =
+        type === "theory" ? course.theoryTeachers : course.labTeachers;
 
-      for (const teacher of candidates) {
-        let valid = true;
+      if (!Array.isArray(teacherList) || teacherList.length === 0) return;
 
-        for (const slotCode of teacher.slots) {
-          for (const day of ["TUE", "WED", "THU", "FRI", "SAT"]) {
-            const theory = slotStructure[day]?.theorySlots || [];
-            const lab = slotStructure[day]?.labSlots || [];
+      if (selections.teachers[courseCode][type]) return;
 
-            for (let i = 0; i < unifiedTimes.length; i++) {
-              const tIndex = unifiedToTheoryIndex[i];
-              const theoryGroup =
-                tIndex !== undefined ? theory[tIndex] || [] : [];
-              const labGroup = lab[i] || [];
+      const auto = autoSelectTeacher(courseCode, type, timeMap);
+      if (!auto) return;
 
-              const slots = [...theoryGroup, ...labGroup].flatMap((s) =>
-                s.split(",").map((x) => x.trim())
-              );
+      selections.teachers[courseCode][type] = {
+        name: auto.name,
+        slots: [...auto.slots],
+      };
 
-              if (slots.includes(slotCode)) {
-                if (type === "theory" && unifiedTimes[i].labOnly) {
-                  valid = false;
-                  break;
-                }
-                const key = `${day}|${i}`;
-                if (timeMap[key]?.some((x) => x.slotCode === slotCode)) {
-                  valid = false;
-                  break;
-                }
-              }
-            }
-            if (!valid) break;
+      // Reserve its slots into timeMap immediately
+      auto.slots.forEach((slotCode) => {
+        for (const day of DAYS) {
+          for (let i = 0; i < unifiedTimes.length; i++) {
+            const slots = getSlotsAt(day, i);
+            if (!slots.includes(slotCode)) continue;
+
+            const key = `${day}|${i}`;
+            timeMap[key] ??= [];
+            timeMap[key].push({
+              slotCode,
+              courseCode,
+              teacherName: auto.name,
+              isLab: type === "lab",
+            });
           }
-          if (!valid) break;
         }
-
-        if (valid) {
-          bestChoice = teacher;
-          break;
-        }
-      }
-
-      if (bestChoice) {
-        if (!selections.teachers[courseCode])
-          selections.teachers[courseCode] = {};
-        selections.teachers[courseCode][type] = {
-          name: bestChoice.name,
-          slots: [...bestChoice.slots],
-        };
-      }
+      });
     });
   });
 
@@ -1667,8 +1801,8 @@ function generateTimetable() {
       if (!teacher?.slots) return;
 
       teacher.slots.forEach((slotCode) => {
-        for (const day of ["TUE", "WED", "THU", "FRI", "SAT"]) {
-          const dayIndex = ["TUE", "WED", "THU", "FRI", "SAT"].indexOf(day);
+        for (const day of DAYS) {
+          const dayIndex = DAYS.indexOf(day);
           const theory = slotStructure[day]?.theorySlots || [];
           const lab = slotStructure[day]?.labSlots || [];
 
@@ -1679,7 +1813,7 @@ function generateTimetable() {
             const labGroup = lab[i] || [];
 
             const slots = [...theoryGroup, ...labGroup].flatMap((s) =>
-              s.split(",").map((x) => x.trim())
+              s.split(",").map((x) => x.trim()),
             );
             if (!slots.includes(slotCode)) continue;
 
@@ -1692,28 +1826,45 @@ function generateTimetable() {
             }
 
             const timeKey = `${day}|${i}`;
-            if (!timeMap[timeKey]) timeMap[timeKey] = [];
-            timeMap[timeKey].push({
-              slotCode,
-              courseCode,
-              teacherName: teacher.name,
-              isLab: type === "lab",
-            });
+            timeMap[timeKey] ??= [];
 
-            if (timeMap[timeKey].length > 1) {
+            // 🔍 Only count as conflict if DIFFERENT course
+            const alreadyPlaced = timeMap[timeKey].some(
+              (x) => x.courseCode === courseCode,
+            );
+
+            if (!alreadyPlaced) {
+              timeMap[timeKey].push({
+                slotCode,
+                courseCode,
+                teacherName: teacher.name,
+                isLab: type === "lab",
+              });
+            }
+
+            // ❗ Only mark conflict if 2+ different courses
+            const uniqueCourses = new Set(
+              timeMap[timeKey].map((x) => x.courseCode),
+            );
+
+            if (uniqueCourses.size > 1) {
               conflicts.add(timeKey);
             }
 
-            const row = i + 1;
-            const col = dayIndex + 1;
-            const cellIndex = row * 6 + col;
+            const totalCols = unifiedTimes.length + 1;
+
+            const row = dayIndex + 1;
+            const col = i + 1;
+
+            const cellIndex = row * totalCols + col;
 
             const cell = timetableGrid.children[cellIndex];
             const div = document.createElement("div");
             div.className = `course-slot ${
               type === "lab" ? "lab-slot" : "theory-slot"
             }`;
-            div.textContent = courseCode;
+            div.innerHTML = ` <div class="course-code">${courseCode}</div> <div class="course-slot-code">${slotCode}</div>`;
+
             div.title = `${courseData[courseCode].name}\nTeacher: ${teacher.name}`;
             if (timeMap[timeKey].length > 1) div.classList.add("conflict-slot");
             cell.appendChild(div);
@@ -1768,11 +1919,10 @@ function loadSelection() {
     selections.courses = saved.courses;
     selections.teachers = saved.teachers;
 
-    Array.from(courseSelect.options).forEach((opt) => {
-      opt.selected = selections.courses.includes(opt.value.split(" - ")[0]);
-    });
+    renderCourseTabs();
+    renderTeacherTabs();
 
-    showTeacherOptions();
+    openTeacherSelection();
     alert("Selection loaded!");
   } catch (e) {
     alert("Load failed: " + e.message);
@@ -1783,118 +1933,176 @@ function loadSelection() {
 async function exportAsPDF() {
   try {
     const { jsPDF } = window.jspdf;
-    const doc = new jsPDF({ orientation: "landscape", unit: "mm" });
 
-    // Add teachers table first
-    doc.setFontSize(16);
-    doc.text("Selected Teachers", 20, 15);
-
-    // Get teachers table data
-    let teachersContent = [];
-    let totalCredits = 0;
-
-    selections.courses.forEach((courseCode) => {
-      const course = courseData[courseCode];
-      const selected = selections.teachers[courseCode];
-      if (!course) return;
-
-      const theoryTeacher = selected?.theory;
-      const labTeacher = selected?.lab;
-
-      teachersContent.push({
-        courseCode,
-        courseName: course.name,
-        theoryTeacher: theoryTeacher ? theoryTeacher.name : "Not selected",
-        theorySlots: theoryTeacher ? theoryTeacher.slots.join(", ") : "-",
-        labTeacher: labTeacher ? labTeacher.name : "Not selected",
-        labSlots: labTeacher ? labTeacher.slots.join(", ") : "-",
-        credits: course.credits,
-      });
-
-      totalCredits += course.credits || 0;
+    const pdf = new jsPDF({
+      orientation: "landscape",
+      unit: "mm",
+      format: "a3", // 👈 Big enough for full timetable width
     });
 
-    // Add teachers table content
-    let yPosition = 25;
-    doc.setFontSize(10);
+    /* ───────────────────────────────
+       PAGE 1 — Selected Teachers Table
+    ─────────────────────────────── */
 
-    teachersContent.forEach((item) => {
-      if (yPosition > 250) {
-        doc.addPage();
-        yPosition = 20;
-      }
+    const tableContainer = document.createElement("div");
+    tableContainer.style.cssText = `
+      position: fixed;
+      left: -10000px;
+      top: -10000px;
+      width: 1400px;
+      background: white;
+      padding: 24px;
+      z-index: 10000;
+      font-family: Poppins, sans-serif;
+    `;
 
-      doc.text(`${item.courseCode} - ${item.courseName}`, 20, yPosition);
-      yPosition += 5;
-      doc.text(
-        `Theory: ${item.theoryTeacher} (${item.theorySlots})`,
-        25,
-        yPosition
-      );
-      yPosition += 5;
-      doc.text(`Lab: ${item.labTeacher} (${item.labSlots})`, 25, yPosition);
-      yPosition += 5;
-      doc.text(`Credits: ${item.credits}`, 25, yPosition);
-      yPosition += 8;
+    const title1 = document.createElement("h2");
+    title1.style.cssText = `
+      margin-bottom: 16px;
+      color: #2e8b57;
+      font-weight: 600;
+    `;
+    tableContainer.appendChild(title1);
+
+    const teachersTable = document
+      .getElementById("selected-teachers-table")
+      .cloneNode(true);
+
+    tableContainer.appendChild(teachersTable);
+    document.body.appendChild(tableContainer);
+
+    const tableCanvas = await html2canvas(tableContainer, {
+      scale: 2,
+      backgroundColor: "#ffffff",
     });
 
-    // Add total credits
-    doc.text(`Total Credits: ${totalCredits}`, 20, yPosition);
-    yPosition += 15;
+    const tableImg = tableCanvas.toDataURL("image/png");
 
-    // Add timetable
-    if (yPosition > 180) {
-      doc.addPage();
-      yPosition = 20;
-    }
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
 
-    doc.setFontSize(16);
-    doc.text("Timetable", 20, yPosition);
-    yPosition += 10;
+    const tableImgWidth = pageWidth - 20;
+    const tableImgHeight =
+      (tableCanvas.height * tableImgWidth) / tableCanvas.width;
 
-    const timetableElement = document.querySelector(".timetable-container");
-    const canvas = await html2canvas(timetableElement, { scale: 1.5 });
-    const imgData = canvas.toDataURL("image/png");
-    const imgWidth = 270;
-    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    pdf.addImage(tableImg, "PNG", 10, 15, tableImgWidth, tableImgHeight);
 
-    doc.addImage(imgData, "PNG", 10, yPosition, imgWidth, imgHeight);
-    doc.save("timetable-with-teachers.pdf");
+    document.body.removeChild(tableContainer);
+
+    /* ───────────────────────────────
+       PAGE 2 — Timetable
+    ─────────────────────────────── */
+
+    pdf.addPage();
+
+    const timetableContainer = document.createElement("div");
+    timetableContainer.style.cssText = `
+      position: fixed;
+      left: -10000px;
+      top: -10000px;
+      width: 1900px;  /* 👈 Wide capture */
+      background: white;
+      padding: 24px;
+      z-index: 10000;
+      font-family: Poppins, sans-serif;
+    `;
+
+    const title2 = document.createElement("h2");
+    title2.innerText = "Timetable";
+    title2.style.cssText = `
+      margin-bottom: 16px;
+      color: #2e8b57;
+      font-weight: 600;
+    `;
+    timetableContainer.appendChild(title2);
+
+    const timetable = document
+      .querySelector(".timetable-container")
+      .cloneNode(true);
+
+    timetable.style.width = "100%";
+    timetable.style.overflow = "visible";
+
+    timetableContainer.appendChild(timetable);
+    document.body.appendChild(timetableContainer);
+
+    const timetableCanvas = await html2canvas(timetableContainer, {
+      scale: 2,
+      backgroundColor: "#ffffff",
+    });
+
+    const timetableImg = timetableCanvas.toDataURL("image/png");
+
+    const timetableImgWidth = pageWidth - 20;
+    const timetableImgHeight =
+      (timetableCanvas.height * timetableImgWidth) / timetableCanvas.width;
+
+    pdf.addImage(
+      timetableImg,
+      "PNG",
+      10,
+      15,
+      timetableImgWidth,
+      timetableImgHeight,
+    );
+
+    document.body.removeChild(timetableContainer);
+
+    /* ─────────────────────────────── */
+
+    pdf.save("timetable-with-teachers.pdf");
   } catch (e) {
-    alert("Export failed: " + e.message);
+    alert("PDF export failed: " + e.message);
   }
 }
 
 async function exportAsImage() {
   try {
-    // Create a container to capture both teachers table and timetable
     const exportContainer = document.createElement("div");
     exportContainer.style.cssText = `
       position: fixed;
       left: -10000px;
       top: -10000px;
-      width: 1200px;
+      width: 1900px;
       background: white;
-      padding: 20px;
+      padding: 24px;
       z-index: 10000;
+      font-family: Poppins, sans-serif;
     `;
 
-    // Clone the teachers table
+    // Optional title
+    const title = document.createElement("h2");
+    title.innerText = "Timetable Optimizer – Selected Teachers & Schedule";
+    title.style.cssText = `
+      margin-bottom: 16px;
+      color: #2e8b57;
+      font-weight: 600;
+    `;
+    exportContainer.appendChild(title);
+
+    // Clone Selected Teachers table
     const teachersTable = document
       .getElementById("selected-teachers-table")
       .cloneNode(true);
-    teachersTable.style.marginBottom = "30px";
+    teachersTable.style.marginBottom = "32px";
     exportContainer.appendChild(teachersTable);
 
-    // Clone the timetable
+    // Clone Timetable
     const timetable = document
       .querySelector(".timetable-container")
       .cloneNode(true);
+
+    timetable.style.width = "100%";
+    timetable.style.overflow = "visible";
     exportContainer.appendChild(timetable);
 
     document.body.appendChild(exportContainer);
 
-    const canvas = await html2canvas(exportContainer, { scale: 2 });
+    const canvas = await html2canvas(exportContainer, {
+      scale: 2,
+      backgroundColor: "#ffffff",
+    });
+
     const link = document.createElement("a");
     link.download = "timetable-with-teachers.png";
     link.href = canvas.toDataURL("image/png");
@@ -1908,23 +2116,109 @@ async function exportAsImage() {
 
 // ✅ Reset selections
 function resetSelections() {
-  courseSelect.selectedIndex = -1;
-  teacherContainer.innerHTML = "";
   selections.courses = [];
   selections.teachers = {};
+  resetCourseDropdown();
+  updateCourseDropdownLabel();
+
+  selectedCoursesTabs.innerHTML = "";
+
+  teacherTabs.innerHTML = "";
+  teacherTabContent.innerHTML = "";
+
   teacherSection.classList.add("hidden");
   timetableDisplay.classList.add("hidden");
+
   document.querySelectorAll(".course-slot").forEach((el) => el.remove());
   conflictWarnings.innerHTML = "";
+}
+
+// Dropdown
+const dropdown = document.querySelector("#course-dropdown");
+const toggle = dropdown.querySelector(".dropdown-toggle");
+const menu = dropdown.querySelector(".dropdown-menu");
+
+function resetCourseDropdown() {
+  document
+    .querySelectorAll("#course-dropdown input[type='checkbox']")
+    .forEach((input) => {
+      input.checked = false;
+      input.disabled = false;
+      input.closest("label")?.classList.remove("selected-course");
+    });
+
+  // Optional: reset dropdown button label
+  const btn = document.querySelector(".dropdown-toggle");
+  if (btn) btn.textContent = "Select courses";
+}
+
+teacherSection.addEventListener("transitionend", () => {
+  if (teacherSection.classList.contains("hidden")) {
+    resetCourseDropdown();
+  }
+});
+
+function uncheckCourseInDropdown(courseCode) {
+  const checkbox = document.querySelector(
+    `#course-dropdown input[value="${courseCode}"]`,
+  );
+
+  if (!checkbox) return;
+
+  checkbox.checked = false;
+  checkbox.disabled = false;
+  checkbox.closest("label")?.classList.remove("selected-course");
+}
+
+function updateCourseDropdownLabel() {
+  const count = selections.courses.length;
+  const btn = document.querySelector(".dropdown-toggle");
+
+  if (!btn) return;
+
+  if (count === 0) {
+    btn.textContent = "Select courses";
+  } else if (count === 1) {
+    btn.textContent = "1 course selected";
+  } else {
+    btn.textContent = `${count} courses selected`;
+  }
+}
+
+function updateCourseDropdownLabelFromMenu() {
+  const checked = document.querySelectorAll(
+    "#course-dropdown input[type='checkbox']:checked",
+  );
+
+  const btn = document.querySelector(".dropdown-toggle");
+  if (!btn) return;
+
+  const count = checked.length;
+
+  if (count === 0) {
+    btn.textContent = "Select courses";
+  } else if (count === 1) {
+    btn.textContent = "1 course selected";
+  } else {
+    btn.textContent = `${count} courses selected`;
+  }
 }
 
 // ✅ Event listeners
 document.addEventListener("DOMContentLoaded", () => {
   initializeTimetable();
 
-  confirmBtn.addEventListener("click", showTeacherOptions);
-  backBtn.addEventListener("click", () =>
-    teacherSection.classList.add("hidden")
+  addCourseBtn.addEventListener("click", addCourse);
+
+  confirmBtn.addEventListener("click", openTeacherSelection);
+  backBtn.addEventListener(
+    "click",
+    () => (
+      teacherSection.classList.add("hidden"),
+      timetableDisplay.classList.add("hidden"),
+      resetCourseDropdown(),
+      updateCourseDropdownLabel()
+    ),
   );
   generateBtn.addEventListener("click", generateTimetable);
   resetBtn.addEventListener("click", resetSelections);
@@ -1932,4 +2226,49 @@ document.addEventListener("DOMContentLoaded", () => {
   loadBtn.addEventListener("click", loadSelection);
   exportPdfBtn.addEventListener("click", exportAsPDF);
   exportImageBtn.addEventListener("click", exportAsImage);
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) {
+      menu.classList.add("hidden");
+    }
+  });
+
+  document
+    .querySelectorAll("#course-dropdown input[type='checkbox']")
+    .forEach((input) => {
+      input.addEventListener("change", updateCourseDropdownLabelFromMenu);
+    });
 });
+
+// HELP OVERLAY LOGIC
+
+const helpBtn = document.getElementById("help-btn");
+const helpOverlay = document.getElementById("help-overlay");
+const closeHelpBtn = document.getElementById("close-help");
+
+if (helpBtn && helpOverlay && closeHelpBtn) {
+  helpBtn.addEventListener("click", () => {
+    helpOverlay.classList.remove("hidden");
+  });
+
+  closeHelpBtn.addEventListener("click", () => {
+    helpOverlay.classList.add("hidden");
+  });
+
+  // Close when clicking outside the modal
+  helpOverlay.addEventListener("click", (e) => {
+    if (e.target === helpOverlay) {
+      helpOverlay.classList.add("hidden");
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !helpOverlay.classList.contains("hidden")) {
+      helpOverlay.classList.add("hidden");
+    }
+  });
+}
