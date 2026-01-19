@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,48 +20,95 @@
     <div class="app-container">
       <header class="app-header">
         <div class="header-content">
-          <h1><i class="fas fa-calendar-alt"></i> Timetable Optimizer</h1>
+          <h1>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="44px"
+              viewBox="0 -960 960 960"
+              width="44px"
+              fill="#ffffff"
+            >
+              <path
+                d="M480-400q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z"
+              />
+            </svg>
+            Timetable Optimizer
+          </h1>
           <p>Create your perfect green schedule without slot clashes</p>
         </div>
       </header>
 
       <main class="app-main">
+        <button id="help-btn" class="help-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#ffffff"
+          >
+            <path
+              d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+            />
+          </svg>
+        </button>
+
         <section class="input-section card">
           <div id="course-selection">
             <h2><i class="fas fa-book-open"></i> Select Courses</h2>
             <div class="form-group">
-              <select name="Courses" id="course-type" multiple size="6">
-                <option value="CSE1005">
-                  CSE1005 - Software Engineering (4 Credits)
-                </option>
-                <option value="CSE2007">
-                  CSE2007 - Database Management Systems (4 Credits)
-                </option>
-                <option value="CSE3008">
-                  CSE3008 - Introduction to Machine Learning (4 Credits)
-                </option>
-                <option value="CSE2011">
-                  CSE2011 - Cyber Security and Digital Forensics (4 Credits)
-                </option>
-                <option value="MAT1011">
-                  MAT1011 - Applied Statistics (4 credits)
-                </option>
-                <option value="ECE2002">
-                  ECE2002 - Computer Architecture and Organization (4 Credit)
-                </option>
-                <option value="MGT1040">
-                  MGT1040 - Entrepreneurship - Theory Only (2 Credits)
-                </option>
-                <option value="STS2009">
-                  STS2009 - Arithmetic Problem Solving Skills (3 Credits)
-                </option>
-              </select>
-              <small
-                ><i class="fas fa-info-circle"></i> Hold Ctrl/Cmd to select
-                multiple courses</small
-              >
+              <div class="course-picker">
+                <div class="multi-dropdown" id="course-dropdown">
+                  <button class="dropdown-toggle">
+                    Select courses
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+
+                  <div class="dropdown-menu hidden">
+                    <label
+                      ><input type="checkbox" value="LIB1023" /> LIB1023 –
+                      Indian Studies</label
+                    >
+                    <label
+                      ><input type="checkbox" value="ENG1002" /> ENG1002 –
+                      English for Effective Communication</label
+                    >
+                    <label
+                      ><input type="checkbox" value="ENG2001" /> ENG2001 –
+                      English for Professional Communication</label
+                    >
+                    <label
+                      ><input type="checkbox" value="MAT1002" /> MAT1002 –
+                      Applications of Differential and Difference
+                      Equations</label
+                    >
+                    <label
+                      ><input type="checkbox" value="CHY1009" /> CHY1009 –
+                      Chemistry and Environmental Studies</label
+                    >
+                    <label
+                      ><input type="checkbox" value="CSE2005" /> CSE2005 –
+                      Object Oriented Programming using JAVA</label
+                    >
+                    <label
+                      ><input type="checkbox" value="ECE1002" /> ECE1002 –
+                      Fundamentals of Electrical and Electronics
+                      Engineering</label
+                    >
+                    <label
+                      ><input type="checkbox" value="PHY1008" /> PHY1008 –
+                      Modern Physics</label
+                    >
+                  </div>
+                </div>
+
+                <button id="add-course" class="secondary-btn">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+              <div id="selected-courses-tabs" class="course-tabs"></div>
             </div>
-            <button id="confirm-courses" class="primary-btn">
+            <button id="confirm-courses" class="sort-apply-btn primary-btn">
               <i class="fas fa-arrow-right"></i> Continue to Teachers
             </button>
           </div>
@@ -85,11 +132,12 @@
             </div>
           </div>
 
-          <div id="teacher-options-container">
-            <!-- Course sections with sorting controls will be dynamically inserted here -->
-          </div>
+          <div id="teacher-tabs" class="course-tabs"></div>
+          <div id="teacher-tab-content"></div>
+
+          <!-- Course sections with sorting controls will be dynamically inserted here -->
           <div class="action-buttons">
-            <button id="generate-timetable" class="primary-btn">
+            <button id="generate-timetable" class="sort-apply-btn primary-btn">
               <i class="fas fa-calendar-check"></i> Generate Timetable
             </button>
             <button id="reset-selection" class="secondary-btn">
@@ -99,68 +147,71 @@
         </section>
 
         <section id="timetable-display" class="hidden">
-          <div class="section-header">
-            <h2><i class="fas fa-table"></i> Your Timetable</h2>
-            <div class="header-actions">
-              <div class="legend">
-                <span class="theory-legend"
-                  ><i class="fas fa-chalkboard"></i> Theory</span
-                >
-                <span class="lab-legend"><i class="fas fa-flask"></i> Lab</span>
-                <span class="conflict-legend"
-                  ><i class="fas fa-exclamation-triangle"></i> Conflict</span
-                >
+          <div id="export-wrapper">
+            <div class="section-header">
+              <h2><i class="fas fa-table"></i> Your Timetable</h2>
+              <div class="header-actions">
+                <div class="legend">
+                  <span class="theory-legend"
+                    ><i class="fas fa-chalkboard"></i> Theory</span
+                  >
+                  <span class="lab-legend"
+                    ><i class="fas fa-flask"></i> Lab</span
+                  >
+                  <span class="conflict-legend"
+                    ><i class="fas fa-exclamation-triangle"></i> Conflict</span
+                  >
+                </div>
+                <div class="export-buttons">
+                  <button id="export-pdf" class="secondary-btn">
+                    <i class="fas fa-file-pdf"></i> Export PDF
+                  </button>
+                  <button id="export-image" class="secondary-btn">
+                    <i class="fas fa-image"></i> Export Image
+                  </button>
+                </div>
               </div>
-              <div class="export-buttons">
-                <button id="export-pdf" class="secondary-btn">
-                  <i class="fas fa-file-pdf"></i> Export PDF
-                </button>
-                <button id="export-image" class="secondary-btn">
-                  <i class="fas fa-image"></i> Export Image
-                </button>
+            </div>
+
+            <!-- NEW: Selected Teachers Table -->
+            <div
+              id="selected-teachers-table"
+              class="selected-teachers-table card"
+            >
+              <h3><i class="fas fa-users"></i> Selected Teachers</h3>
+              <div class="table-container">
+                <table class="teachers-table">
+                  <thead>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Course Name</th>
+                      <th>Theory Teacher</th>
+                      <th>Theory Slots</th>
+                      <th>Lab Teacher</th>
+                      <th>Lab Slots</th>
+                      <th>Credits</th>
+                    </tr>
+                  </thead>
+                  <tbody id="selected-teachers-tbody">
+                    <!-- Will be populated by JavaScript -->
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td
+                        colspan="6"
+                        style="text-align: right; font-weight: bold"
+                      >
+                        Total Credits:
+                      </td>
+                      <td id="total-credits-display" style="font-weight: bold">
+                        0
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
               </div>
             </div>
           </div>
-
-          <!-- NEW: Selected Teachers Table -->
-          <div
-            id="selected-teachers-table"
-            class="selected-teachers-table card"
-          >
-            <h3><i class="fas fa-users"></i> Selected Teachers</h3>
-            <div class="table-container">
-              <table class="teachers-table">
-                <thead>
-                  <tr>
-                    <th>Course Code</th>
-                    <th>Course Name</th>
-                    <th>Theory Teacher</th>
-                    <th>Theory Slots</th>
-                    <th>Lab Teacher</th>
-                    <th>Lab Slots</th>
-                    <th>Credits</th>
-                  </tr>
-                </thead>
-                <tbody id="selected-teachers-tbody">
-                  <!-- Will be populated by JavaScript -->
-                </tbody>
-                <tfoot>
-                  <tr>
-                    <td
-                      colspan="6"
-                      style="text-align: right; font-weight: bold"
-                    >
-                      Total Credits:
-                    </td>
-                    <td id="total-credits-display" style="font-weight: bold">
-                      0
-                    </td>
-                  </tr>
-                </tfoot>
-              </table>
-            </div>
-          </div>
-
           <div class="timetable-container">
             <div class="timetable-grid" id="timetable-grid"></div>
           </div>
@@ -171,11 +222,144 @@
             minute duration.</small
           >
         </section>
-      </main>
+        <!-- Help Overlay -->
+        <div id="help-overlay" class="help-overlay hidden">
+          <div class="help-content">
+            <div class="help-header">
+              <h2>Timetable Optimizer – Quick Help</h2>
+              <button id="close-help" class="close-help">&times;</button>
+            </div>
 
+            <div class="help-body">
+              <h3>1. Select Your Courses</h3>
+              <p>
+                Choose one or more courses from the dropdown and click
+                <b>Add</b>. You can add multiple courses before continuing.
+              </p>
+              <p>
+                When you’re done selecting courses, click <b>Continue</b> to
+                move on to teacher selection.
+              </p>
+
+              <h3>2. Choose Teachers (Optional)</h3>
+              <p>For each course, you can either:</p>
+              <ul>
+                <li>Select a specific teacher</li>
+                <li>Or leave it as <b>No Preference</b></li>
+              </ul>
+              <p>
+                If you leave it as <b>No Preference</b>, the system will
+                automatically choose a suitable teacher for you later.
+              </p>
+
+              <h3>3. Generate the Timetable</h3>
+              <p>
+                Click <b>Generate Timetable</b> to build your schedule. The
+                system tries to pick teacher-slot combinations that do not
+                clash.
+              </p>
+
+              <h3>4. What Is Auto-Select Doing?</h3>
+              <p>
+                Auto-Select looks at all available teachers for each course and
+                prefers those whose slots do not overlap with your existing
+                timetable.
+              </p>
+              <p>
+                If multiple non-clashing options exist, one is picked randomly
+                so you can get different valid timetables each time you
+                generate.
+              </p>
+
+              <h3>5. Why Are There No Ratings?</h3>
+              <p>
+                Faculty ratings are subjective and vary across platforms.
+                Instead of opinions, this tool focuses only on:
+              </p>
+              <ul>
+                <li><b>Slot compatibility</b></li>
+                <li><b>Conflict-free scheduling</b></li>
+              </ul>
+
+              <h3>6. When Can Conflicts Still Appear?</h3>
+              <p>Conflicts may still show up if:</p>
+              <ul>
+                <li>No zero-conflict teachers exist for a course</li>
+                <li>Theory and lab slots overlap</li>
+                <li>You manually select teachers with clashing slots</li>
+              </ul>
+
+              <h3>7. What Does “No Preference” Mean?</h3>
+              <p>
+                It simply tells the system:
+                <i>“You decide what works best for me.”</i>
+              </p>
+              <p>
+                A suitable teacher will be chosen automatically when generating
+                the timetable.
+              </p>
+
+              <h3>8. Export & Share Your Timetable</h3>
+              <p>Once your timetable is generated, you can export it using:</p>
+              <ul>
+                <li>
+                  <b>Export PDF</b> – Ideal for printing or long-term storage
+                </li>
+                <li>
+                  <b>Export Image</b> – Perfect for sharing on WhatsApp,
+                  Telegram, or email
+                </li>
+              </ul>
+              <p>The exported file includes:</p>
+              <ul>
+                <li>Your selected teachers</li>
+                <li>The complete timetable</li>
+                <li>Total credits</li>
+              </ul>
+              <p>
+                You can easily send this file to friends to compare schedules,
+                plan group studies, or avoid slot clashes together.
+              </p>
+
+              <h3>9. Helpful Tips</h3>
+              <ul>
+                <li>
+                  Click <b>Generate Timetable</b> again to re-roll a new valid
+                  combination
+                </li>
+                <li>
+                  Use sorting and filtering to find preferred slots faster
+                </li>
+                <li>Manual selections always override Auto-Select</li>
+                <li>
+                  Export your timetable to keep a backup or share it with
+                  friends
+                </li>
+              </ul>
+
+              <p style="margin-top: 14px; font-size: 0.85rem; color: #777">
+                This tool always prioritizes conflict-free scheduling. Your
+                manual choices take priority over automatic ones.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
       <footer class="app-footer">
-        <p>Made with <i class="fas fa-heart"></i> for students</p>
-        <p class="version">Version 3.1.0</p>
+        <div class="footer-top">
+          <p>Made with <i class="fas fa-heart"></i> for students</p>
+          <p class="version">Version 4.0.0</p>
+        </div>
+
+        <div class="footer-disclaimer">
+          <span>
+            This timetable is generated using <b>mock registration data</b>.
+            Final course registration may differ - some teachers or slots may be
+            added, removed, or changed. Please keep
+            <b>alternative timetables</b> ready and don’t rely on a single
+            schedule.
+          </span>
+        </div>
       </footer>
     </div>
 
