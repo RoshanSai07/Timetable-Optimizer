@@ -9,7 +9,7 @@ Helps you plan course schedules using mock registration data, select preferred t
 
 **Try it here:**  https://roshansai07.github.io/Timetable-Optimizer/
 
-## ✨ What’s New in v4.0
+## ✨ What’s New in v4.2
 
 - **Updated Course & Teacher Data**  
   Includes refreshed mock registration data with courses, teachers, and slot mappings.
@@ -35,8 +35,8 @@ Helps you plan course schedules using mock registration data, select preferred t
 - **Help Overlay**  
   Built-in guide explaining how to use the tool, Auto-Select logic, and tips.
 
-- **Mock Data Disclaimer**  
-  Clear warning that final registration data may differ — encourages backup schedules.
+- **Original Course Registration Demo Video**  
+  Built-in video frame for the demo video of the course registration-official.
 
 ## Core Features
 
