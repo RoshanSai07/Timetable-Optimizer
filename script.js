@@ -2315,7 +2315,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// HELP OVERLAY LOGIC
+// OVERLAY LOGIC
 
 const helpBtn = document.getElementById("help-btn");
 const helpOverlay = document.getElementById("help-overlay");
@@ -2344,3 +2344,26 @@ if (helpBtn && helpOverlay && closeHelpBtn) {
     }
   });
 }
+
+const videoBtn = document.getElementById("video-btn");
+const videoOverlay = document.getElementById("video-overlay");
+const closeVideo = document.getElementById("close-video");
+const demoVideo = document.getElementById("demo-video");
+
+videoBtn.addEventListener("click", () => {
+  videoOverlay.classList.remove("hidden");
+  demoVideo.currentTime = 0;
+  demoVideo.play();
+});
+
+closeVideo.addEventListener("click", () => {
+  videoOverlay.classList.add("hidden");
+  demoVideo.pause();
+});
+
+videoOverlay.addEventListener("click", (e) => {
+  if (e.target === videoOverlay) {
+    videoOverlay.classList.add("hidden");
+    demoVideo.pause();
+  }
+});
