@@ -1,61 +1,93 @@
-# Timetable-Optimizer
+# Timetable Optimizer
 
-This branch contains Version 2.0 of the Course Selection & Timetable Assistant.
+A smart, conflict-aware timetable builder for students.  
+Helps you plan course schedules using mock registration data, select preferred teachers, auto-generate clash-free timetables, and export your final schedule as an image or PDF.
 
-## Try It
-👉 [Live Demo](https://roshansai07.github.io/Timetable-Optimizer/)
+> ⚠️ Uses mock registration data. Final course registration may differ.
 
-## What’s New in v3.1
+## Live Demo
 
-✅ Updated Course & Teacher Data
-Includes complete information for 4th Semester — all courses, teachers, and slot mappings are refreshed and verified.
+**Try it here:**  https://roshansai07.github.io/Timetable-Optimizer/
 
-✅ Selected Teachers Table
-Automatically lists your chosen teachers in a neat, shareable format — perfect for sending your final selections to friends or teammates.
+## ✨ What’s New in v4.0
 
+- **Updated Course & Teacher Data**  
+  Includes refreshed mock registration data with courses, teachers, and slot mappings.
 
-## From v2.0 
+- **Selected Teachers Table**  
+  Automatically lists your chosen theory & lab teachers in a clean, shareable table.
 
-Smart Slot Mapping Logic — Unified alignment for theory + lab slots.
-Lab-only Time Handling — Auto-skips theory slots during lab hours.
-Dynamic Teacher Selection — Picks best-fit teachers when “No Preference” is selected.
-Export Timetable — One-click export to PDF or image.
-Conflict Detection System — Highlights overlapping slots with detailed info.
-Save & Load Selections — Your timetable preferences stay stored locally.
+- **Smart Auto-Select (No Clashes)**  
+  Picks teacher–slot combinations that avoid overlaps wherever possible.
+
+- **Conflict Detection System**  
+  Highlights overlapping slots with visual warnings and details.
+
+- **Timetable Grid View**  
+  Clear weekly layout with theory, lab, and conflict markers.
+
+- **Export as Image**  
+  One-click export of the full timetable + selected teachers.
+
+- **Export as PDF (A3 Landscape)**  
+  High-quality PDF export for sharing or printing.
+
+- **Help Overlay**  
+  Built-in guide explaining how to use the tool, Auto-Select logic, and tips.
+
+- **Mock Data Disclaimer**  
+  Clear warning that final registration data may differ — encourages backup schedules.
+
+## Core Features
+
+- Smart slot mapping for theory + lab
+- Auto-skip theory slots during lab hours
+- Dynamic teacher selection with “No Preference”
+- Randomized valid schedule generation
+- Conflict highlighting and warnings
+- Local storage for selections
+- Shareable exports (PNG / PDF)
+- Clean UI with mobile support
 
 ## Tech Stack
-Frontend: HTML, CSS (Custom UI), JavaScript (DOM-based rendering)
-Libraries: html2canvas, jsPDF
 
-## Branch Purpose
-This branch contains the stable v3.0 release, featuring 4th Semester data and the new Selected Teacher Table.
-The main branch remains clean or hosts the legacy build.
+**Frontend**
+- HTML
+- CSS (Custom UI)
+- JavaScript (DOM-based rendering)
+
+**Libraries**
+- html2canvas  
+- jsPDF  
+
+No backend. No frameworks. Everything runs locally in your browser.
 
 ## How to Use
 
-Select a course from the dropdown.
-Click Confirm to view available teachers.
-Choose your preferred teacher(s).
-View your chosen teachers in the Selected Teachers Table.
-Click Generate Timetable to see your schedule.
-Use Reset to start again.
+1. Select one or more courses from the dropdown  
+2. Click **Add**, then **Continue**  
+3. Choose preferred teachers or leave as **No Preference**  
+4. Click **Generate Timetable**  
+5. Review:
+   - Selected Teachers Table  
+   - Weekly timetable grid  
+   - Conflict warnings (if any)  
+6. Re-roll schedules or adjust selections  
+7. Export as **Image** or **PDF** to share with friends  
 
-## Notes
-Multiple courses can be selected before generating.
-Choices remain locked until you reset.
-All selections and data are stored locally in your browser — no backend.
-Lab end times rounded to 50 minutes for logic consistency.
+## Important Notes
 
-## Files
-index.html — Main page structure.
-style.css — UI and layout styling.
-script.js — Logic for selection, sharing table, and timetable generation.
+- This tool uses **mock registration data**
+- Final course registration may differ
+- Teachers or slots may be added, removed, or changed
+- Always keep **alternative timetables** ready
+- Do not rely on a single generated schedule
 
-## Clone It
+## Project Structure
 
-```bash
-git clone git@github.com:RoshanSai07/Timetable-Optimizer.git
-
-## Author
-
-Created by Roshan – VIT-AP, 2025–2026
+```text
+Timetable-Optimizer/
+├── index.html     # Main page structure
+├── style.css      # UI and layout styling
+├── script.js      # Core logic & export features
+└── README.md
