@@ -415,6 +415,8 @@ button:disabled {
   z-index: 1000;
   max-height: 260px;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 128, 0, 0.5) transparent;
 }
 
 /* Checkbox alignment */
@@ -423,6 +425,22 @@ button:disabled {
   align-items: center;
   gap: 10px;
   font-size: 0.9rem;
+}
+.dropdown-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background: rgba(0, 128, 0, 0.35); /* soft green */
+  border-radius: 8px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 128, 0, 0.55);
 }
 
 /* Hover */
@@ -662,6 +680,7 @@ button:disabled {
   box-shadow: var(--shadow-sm);
   width: 100%;
   scrollbar-width: thin;
+  scrollbar-color: rgba(0, 128, 0, 0.5) transparent;
 }
 
 .timetable-grid {
@@ -1742,6 +1761,8 @@ button:disabled {
   font-size: 0.95rem;
   line-height: 1.55;
   color: #333;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 128, 0, 0.5) transparent;
 }
 
 .help-body h3 {
