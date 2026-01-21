@@ -2288,7 +2288,6 @@ document.addEventListener("DOMContentLoaded", () => {
     () => (
       teacherSection.classList.add("hidden"),
       timetableDisplay.classList.add("hidden"),
-      resetCourseDropdown(),
       updateCourseDropdownLabel()
     ),
   );
